@@ -25,10 +25,8 @@ class _CompiledScript extends DomComponent {
   final String scriptPath;
   final bool? contentInCDATA;
 
-  const _CompiledScript(
-    this.scriptPath, {
-    this.contentInCDATA,
-  }) : super('script', attributes: const {'type': 'text/javascript'});
+  const _CompiledScript(this.scriptPath, {this.contentInCDATA})
+    : super('script', attributes: const {'type': 'text/javascript'});
 
   @override
   Iterable<Component> build() {

@@ -152,13 +152,9 @@ class BData extends DomComponent {
 class BSkin extends Component {
   final String css;
   final List<dynamic>? variables; // List of BVariable or BGroup
-  final bool useStyleTag; // kept for future not in use
+  final String version;
 
-  const BSkin(
-    this.css, {
-    this.variables,
-    this.useStyleTag = false, // remove this but introduce b:skin version='1.3.0'
-  });
+  const BSkin(this.css, {this.variables, this.version = '1.3.0'});
 
   @override
   Iterable<Component> build() {
@@ -174,13 +170,14 @@ class BSkin extends Component {
     sb.write(css);
 
     var content = sb.toString();
-    if (useStyleTag) {
-      content = "<style type='text/css'>\n$content\n</style>";
-    }
 
     return [
       XmlComment('prettier-ignore'),
-      DomComponent('b:skin', children: [RawText('<![CDATA[\n$content\n]]>')]),
+      DomComponent(
+        'b:skin',
+        attributes: {'version': version},
+        children: [RawText('<![CDATA[\n$content\n]]>')],
+      ),
     ];
   }
 }
@@ -230,11 +227,15 @@ class BAttr extends DomComponent {
 
 /// Adds a conditional CSS class via Blogger's `b:class` tag.
 class BClass extends DomComponent {
-  final String name;
-  final String cond;
+  final String? name;
+  final String? exprName;
+  final String? cond;
 
-  BClass({required this.name, required this.cond})
-    : super('b:class', attributes: {'name': name, 'cond': cond});
+  BClass({this.name, this.exprName, this.cond})
+    : super(
+        'b:class',
+        attributes: {'name': ?name, 'expr:name': ?exprName, 'cond': ?cond},
+      );
 
   @override
   Iterable<Component> build() => [];

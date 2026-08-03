@@ -10,11 +10,7 @@ class BloggerTheme extends Component {
   final Iterable<Component> body;
   final Map<String, String>? attributes;
 
-  const BloggerTheme({
-    required this.head,
-    required this.body,
-    this.attributes,
-  });
+  const BloggerTheme({required this.head, required this.body, this.attributes});
   @override
   Iterable<Component> build() {
     return [

@@ -1,47 +1,20 @@
 import 'core.dart';
 
 /// The root HTML element for a Blogger template.
-///
-/// Automatically merges the Blogger-required namespace and default template
-/// attributes unless overridden by [attributesz].
 class Html extends DomComponent {
   final Map<String, String?>? attributesz;
-// remve this completely //TODO
-  static const Map<String, String> _defaultAttributes = {
-    // if they are not specified we will default to these values for better compatibility
-    // with Blogger's template requirements shown below, but they can be overridden if needed
-    'b:css': 'false',
-    'b:defaultwidgetversion': '2',
-    'b:layoutsversion': '3',
-    'b:responsive': 'true',
-    'expr:dir': 'data:blog.languageDirection',
-    'expr:lang': 'data:blog.locale',
-    // below are the standard XML namespaces for Blogger templates and they are fixed
-    'xmlns': 'http://www.w3.org/1999/xhtml',
-    'xmlns:b': 'http://www.google.com/2005/gml/b',
-    'xmlns:data': 'http://www.google.com/2005/gml/data',
-    'xmlns:expr': 'http://www.google.com/2005/gml/expr',
-  };
 
-  Html({this.attributesz, super.children}) : super('html', attributes: _mergeAttributes(attributesz));
-
-  static Map<String, String> _mergeAttributes(
-    Map<String, String?>? attributes,
-  ) {
-    // remove forcefull merge // TODO:
-    final merged = <String, String>{};
-    if (attributes != null) {
-      for (final entry in attributes.entries) {
-        if (entry.value != null) {
-          merged[entry.key] = entry.value!;
-        }
-      }
-    }
-    for (final entry in _defaultAttributes.entries) {
-      merged.putIfAbsent(entry.key, () => entry.value);
-    }
-    return merged;
-  }
+  Html({this.attributesz, super.children})
+    : super(
+        'html',
+        attributes: attributesz == null
+            ? null
+            : Map.fromEntries(
+                attributesz.entries
+                    .where((entry) => entry.value != null)
+                    .map((entry) => MapEntry(entry.key, entry.value!)),
+              ),
+      );
 }
 
 /// The document head element.
