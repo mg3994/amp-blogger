@@ -12,8 +12,8 @@ class BloggerTheme extends Component {
   final Map<String, String>? attributes;
 
   const BloggerTheme({
-    required this.head,
-    required this.body,
+    this.head = const [],
+    this.body = const [],
     this.children,
     this.attributes,
   });
@@ -27,8 +27,8 @@ class BloggerTheme extends Component {
         attributesz: attributes,
         children: [
           ...filteredChildren,
-          Head(children: head),
-          Body(children: body),
+          if (head.isNotEmpty) Head(children: head),
+          if (body.isNotEmpty) Body(children: body),
         ],
       ),
     ];

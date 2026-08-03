@@ -121,6 +121,7 @@ class Script extends DomComponent {
   final String? content;
   final bool? contentInCDATA;
   final Iterable<Component>? childrenz;
+  final Map<String, String>? attributesz;
 
   Script({
     this.src,
@@ -129,12 +130,14 @@ class Script extends DomComponent {
     this.content,
     this.contentInCDATA,
     this.childrenz,
+    this.attributesz,
   }) : super(
          'script',
          attributes: {
            'src': ?src,
            'type': ?type,
            if (async != null) 'async': async.toString(),
+           ...?attributesz,
          },
          children:
              childrenz ??

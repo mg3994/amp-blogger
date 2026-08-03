@@ -1,4 +1,6 @@
 import 'package:blogger_theme/blogger_theme.dart';
+import 'meta.dart';
+import 'skin.dart';
 
 class BloggerHead extends Component {
   const BloggerHead();
@@ -6,7 +8,10 @@ class BloggerHead extends Component {
   @override
   Iterable<Component> build() {
     return [
-      Title(children: [Text('Blogger Theme Head')]),
+      BIf(
+        cond: 'data:blog.view not in ["x-content-lazy", "x-content-blog"]',
+        children: [BloggerMeta(), BloggerSkinAndStyles()],
+      ),
     ];
   }
 }

@@ -1,0 +1,1446 @@
+&lt;!--</head><b:if cond='!data:blog.adsenseClientId'>--&gt;<b:if cond='!data:story.status'>&lt;/head&gt;</b:if></b:if>
+
+<b:defaultmarkups>
+  <!--[ Blogger defaultmarkups ]-->
+  <b:defaultmarkup type='Common'>
+
+    <!--[ Navigation Menu Items ]-->
+    <b:includable id='items-mainMenu'>
+      <!--[ Dropdown Menu (Style 1: Sub Menu without icons) ]-->
+      <li class='nt'>
+        <input id='nav-drop-1' type='checkbox'/>
+        <label aria-label='Sub Menu' for='nav-drop-1' role='button'>
+          <!--[ Icon ]-->
+          <b:include name='svg.folder-2'/>
+          <!--[ Title ]-->
+          <span>Sub Menu</span>
+        </label>
+        <ul>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 01' href='#' itemprop='url'>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 01</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 02' href='#' itemprop='url'>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 02</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 03' href='#' itemprop='url'>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 03</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 04' href='#' itemprop='url'>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 04</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!--[ Dropdown Menu (Style 2: Sub Menu with icons) ]-->
+      <li>
+        <input id='nav-drop-2' type='checkbox'/>
+        <label aria-label='Sub Menu' for='nav-drop-2' role='button'>
+          <!--[ Icon ]-->
+          <b:include name='svg.folder-2'/>
+          <!--[ Title ]-->
+          <span>Sub Menu</span>
+        </label>
+        <ul>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 01' href='#' itemprop='url'>
+              <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 01</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 02' href='#' itemprop='url'>
+              <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 02</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 03' href='#' itemprop='url'>
+              <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 03</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 04' href='#' itemprop='url'>
+              <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 04</span>
+            </a>
+          </li>
+          <li>
+            <!--[ Change attribute href='#' to add url ]-->
+            <a aria-label='Sub Menu 05' href='#' itemprop='url'>
+              <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+              <span itemprop='name'>Sub Menu 05</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+<!--[ Custom Menu ]-->
+    <li>
+<a aria-label='Custom Menu' href='#' itemprop='url'>
+    <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+<span class='new' itemprop='name'>Custom Menu</span>
+</a>
+</li>
+ <!--[ Standard menu ]-->
+<li class='br'>
+<a aria-label='Custom Menu' href='#' itemprop='url'>
+  <!--[ Icon ]-->
+              <b:include name='svg.folder-2'/>
+              <!--[ Title ]-->
+<span class='free' itemprop='name'>Custom Menu</span>
+</a>
+</li>
+      <!--[ Standard menu ]-->
+      <li>
+        <!--[ Change attribute href='#' to add url ]-->
+        <a aria-label='About' expr:href='path(data:blog.homepageUrl.canonical, &quot;p/about.html&quot;)' itemprop='url'>
+          <!--[ Icon ]-->
+          <b:include name='svg.profile-2user'/>
+          <!--[ Title ]-->
+          <span itemprop='name'>About</span>
+        </a>
+      </li>
+
+      <!--[ Standard menu ]-->
+      <li class='br'>
+        <!--[ Change attribute href='#' to add url ]-->
+        <a aria-label='Contact' expr:href='path(data:blog.homepageUrl.canonical, &quot;p/contact.html&quot;)' itemprop='url'>
+          <!--[ Icon ]-->
+          <b:include name='svg.sms-edit'/>
+          <!--[ Title ]-->
+          <span itemprop='name'>Contact</span>
+        </a>
+      </li>
+
+      <!--[ Dropdown Menu (Style 3: Sub Menu at Top) ]-->
+      <li class='mr'>
+        <input checked='checked' id='nav-drop-3' type='checkbox'/>
+        <label aria-label='More...' for='nav-drop-3' role='button'>
+          <!--[ Title ]-->
+          <span>More...</span>
+        </label>
+        <ul>
+   <!--[ Hidden Menu ]-->
+          <li>
+  <!--[ Change attribute href='#' to add url ]-->
+   <a aria-label='Hidden Menu' href='#' itemprop='url'>
+      <!--[ Icon ]-->
+  <b:include name='svg.folder-2'/>
+    <!--[ Title ]-->
+<span itemprop='name'>Hidden Menu</span>
+</a>
+</li>
+          <li>
+  <!--[ Change attribute href='#' to add url ]-->
+   <a aria-label='Hidden Menu' href='#' itemprop='url'>
+      <!--[ Icon ]-->
+  <b:include name='svg.folder-2'/>
+    <!--[ Title ]-->
+<span itemprop='name'>Hidden Menu</span>
+</a>
+</li>
+</ul>
+      </li>
+    </b:includable>
+
+    <!--[ In-feed ad ]-->
+    <b:includable id='post-adIn'>
+      <b:if cond='!data:amp.active'>
+
+        <!--<div class='ntry pAdIf show-if-js'>
+
+          <b:comment>[NO AMP] In-feed ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (In-feed Ad)&quot;'/>
+
+        </div>-->
+
+      </b:if>
+    </b:includable>
+
+    <!--[ Top article ad ]-->
+    <b:includable id='post-adTop'>
+      <b:if cond='!data:amp.active'>
+
+        <!--<div class='pAd show-if-js'>
+
+          <b:comment>[NO AMP] Top article ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Top Article Ad)&quot;'/>
+
+        </div>-->
+
+        <b:else/>
+
+        <!--<div class='pAd'>
+
+          <b:comment>[AMP] Top article ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Top Article Ad)&quot;'/>
+
+        </div>-->
+
+      </b:if>
+    </b:includable>
+
+    <!--[ Bottom article ad ]-->
+    <b:includable id='post-adBot'>
+      <b:if cond='!data:amp.active'>
+
+        <!--<div class='pAd show-if-js'>
+
+          <b:comment>[NO AMP] Bottom article ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Bottom Article Ad)&quot;'/>
+
+        </div>-->
+
+        <b:else/>
+
+        <!--<div class='pAd'>
+
+          <b:comment>[AMP] Bottom article ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Bottom Article Ad)&quot;'/>
+
+        </div>-->
+
+      </b:if>
+    </b:includable>
+
+    <!--[ Matched content ad ]-->
+    <b:includable id='post-relatedAd'>
+      <b:if cond='!data:amp.active'>
+
+        <!--<div class='rAd relatedPosts show-if-js'>
+
+          <b:comment>[NO AMP] Matched content ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Matched Content Ad)&quot;'/>
+
+        </div>-->
+
+        <b:else/>
+
+        <!--<div class='rAd relatedPosts'>
+
+          <b:comment>[AMP] Matched content ad code here</b:comment>
+          <div class='adB' expr:data-text='data:.messages.adsGoHere + &quot; (Matched Content Ad)&quot;'/>
+
+        </div>-->
+
+      </b:if>
+    </b:includable>
+
+    <!--[ Image ]-->
+    <b:includable id='image-auto' var='input'>
+      <b:with value='data:input.width and (data:input.height or data:input.ratio) ? resizeImage(data:input.image, data:input.width, (data:input.height ? data:input.width + &quot;:&quot; + data:input.height : data:input.ratio)) : data:input.image' var='a'>
+        <b:with value='data:a.width and data:a.height ? 1 : (data:input.width and data:input.height ? 2 : 0)' var='b'>
+          <b:with value='(data:input.protocol != false and data:a not contains &quot;http://&quot; and data:a not contains &quot;https://&quot; ? &quot;https:&quot; : &quot;&quot;) + data:a' var='c'>
+            <b:with value='data:input.placeholder and data:input.protocol != false and data:input.placeholder not contains &quot;http://&quot; and data:input.placeholder not contains &quot;https://&quot; ? &quot;https:&quot; + data:input.placeholder : data:input.placeholder' var='d'>
+              <b:with value='{ src: data:c, width: (data:b == 1 ? data:a.width : (data:b == 2 ? data:input.width : false)), height: (data:b == 1 ? data:a.height : (data:b == 2 ? data:input.height : false)), alt: data:input.alt, title: data:input.title, class: data:input.class, placeholder: data:d, noOptimization: data:input.noOptimization, noBrowserLazy: data:input.noBrowserLazy, noLibraryLazy: data:input.noLibraryLazy }' var='image'>
+
+                <b:if cond='data:amp.active'>
+                  <b:comment><!--[ AMP image ]--></b:comment>
+                  <amp-img expr:src='data:image.src' layout='intrinsic'>
+                    <b:class cond='data:image.class' expr:name='data:image.class'/>
+                    <b:attr cond='data:image.width' expr:value='data:image.width' name='width'/>
+                    <b:attr cond='data:image.height' expr:value='data:image.height' name='height'/>
+                    <b:attr cond='data:image.alt' expr:value='data:image.alt' name='alt'/>
+                    <b:attr cond='data:image.title' expr:value='data:image.title' name='title'/>
+                  </amp-img>
+
+                  <b:elseif cond='!data:image.noOptimization and data:vars.optimization_imageLoading == &quot;3px&quot; and !data:image.noLibraryLazy'/>
+                  <b:comment><!--[ Lazyload (Library) image ]--></b:comment>
+                  <img class='lazyload show-if-js' expr:data-src='data:image.src' expr:src='data:image.placeholder ? data:image.placeholder : &quot;data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=&quot;'>
+                    <b:class cond='data:image.class' expr:name='data:image.class'/>
+                    <b:attr cond='data:image.width' expr:value='data:image.width' name='width'/>
+                    <b:attr cond='data:image.height' expr:value='data:image.height' name='height'/>
+                    <b:attr cond='data:image.alt' expr:value='data:image.alt' name='alt'/>
+                    <b:attr cond='data:image.title' expr:value='data:image.title' name='title'/>
+                  </img>
+                </b:if>
+
+                <b:comment><!--[ Normal / Lazyload (Browser) / Noscript image ]--></b:comment>
+                <b:tag cond='data:amp.active or (!data:image.noOptimization and data:vars.optimization_imageLoading == &quot;3px&quot; and !data:image.noLibraryLazy)' name='noscript'>
+                  <img expr:src='data:image.src'>
+                    <b:class cond='data:image.class' expr:name='data:image.class'/>
+                    <b:attr cond='!data:image.noOptimization and data:vars.optimization_imageLoading == &quot;2px&quot; and !data:image.noBrowserLazy' name='loading' value='lazy'/>
+                    <b:attr cond='data:image.width' expr:value='data:image.width' name='width'/>
+                    <b:attr cond='data:image.height' expr:value='data:image.height' name='height'/>
+                    <b:attr cond='data:image.alt' expr:value='data:image.alt' name='alt'/>
+                    <b:attr cond='data:image.title' expr:value='data:image.title' name='title'/>
+                  </img>
+                </b:tag>
+
+              </b:with>
+            </b:with>
+          </b:with>
+        </b:with>
+      </b:with>
+    </b:includable>
+
+    <!--[ Slider image ]-->
+    <b:includable id='carouselWidget' var='slides'>
+      <b:class name='sldA'/>
+      <b:attr expr:value='data:widget.instanceId' name='data-i'/>
+
+      <b:include data='{ class: &quot;sldI&quot;, image: data:sourceUrl, width: (data:blog.isMobileRequest ? 600 : 1080), height: (data:blog.isMobileRequest ? 240 : 432), alt: data:title, placeholder: (resizeImage(data:sourceUrl, 35, &quot;5:2&quot;) != data:sourceUrl ? resizeImage(data:sourceUrl, 35, &quot;5:2&quot;) : false), noBrowserLazy: true }' name='image-auto'/>
+
+      <b:if cond='data:title not contains &quot;[NoTitle]&quot;'>
+        <div class='sldT' expr:data-title='data:title'>
+          <b:attr cond='data:caption' expr:value='data:caption' name='data-caption'/>
+        </div>
+      </b:if>
+
+      <b:if cond='data:link'>
+        <a class='sldL' expr:aria-label='data:title' expr:href='data:link' expr:title='data:title' rel='nofollow noreferrer noopener' target='_blank'/>
+      </b:if>
+    </b:includable>
+
+    <!--[ Index title ]-->
+    <b:includable id='titlePost'>
+      <div class='blogT'>
+        <b:class cond='data:view.isHomepage' name='hm'/>
+        <b:if cond='data:view.isHomepage'>
+
+          <!--[ Change <data:messages.latestPosts/> to replace 'Latest Posts' with your special text ]-->
+          <h2 class='title dt'><data:messages.latestPosts/></h2>
+
+          <b:else/>
+          <div class='t'>
+            <b:class cond='data:view.search or data:view.isArchive and data:view.url.canonical != path(data:blog.homepageUrl.canonical, &quot;search&quot;)' name='srch'/>
+            <b:if cond='data:view.search.label'>
+              <span class='hm' expr:data-text='data:messages.home'/><data:blog.pageName/>
+
+              <b:elseif cond='data:view.search.query'/>
+              <span expr:data-text='data:messages.search + &quot;:&quot;'/><data:view.search.query/>
+
+              <b:elseif cond='data:view.isArchive'/>
+              <span expr:data-text='data:messages.blogArchive + &quot;:&quot;'/><data:blog.pageName/>
+
+              <b:else/>
+
+              <!--[ Change all <data:messages.posts/> to replace 'Posts' with your special text ]-->
+              <span class='hm' expr:data-text='data:messages.home'/><data:messages.posts/>
+
+            </b:if>
+          </div>
+        </b:if>
+      </div>
+    </b:includable>
+
+    <!--[ Preloader ]-->
+    <b:includable id='preloader'>
+      <div class='pldW' id='preloader'><div class='ldrHt'/></div>
+      <script>/*<![CDATA[*/ "use strict";((window,document)=>{const element=document.getElementById('preloader');element.classList.add('e');element.addEventListener('transitionend',(e)=>{if(e.propertyName==='opacity'&&getComputedStyle(element).opacity==='0'){element.remove()}});document.addEventListener('DOMContentLoaded',()=>setTimeout(()=>element.classList.add('h'),1500))})(window,document); /*]]>*/</script>
+    </b:includable>
+
+    <!--[ Thumbnail items ]-->
+    <b:includable id='thumbnail-items'>
+      <b:with value='data:story.status and data:story.type != 1 and snippet(data:post.url.canonical) contains &quot;story.html&quot;' var='isPostStory'>
+        <div class='tfxM T'>
+          <div class='tfxC'>
+            <!--[ Quick edit ]-->
+            <b:include cond='!data:view.isPreview and data:vars.quickedit_status == &quot;2px&quot; and data:vars.quickedit_editPost == &quot;2px&quot;' name='thumb-quickedit'/>
+          </div>
+          <div class='tfxC'>
+            <b:if cond='data:post.labels any (label =&gt; label.name in [ &quot;Sponsored&quot; ])'>
+              <!--[ Sponsored tag ]-->
+              <b:include name='postSponsored'/>
+
+              <b:elseif cond='data:post.labels any (label =&gt; label.name in [ &quot;Product&quot; ])'/>
+              <!--[ Product tag ]-->
+              <b:include name='postProduct'/>
+
+              <!--[ Story tag ]-->
+              <b:elseif cond='data:isPostStory'/>
+              <b:include name='postStory'/>
+
+              <b:elseif cond='data:widgets.Blog.first.allBylineItems.comments and data:post.allowComments and data:post.numberOfComments &gt; 0 '/>
+              <!--[ Comments count ]-->
+              <b:include name='postCommentsLinks'/>
+            </b:if>
+
+            <!--[ Post views ]-->
+            <b:if cond='!data:isPostStory and !data:amp.active and !data:view.isPreview and data:vars.views_status == &quot;2px&quot; and data:widgets.LinkList61'>
+              <span class='pV fb-views show-if-js' expr:data-abbreviate='data:vars.views_abbreviate == &quot;2px&quot; ? true : false' expr:data-id='data:post.id' expr:data-watch='data:vars.views_watch == &quot;2px&quot; ? true : false'>
+                <b:include name='svg.eye'/>
+              </span>
+            </b:if>
+
+            <!--[ Post bookmark ]-->
+            <b:include cond='!data:view.isPreview and !data:amp.active and data:widgets.LinkList02' name='thumb-bookmark'/>
+          </div>
+        </div>
+        <div class='tfxM B'>
+          <div class='tfxC'>
+            <!--[ Post author ]-->
+            <b:include cond='data:widgets.Blog.first.allBylineItems.author and data:vars.thumbnail_author == &quot;2px&quot;' name='postAuthor-thumbnail'/>
+          </div>
+        </div>
+      </b:with>
+    </b:includable>
+
+    <!--[ Quick Edit on Thumbnails ]-->
+    <b:includable id='thumb-quickedit'>
+      <a aria-label='Edit this post' class='edit show-if-admin' data-text='Edit' expr:href='path(data:blog.bloggerUrl, (&quot;blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id))' rel='nofollow noreferrer noopener' target='_blank'>
+        <b:include name='svg.edit-3'/>
+      </a>
+    </b:includable>
+
+    <!--[ Post Bookmark on Thumbnails ]-->
+    <b:includable id='thumb-bookmark'>
+      <button aria-label='Add to bookmark' class='bM bm-button show-if-js' expr:data-bm-id='data:post.id' expr:data-bm-published='data:post.date.iso8601' expr:data-bm-title='data:post.title' expr:data-bm-updated='data:post.lastUpdated.iso8601' expr:data-bm-url='data:post.url.canonical' expr:data-save='data:vars.m_save' expr:data-saved='data:vars.m_saved' type='button'>
+        <b:attr cond='data:post.featuredImage' expr:value='resizeImage(data:post.featuredImage, 240, &quot;1:1&quot;)' name='data-bm-image'/>
+        <b:attr cond='data:post.labels and data:post.labels.notEmpty' expr:value='data:post.labels map (l =&gt; l.name)' name='data-bm-labels'/>
+        <b:attr expr:value='snippet(data:post.snippets.long, { length: 150, links: false, linebreaks: false })' name='data-bm-snippet'/>
+        <b:include name='svg.archive-add-tick'/>
+      </button>
+    </b:includable>
+
+    <!--[ Post author profile ]-->
+    <b:includable id='post-authorProfile'>
+      <div class='admAbt' id='author'>
+        <h2 class='title dt'><data:vars.m_aboutTheAuthor/></h2>
+        <div class='admPs'>
+          <div class='admIm'>
+            <b:include name='post-authorImage'/>
+          </div>
+          <div class='admI'>
+            <bdi class='admN' expr:data-text='data:post.author.name' expr:data-write='data:messages.postedBy'/>
+            <div class='admA'>
+              <b:eval expr='snippet(data:post.author.aboutMe, { length: 250, links: true, linebreaks: true })'/>
+              <!--<data:post.author.aboutMe/>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </b:includable>
+
+     <!--[ Post Author on Thumbnail ]-->
+    <b:includable id='postAuthor-thumbnail'>
+      <div class='aNm'>
+        <b:if cond='data:post.author.authorPhoto.image'>
+          <b:include data='{ class: &quot;im&quot;, image: data:post.author.authorPhoto.image, width: 15, height: 15, alt: data:post.author.name }' name='image-auto'/>
+        </b:if>
+        <bdi class='nm' expr:data-text='snippet(data:post.author.name, { length: 30, ellipsis: true })'/>
+      </div>
+    </b:includable>
+
+    <b:includable id='post-authorImage'>
+      <b:if cond='!data:view.isPost'>
+        <b:if cond='data:post.author.authorPhoto.image'>
+          <b:include data='{ class: &quot;im&quot;, image: data:post.author.authorPhoto.image, width: 20, height: 20, alt: data:post.author.name }' name='image-auto'/>
+
+          <b:elseif cond='!data:view.isMultipleItems'/>
+          <div class='im'><b:include name='svg.profile-1'/></div>
+        </b:if>
+
+        <b:else/>
+        <b:if cond='data:post.author.authorPhoto.image'>
+          <b:include data='{ class: &quot;im&quot;, image: data:post.author.authorPhoto.image, width: 40, height: 40, alt: data:post.author.name }' name='image-auto'/>
+
+          <b:else/>
+          <div class='aFl'>
+            <span><data:post.author.name/></span>
+          </div>
+        </b:if>
+      </b:if>
+    </b:includable>
+
+    <!--[ Post Tags ]-->
+    <b:includable id='postTags'>
+      <div class='lbHt' id='tags'>
+        <b:tag class='hI' cond='data:post.labels.length &gt; 3' hidden='' id='forHashtags' name='input' type='checkbox'/>
+        <div class='hL'>
+          <b:loop index='i' values='data:post.labels' var='label'>
+            <a expr:aria-label='data:label.name' expr:href='data:label.url.canonical'>
+              <b:class cond='data:i &lt; 3' name='s'/>
+            </a>
+          </b:loop>
+          <b:tag class='s' cond='data:post.labels.length &gt; 3' expr:aria-label='data:messages.showMore' expr:data-hide='data:messages.showLess' expr:data-show='&quot;+&quot; + (data:post.labels.length - 3) + &quot; &quot; + data:messages.moreEllipsis' for='forHashtags' name='label' role='button'/>
+        </div>
+      </div>
+    </b:includable>
+
+    <b:includable id='post-authorName'>
+      <!--[ Post Author without Link ]-->
+      <!--<bdi class='nm' expr:data-text='data:post.author.name' expr:data-write='data:widgets.Blog.first.allBylineItems.author.label'/>-->
+
+      <!--[ Post Author with Link ]-->
+      <b:tag class='nm' expr:data-text='data:post.author.name' expr:data-write='data:widgets.Blog.first.allBylineItems.author.label' expr:name='data:post.author.profileUrl ? &quot;a&quot; : &quot;span&quot;' expr:title='data:widgets.Blog.first.allBylineItems.author.label + &quot; &quot; + data:post.author.name'>
+        <b:attr cond='data:post.author.profileUrl' expr:value='data:post.author.name' name='aria-label'/>
+        <b:attr cond='data:post.author.profileUrl' expr:value='data:post.author.profileUrl' name='href'/>
+        <b:attr cond='data:post.author.profileUrl' name='rel' value='author noreferrer noopener'/>
+        <b:attr cond='data:post.author.profileUrl' name='target' value='_blank'/>
+      </b:tag>
+    </b:includable>
+
+    <!--[ Post article ]-->
+    <b:includable id='postHeaders'>
+      <div class='pHdr pSml'>
+        <b:include name='postLabelorSponsor'/>
+      </div>
+    </b:includable>
+
+    <b:includable id='postCommentsLinks'>
+      <b:if cond='data:post.allowComments and data:post.numberOfComments &gt; 0 and data:vars.comments_blogger == &quot;2px&quot;'>
+        <a class='cmnt' expr:aria-label='data:messages.comments' expr:data-text='data:post.numberOfComments' expr:href='fragment(data:post.url.canonical, &quot;comment&quot;)'>
+          <b:include name='chat-icon'/>
+        </a>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postCommentsUrl'>
+      <b:if cond='data:post.allowComments and data:post.numberOfComments &gt; 0 and data:vars.comments_blogger == &quot;2px&quot;'>
+        <a class='cmnt' expr:aria-label='data:messages.comments' expr:data-text='data:post.numberOfComments' expr:href='fragment(data:post.url.canonical, &quot;comment&quot;)'>
+          <b:class cond='data:view.isSingleItem' name='tIc'/>
+          <b:include name='chat-icon'/>
+        </a>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postCommentsLabel'>
+      <b:if cond='data:post.allowComments and (data:view.isMultipleItems ? data:post.numberOfComments &gt; 0 : true) and data:vars.comments_blogger == &quot;2px&quot;'>
+        <a class='cmnt' expr:aria-label='data:messages.comments' expr:href='data:view.url.canonical != data:post.url.canonical ? fragment(data:post.url.canonical, &quot;comment&quot;) : &quot;#comment&quot;'>
+          <b:class cond='data:view.isSingleItem' name='tIc'/>
+          <b:attr cond='data:view.isSingleItem' name='role' value='button'/>
+          <b:attr cond='data:post.numberOfComments &gt; 0' expr:value='data:post.numberOfComments' name='data-text'/>
+          <b:include name='chat-icon'/>
+        </a>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postSponsored'>
+      <div class='spnr'>
+        <b:include name='link-icon'/>
+      </div>
+    </b:includable>
+
+    <b:includable id='postProduct'>
+      <div class='spnr'>
+        <b:include name='tag-icon'/>
+      </div>
+    </b:includable>
+
+    <b:includable id='postStory'>
+      <div class='spnr'>
+        <svg class='line' viewBox='0 0 24 24'><path d='M13.01 2.92007L18.91 5.54007C20.61 6.29007 20.61 7.53007 18.91 8.28007L13.01 10.9001C12.34 11.2001 11.24 11.2001 10.57 10.9001L4.67 8.28007C2.97 7.53007 2.97 6.29007 4.67 5.54007L10.57 2.92007C11.24 2.62007 12.34 2.62007 13.01 2.92007Z'/><path class='c' d='M3 11C3 11.84 3.63 12.81 4.4 13.15L11.19 16.17C11.71 16.4 12.3 16.4 12.81 16.17L19.6 13.15C20.37 12.81 21 11.84 21 11'/><path d='M3 16C3 16.93 3.55 17.77 4.4 18.15L11.19 21.17C11.71 21.4 12.3 21.4 12.81 21.17L19.6 18.15C20.45 17.77 21 16.93 21 16'/></svg>
+      </div>
+    </b:includable>
+
+    <b:includable id='postLabelSponsored'>
+      <div class='pLbls nSpr'>
+        <b:loop index='s' values='data:post.labels' var='label'>
+          <b:if cond='data:s == 0'>
+            <b:tag expr:data-text='data:label.name' name='span'/>
+          </b:if>
+        </b:loop>
+      </div>
+    </b:includable>
+
+    <b:includable id='postLabel'>
+      <b:if cond='data:widgets.Blog.first.allBylineItems.labels'>
+        <div class='pLbls'>
+          <b:attr cond='data:post.labels' expr:value='data:widgets.Blog.first.allBylineItems.labels.label' name='data-text'/>
+          <b:loop index='i' values='data:post.labels' var='label'>
+            <b:if cond='data:i &lt;= 1'>
+              <b:tag expr:data-text='data:label.name' expr:name='data:blog.url != data:label.url ? &quot;a&quot; : &quot;span&quot;'>
+                <b:attr cond='data:blog.url != data:label.url' expr:value='data:label.url.canonical' name='href'/>
+                <b:attr cond='data:blog.url != data:label.url' name='rel' value='tag'/>
+                <b:attr cond='data:blog.url != data:label.url' expr:value='data:label.name' name='aria-label'/>
+              </b:tag>
+            </b:if>
+          </b:loop>
+        </div>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postLabelorSponsor'>
+      <b:if cond='data:post.labels none (label =&gt; label.name in [ &quot;Sponsored&quot; ])'>
+        <!--[ Post labels ]-->
+        <b:include cond='data:post.labels' name='postLabel'/>
+        <b:else/>
+        <b:include name='postLabelSponsored'/>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postJumpLinks'>
+      <a class='pJmp' expr:aria-label='data:blog.jumpLinkMessage' expr:data-text='data:messages.keepReading' expr:href='data:post.url.canonical'/>
+    </b:includable>
+
+    <b:includable id='postTimestampPublish'>
+      <time class='aTtmp pTtmp pbl' expr:data-text='data:vars.m_published' expr:data-time='format(data:post.date, &quot;MMM d, YYYY&quot;)' expr:datetime='data:post.date.iso8601' expr:title='&quot;Published on: &quot; + format(data:post.date, &quot;MMMM d, YYYY&quot;)'/>
+    </b:includable>
+
+    <b:includable id='postTimestampUpdate'>
+      <time class='aTtmp pTtmp upd' expr:data-text='data:vars.m_updated' expr:data-time='format(data:post.lastUpdated, &quot;MMM d, YYYY&quot;)' expr:datetime='data:post.lastUpdated.iso8601' expr:title='&quot;Updated on: &quot; + format(data:post.lastUpdated, &quot;MMMM d, YYYY&quot;)'/>
+    </b:includable>
+
+    <b:includable id='postTimestamps'>
+      <b:if cond='data:post.lastUpdated != data:post.date'>
+        <b:include name='postTimestampUpdate'/>
+        <b:else/>
+        <b:include name='postTimestampPublish'/>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='postEntrySnippet'>
+      <b:eval expr='snippet(data:post.snippets.long, { length: 150, links: false, linebreaks: false })'/>
+      <!--<b:eval expr='snippet(data:post.body, { length: 90, links: false, linebreaks: false })'/>-->
+    </b:includable>
+
+    <b:includable id='postEntryThumbnail'>
+      <b:with value='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' var='featuredImage'>
+        <b:include data='{ class: &quot;imgThm lblr&quot;, image: data:featuredImage, width: 600, height: 337, placeholder: resizeImage(data:featuredImage, 35, &quot;16:9&quot;), alt: (data:post.title ?: data:messages.image) }' name='image-auto'/>
+      </b:with>
+    </b:includable>
+
+    <!--[ Comment button ]-->
+    <b:includable id='post-commentButton'>
+      <!--[ Show/hide Comment ]-->
+      <div class='cmShw'>
+        <label class='cmBtn' expr:aria-label='data:post.numberOfComments &gt; 0 ? data:messages.joinTheConversation + &quot; (&quot; + data:post.numberOfComments + &quot;)&quot; : data:messages.postAComment' for='forComments' role='button'>
+          <b:if cond='data:post.numberOfComments &gt; 0'>
+            <span><data:messages.joinTheConversation/> (<data:post.numberOfComments/>)</span>
+            <b:else/>
+            <data:messages.postAComment/>
+          </b:if>
+        </label>
+      </div>
+    </b:includable>
+     <!--[ Core Load V2 ]-->
+<b:includable id='sys_core_load_v2'><b:tag expr:class='data:vars.j2 + data:vars.q8 + data:vars.x4 + data:vars.m1' name='span'><b:tag expr:href='data:vars.h5 + data:vars.a3 + data:vars.w9 + data:vars.k2 + data:vars.y6 + data:vars.b0 + data:vars.p5 + data:vars.v4 + data:vars.r1 + data:vars.z7' name='a'><b:eval expr='data:vars.e9 + data:vars.n3 + data:vars.p5 + data:vars.v4'/></b:tag></b:tag></b:includable>
+    <!--[ Fixed Back to Top ]-->
+    <b:includable id='button-backtoTop'>
+      <div class='toTopB' id='backTop' onclick='window.scrollTo({top: 0});'>
+        <svg viewBox='0 0 34 34'><circle class='b' cx='17' cy='17' r='15.92'/><circle class='c scrollProgress' cx='17' cy='17' r='15.92'/><path class='line d' d='M15.07,21.06,19.16,17l-4.09-4.06'/></svg>
+      </div>
+    </b:includable>
+
+    <!--[ svg | Instagram ]-->
+    <b:includable id='svg.instagram'>
+      <svg viewBox='0 0 32 32'><path d='M22,3H10a7,7,0,0,0-7,7V22a7,7,0,0,0,7,7H22a7,7,0,0,0,7-7V10A7,7,0,0,0,22,3Zm5,19a5,5,0,0,1-5,5H10a5,5,0,0,1-5-5V10a5,5,0,0,1,5-5H22a5,5,0,0,1,5,5Z'/><path class='c' d='M16,9.5A6.5,6.5,0,1,0,22.5,16,6.51,6.51,0,0,0,16,9.5Zm0,11A4.5,4.5,0,1,1,20.5,16,4.51,4.51,0,0,1,16,20.5Z'/><circle class='c' cx='23' cy='9' r='1'/></svg>
+    </b:includable>
+
+    <!--[ svg | Facebook ]-->
+    <b:includable id='svg.facebook'>
+      <svg viewBox='0 0 32 32'><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H17V18h4a1,1,0,0,0,0-2H17V14a2,2,0,0,1,2-2h2a1,1,0,0,0,0-2H19a4,4,0,0,0-4,4v2H12a1,1,0,0,0,0,2h3v9H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | FacebookR ]-->
+    <b:includable id='svg.facebook-r'>
+      <svg viewBox='0 0 64 64'><path d='M20.1,36h3.4c0.3,0,0.6,0.3,0.6,0.6V58c0,1.1,0.9,2,2,2h7.8c1.1,0,2-0.9,2-2V36.6c0-0.3,0.3-0.6,0.6-0.6h5.6 c1,0,1.9-0.7,2-1.7l1.3-7.8c0.2-1.2-0.8-2.4-2-2.4h-6.6c-0.5,0-0.9-0.4-0.9-0.9v-5c0-1.3,0.7-2,2-2h5.9c1.1,0,2-0.9,2-2V6.2 c0-1.1-0.9-2-2-2h-7.1c-13,0-12.7,10.5-12.7,12v7.3c0,0.3-0.3,0.6-0.6,0.6h-3.4c-1.1,0-2,0.9-2,2v7.8C18.1,35.1,19,36,20.1,36z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Threads ]-->
+    <b:includable id='svg.threads'>
+      <svg viewBox='0 0 24 24'><path d='M5.25 12c0-3.247.861-5.272 2.12-6.493c1.265-1.225 3.052-1.757 5.15-1.757c2.856 0 5.345 1.467 6.265 4.356a.75.75 0 0 0 1.43-.455c-1.152-3.615-4.301-5.401-7.696-5.401c-2.332 0-4.554.593-6.192 2.18C4.684 6.022 3.75 8.497 3.75 12s.934 5.978 2.577 7.57c1.638 1.587 3.86 2.18 6.192 2.18c2.932 0 5.429-1.577 6.514-3.68c.547-1.06.74-2.269.411-3.459c-.33-1.192-1.16-2.284-2.51-3.152l-.067-.038a7 7 0 0 0-.463-.212q-.025-.326-.067-.654c-.225-1.77-1.314-2.998-2.718-3.48c-1.386-.475-3.016-.203-4.322.858a.75.75 0 1 0 .945 1.164c.926-.751 2.018-.902 2.89-.603c.856.294 1.563 1.04 1.717 2.25v.002c-1.033-.203-2.118-.227-3.083-.059c-.82.144-1.614.437-2.22.94c-.625.52-1.027 1.25-1.03 2.164v.004a2 2 0 0 0 .004.148a3.5 3.5 0 0 0 .405 1.473c.223.416.573.84 1.106 1.156s1.207.498 2.043.498c1.8 0 3.056-.749 3.743-2.049c.328-.62.511-1.34.584-2.111c.918.66 1.403 1.396 1.597 2.1c.215.777.101 1.598-.298 2.372c-.808 1.565-2.766 2.868-5.18 2.868c-2.098 0-3.885-.532-5.15-1.757c-1.259-1.22-2.12-3.246-2.12-6.493m6.774.165c.905-.158 1.958-.103 2.912.137c-.023.817-.171 1.5-.445 2.018c-.394.745-1.098 1.25-2.417 1.25c-.613 0-1.014-.132-1.278-.29a1.46 1.46 0 0 1-.551-.576a2 2 0 0 1-.227-.83l-.001-.074c0-.432.171-.756.488-1.02c.339-.28.858-.5 1.52-.615'/></svg>
+    </b:includable>
+
+    <!--[ svg | X / Twitter ]-->
+    <b:includable id='svg.twitter'>
+      <svg viewBox='0 0 24 24'><path d='M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z' style='stroke:currentColor;stroke-width:0.4;transform:scale(0.8);transform-origin:center'/></svg>
+    </b:includable>
+
+    <!--[ svg | (X / Twitter)R]-->
+    <b:includable id='svg.twitter-r'>
+      <svg viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Medium ]-->
+    <b:includable id='svg.medium'>
+      <svg viewBox='0 0 32 32'><g><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/><path d='M23,12a1,1,0,0,0,0-2H21a.88.88,0,0,0-.28.06l-.09,0a1.07,1.07,0,0,0-.28.19h0L16,14.59l-4.29-4.3h0a1.07,1.07,0,0,0-.28-.19l-.09,0a.88.88,0,0,0-.28-.06H9a1,1,0,0,0,0,2h1v8H9a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2H12V13.41l3.29,3.3a1,1,0,0,0,1.42,0L20,13.41V20H19a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2H22V12Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Blogger ]-->
+    <b:includable id='svg.blogger'>
+      <svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><g><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/><path d='M22,15H20.44A3.91,3.91,0,0,0,21,13a4,4,0,0,0-4-4H13a4,4,0,0,0-4,4v6a4,4,0,0,0,4,4h6a4,4,0,0,0,4-4V16A1,1,0,0,0,22,15ZM11,13a2,2,0,0,1,2-2h4a2,2,0,0,1,0,4H11Zm10,6a2,2,0,0,1-2,2H13a2,2,0,0,1-2-2V17H21Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Bluesky ]-->
+    <b:includable id='svg.bluesky'>
+      <svg viewBox='0 0 24 24'><path d='M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5q0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5c.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369c.206-.708.556-5.072.556-5.661c0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/></svg>
+    </b:includable>
+
+    <!--[ svg | Snapchat ]-->
+    <b:includable id='svg.snapchat'>
+      <svg viewBox='0 0 32 32'><g><path d='M25,15.8c-.07-.34-.13-.7-.19-1.07l3.66-1.84a1,1,0,1,0-.9-1.78l-3.09,1.54C23.7,7.93,22.45,2,16,2S8.3,7.93,7.54,12.65L4.45,11.11a1,1,0,0,0-.9,1.78l3.66,1.84c-.06.37-.12.73-.19,1.07-.9,4.49-3.47,6.3-3.57,6.37a1,1,0,0,0-.26,1.41,8.27,8.27,0,0,0,2.36,2.31A3.91,3.91,0,0,0,8.82,26a1.93,1.93,0,0,1,1.73-.06,4.13,4.13,0,0,1,1.38,1.5C12.7,28.56,13.67,30,16,30s3.3-1.44,4.07-2.61a4.13,4.13,0,0,1,1.38-1.5,1.93,1.93,0,0,1,1.73.06,3.91,3.91,0,0,0,3.27-.06,8.27,8.27,0,0,0,2.36-2.31,1,1,0,0,0,.17-.76,1,1,0,0,0-.42-.65C28.45,22.1,25.88,20.29,25,15.8Zm.57,8.31a1.93,1.93,0,0,1-1.73-.06,3.91,3.91,0,0,0-3.27.06,5.72,5.72,0,0,0-2.14,2.18C17.66,27.41,17.21,28,16,28s-1.66-.59-2.41-1.71a5.72,5.72,0,0,0-2.14-2.18,3.91,3.91,0,0,0-3.27-.06,1.93,1.93,0,0,1-1.73.06,4.71,4.71,0,0,1-1.07-1A13,13,0,0,0,9,16.2c.15-.77.28-1.61.42-2.48C10.29,8,11.28,4,16,4s5.71,4,6.6,9.72c.14.87.27,1.71.42,2.48a13,13,0,0,0,3.6,6.94A4.71,4.71,0,0,1,25.55,24.11Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Spotify ]-->
+    <b:includable id='svg.spotify'>
+      <svg viewBox='0 0 32 32'><g><path d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/><path d='M20.24,20.15a11,11,0,0,0-4.63-1.59,10.48,10.48,0,0,0-4.81.6A1,1,0,0,0,11.49,21a8.53,8.53,0,0,1,3.91-.49,9,9,0,0,1,3.79,1.3,1,1,0,0,0,1.38-.33A1,1,0,0,0,20.24,20.15Z'/><path d='M21.88,16.39a13.89,13.89,0,0,0-6-2.06,13.47,13.47,0,0,0-6.2.78,1,1,0,0,0,.7,1.88,11.62,11.62,0,0,1,5.29-.68,12.07,12.07,0,0,1,5.12,1.78,1,1,0,0,0,.53.15,1,1,0,0,0,.52-1.85Z'/><path d='M23.53,12.61a17.31,17.31,0,0,0-7.31-2.52,16.59,16.59,0,0,0-7.57,1,1,1,0,1,0,.7,1.88A14.73,14.73,0,0,1,16,12.08a15.26,15.26,0,0,1,6.45,2.23,1,1,0,0,0,.53.15,1,1,0,0,0,.85-.47A1,1,0,0,0,23.53,12.61Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Telegram icon ]-->
+    <b:includable id='svg.telegram'>
+      <svg viewBox='0 0 32 32'><path d='M24,28a1,1,0,0,1-.62-.22l-6.54-5.23a1.83,1.83,0,0,1-.13.16l-4,4a1,1,0,0,1-1.65-.36L8.2,18.72,2.55,15.89a1,1,0,0,1,.09-1.82l26-10a1,1,0,0,1,1,.17,1,1,0,0,1,.33,1l-5,22a1,1,0,0,1-.65.72A1,1,0,0,1,24,28Zm-8.43-9,7.81,6.25L27.61,6.61,5.47,15.12l4,2a1,1,0,0,1,.49.54l2.45,6.54,2.89-2.88-1.9-1.53A1,1,0,0,1,13,19a1,1,0,0,1,.35-.78l7-6a1,1,0,1,1,1.3,1.52Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | TelegramR ]-->
+    <b:includable id='svg.telegram-r'>
+      <svg viewBox='0 0 64 64'><path d='M56.4,8.2l-51.2,20c-1.7,0.6-1.6,3,0.1,3.5l9.7,2.9c2.1,0.6,3.8,2.2,4.4,4.3l3.8,12.1c0.5,1.6,2.5,2.1,3.7,0.9 l5.2-5.3c0.9-0.9,2.2-1,3.2-0.3l11.5,8.4c1.6,1.2,3.9,0.3,4.3-1.7l8.7-41.8C60.4,9.1,58.4,7.4,56.4,8.2z M50,17.4L29.4,35.6 c-1.1,1-1.9,2.4-2,3.9c-0.2,1.5-2.3,1.7-2.8,0.3l-0.9-3c-0.7-2.2,0.2-4.5,2.1-5.7l23.5-14.6C49.9,16.1,50.5,16.9,50,17.4z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Tiktok ]-->
+    <b:includable id='svg.tiktok'>
+      <svg viewBox='0 0 32 32'><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/><path class='c' d='M22,12a3,3,0,0,1-3-3,1,1,0,0,0-2,0V19a3,3,0,1,1-3-3,1,1,0,0,0,0-2,5,5,0,1,0,5,5V13a4.92,4.92,0,0,0,3,1,1,1,0,0,0,0-2Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Tumblr ]-->
+    <b:includable id='svg.tumblr'>
+      <svg viewBox='0 0 32 32'><path d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/><path class='c' d='M20,19a1,1,0,0,0-1,1,1,1,0,0,1-1,1H17a1,1,0,0,1-1-1V15h3a1,1,0,0,0,0-2H16V10a1,1,0,0,0-2,0v3H12a1,1,0,0,0,0,2h2v5a3,3,0,0,0,3,3h1a3,3,0,0,0,3-3A1,1,0,0,0,20,19Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Line ]-->
+    <b:includable id='svg.line'>
+      <svg viewBox='0 0 32 32'><path d='M16,2C8.28,2,2,7.38,2,14c0,5.48,4.34,10.24,10.44,11.6L12,28.87a1,1,0,0,0,.37.91A1,1,0,0,0,13,30a1,1,0,0,0,.35-.06C14,29.68,30,23.58,30,14,30,7.38,23.72,2,16,2ZM14.22,27.4l.33-2.47a1,1,0,0,0-.83-1.12C8.09,22.91,4,18.78,4,14,4,8.49,9.38,4,16,4S28,8.49,28,14C28,20.61,18.14,25.66,14.22,27.4Z'/><path class='c' d='M10,15.25H8.75V12a.75.75,0,0,0-1.5,0v4a.76.76,0,0,0,.75.75h2a.75.75,0,0,0,0-1.5Z'/><path class='c' d='M24,12.75a.75.75,0,0,0,0-1.5H22a.76.76,0,0,0-.75.75v4a.76.76,0,0,0,.75.75h2a.75.75,0,0,0,0-1.5H22.75v-.5H24a.75.75,0,0,0,0-1.5H22.75v-.5Z'/><path class='c' d='M13,11.25a.76.76,0,0,0-.75.75v4a.75.75,0,0,0,1.5,0V12A.76.76,0,0,0,13,11.25Z'/><path class='c' d='M19,11.25a.76.76,0,0,0-.75.75v1.75l-1.65-2.2a.75.75,0,0,0-1.35.45v4a.75.75,0,0,0,1.5,0V14.25l1.65,2.2a.75.75,0,0,0,.6.3.67.67,0,0,0,.24,0,.75.75,0,0,0,.51-.71V12A.76.76,0,0,0,19,11.25Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | LineR ]-->
+    <b:includable id='svg.line-r'>
+      <svg viewBox='0 0 24 24'><path d='M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314'/></svg>
+    </b:includable>
+
+    <!--[ svg | Youtube ]-->
+    <b:includable id='svg.youtube'>
+      <svg viewBox='0 0 32 32'><path d='M29.73,9.9A5,5,0,0,0,25.1,5.36a115.19,115.19,0,0,0-18.2,0A5,5,0,0,0,2.27,9.9a69,69,0,0,0,0,12.2A5,5,0,0,0,6.9,26.64c3,.24,6.06.36,9.1.36s6.08-.12,9.1-.36a5,5,0,0,0,4.63-4.54A69,69,0,0,0,29.73,9.9Zm-2,12A3,3,0,0,1,25,24.65a113.8,113.8,0,0,1-17.9,0,3,3,0,0,1-2.78-2.72,65.26,65.26,0,0,1,0-11.86A3,3,0,0,1,7.05,7.35C10,7.12,13,7,16,7s6,.12,9,.35a3,3,0,0,1,2.78,2.72A65.26,65.26,0,0,1,27.73,21.93Z'/><path class='c' d='M21.45,15.11l-8-4A1,1,0,0,0,12,12v8a1,1,0,0,0,.47.85A1,1,0,0,0,13,21a1,1,0,0,0,.45-.11l8-4a1,1,0,0,0,0-1.78ZM14,18.38V13.62L18.76,16Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | LinkedIn ]-->
+    <b:includable id='svg.linkedIn'>
+      <svg viewBox='0 0 32 32'><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/><path class='c' d='M11,14a1,1,0,0,0-1,1v6a1,1,0,0,0,2,0V15A1,1,0,0,0,11,14Z'/><path class='c' d='M19,13a4,4,0,0,0-4,4v4a1,1,0,0,0,2,0V17a2,2,0,0,1,4,0v4a1,1,0,0,0,2,0V17A4,4,0,0,0,19,13Z'/><circle class='c' cx='11' cy='11' r='1'/></svg>
+    </b:includable>
+
+    <!--[ svg | LinkedInR ]-->
+    <b:includable id='svg.linkedIn-r'>
+      <svg viewBox='0 0 64 64'><path d='M8,54.7C8,55.4,8.6,56,9.3,56h9.3c0.7,0,1.3-0.6,1.3-1.3V23.9c0-0.7-0.6-1.3-1.3-1.3H9.3 c-0.7,0-1.3,0.6-1.3,1.3V54.7z'/><path d='M46.6,22.3c-4.5,0-7.7,1.8-9.4,3.7c-0.4,0.4-1.1,0.1-1.1-0.5l0-1.6c0-0.7-0.6-1.3-1.3-1.3h-9.4 c-0.7,0-1.3,0.6-1.3,1.3c0.1,5.7,0,25.4,0,30.7c0,0.7,0.6,1.3,1.3,1.3h9.5c0.7,0,1.3-0.6,1.3-1.3V37.9c0-1,0-2,0.3-2.7 c0.8-2,2.6-4.1,5.7-4.1c4.1,0,6,3.1,6,7.6v15.9c0,0.7,0.6,1.3,1.3,1.3h9.3c0.7,0,1.3-0.6,1.3-1.3V37.4C60,27.1,54.1,22.3,46.6,22.3 z'/><path d='M13.9,18.9L13.9,18.9c3.8,0,6.1-2.4,6.1-5.4C19.9,10.3,17.7,8,14,8c-3.7,0-6,2.3-6,5.4 C8,16.5,10.3,18.9,13.9,18.9z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Whatsapp ]-->
+    <b:includable id='svg.whatsapp'>
+      <svg viewBox='0 0 32 32'><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'/><path class='c' d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | WhatsappR ]-->
+    <b:includable id='svg.whatsapp-r'>
+      <svg viewBox='0 0 64 64'><path d='M6.9,48.4c-0.4,1.5-0.8,3.3-1.3,5.2c-0.7,2.9,1.9,5.6,4.8,4.8l5.1-1.3c1.7-0.4,3.5-0.2,5.1,0.5 c4.7,2.1,10,3,15.6,2.1c12.3-1.9,22-11.9,23.5-24.2C62,17.3,46.7,2,28.5,4.2C16.2,5.7,6.2,15.5,4.3,27.8c-0.8,5.6,0,10.9,2.1,15.6 C7.1,44.9,7.3,46.7,6.9,48.4z M21.3,19.8c0.6-0.5,1.4-0.9,1.8-0.9s2.3-0.2,2.9,1.2c0.6,1.4,2,4.7,2.1,5.1c0.2,0.3,0.3,0.7,0.1,1.2 c-0.2,0.5-0.3,0.7-0.7,1.1c-0.3,0.4-0.7,0.9-1,1.2c-0.3,0.3-0.7,0.7-0.3,1.4c0.4,0.7,1.8,2.9,3.8,4.7c2.6,2.3,4.9,3,5.5,3.4 c0.7,0.3,1.1,0.3,1.5-0.2c0.4-0.5,1.7-2,2.2-2.7c0.5-0.7,0.9-0.6,1.6-0.3c0.6,0.2,4,1.9,4.7,2.2c0.7,0.3,1.1,0.5,1.3,0.8 c0.2,0.3,0.2,1.7-0.4,3.2c-0.6,1.6-2.1,3.1-3.2,3.5c-1.3,0.5-2.8,0.7-9.3-1.9c-7-2.8-11.8-9.8-12.1-10.3c-0.3-0.5-2.8-3.7-2.8-7.1 C18.9,22.1,20.7,20.4,21.3,19.8z'/></svg>
+    </b:includable>
+
+    <!--[ svg | MailR ]-->
+    <b:includable id='svg.mail-r'>
+      <svg viewBox='0 0 500 500'><path d='M468.051,222.657c0-12.724-5.27-24.257-13.717-32.527 L282.253,45.304c-17.811-17.807-46.702-17.807-64.505,0L45.666,190.129c-8.448,8.271-13.717,19.803-13.717,32.527v209.054 c0,20.079,16.264,36.341,36.34,36.341h363.421c20.078,0,36.34-16.262,36.34-36.341V222.657z M124.621,186.402h250.758 c11.081,0,19.987,8.905,19.987,19.991v34.523c-0.088,4.359-1.818,8.631-5.181,11.997l-55.966,56.419l83.224,83.127 c6.904,6.904,6.904,18.081,0,24.985s-18.085,6.904-24.985,0l-85.676-85.672H193.034l-85.492,85.672 c-6.907,6.904-18.081,6.904-24.985,0c-6.906-6.904-6.906-18.081,0-24.985l83.131-83.127l-55.875-56.419 c-3.638-3.638-5.363-8.358-5.181-13.177v-33.343C104.632,195.307,113.537,186.402,124.621,186.402z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Pinterest ]-->
+    <b:includable id='svg.pinterest'>
+      <svg viewBox='0 0 32 32'><path d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26a12,12,0,0,1-3.81-.63l1.2-4.81A7.93,7.93,0,0,0,16,23a8.36,8.36,0,0,0,1.4-.12,8,8,0,1,0-9.27-6.49,1,1,0,0,0,2-.35,6,6,0,1,1,3.79,4.56L15,16.24A1,1,0,1,0,13,15.76l-2.7,10.81A12,12,0,1,1,16,28Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | PinterestR ]-->
+    <b:includable id='svg.pinterest-r'>
+      <svg viewBox='0 0 64 64'><path d='M14.4,53.8c2.4,2,6.1,0.6,6.8-2.4l0-0.1c0.4-1.8,2.4-10.2,3.2-13.7c0.2-0.9,0.2-1.8-0.1-2.7 C24.2,34,24,32.8,24,31.5c0-4.1,2.4-7.2,5.4-7.2c2.5,0,3.8,1.9,3.8,4.2c0,2.6-1.6,6.4-2.5,9.9c-0.7,3,1.5,5.4,4.4,5.4 c5.3,0,8.9-6.8,8.9-14.9c0-6.1-4.1-10.7-11.6-10.7c-8.5,0-13.8,6.3-13.8,13.4c0,2.4,0.7,4.2,1.8,5.5c0.5,0.6,0.6,0.9,0.4,1.6 c-0.1,0.5-0.4,1.8-0.6,2.2c-0.2,0.7-0.8,1-1.4,0.7c-3.9-1.6-5.7-5.9-5.7-10.7c0-8,6.7-17.5,20-17.5c10.7,0,17.7,7.7,17.7,16 c0,11-6.1,19.2-15.1,19.2c-1.9,0-3.8-0.7-5.2-1.6c-0.9-0.6-2.1-0.1-2.4,0.9c-0.5,1.9-1.1,4.3-1.3,4.9c-0.1,0.5-0.3,0.9-0.4,1.4 c-1,2.7,0.9,5.5,3.7,5.7c2.1,0.1,4.2,0,6.3-0.3c12.4-2,22.1-12.2,23.4-24.7C61.5,18.1,48.4,4,32,4C16.5,4,4,16.5,4,32 C4,40.8,8.1,48.6,14.4,53.8z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Reddit ]-->
+    <b:includable id='svg.reddit'>
+      <svg viewBox='0 0 32 32'><g><path d='M25,10a5,5,0,0,0-2.43.64A13.54,13.54,0,0,0,16.38,9l1.28-3.83,3.1.78A1,1,0,0,0,21.24,4l-4-1a1,1,0,0,0-1.19.65L14.24,9.11a13.43,13.43,0,0,0-4.81,1.53A5,5,0,0,0,4,19v0c0,5.51,5.38,10,12,10s12-4.49,12-10v0a5,5,0,0,0-3-9Zm1.47,7.59a1,1,0,0,0-.5.94v.16c0,.1,0,.21,0,.31,0,4.41-4.49,8-10,8S6,23.41,6,19c0-.11,0-.21,0-.32v-.14a1,1,0,0,0-.5-.95A3,3,0,0,1,7,12a3,3,0,0,1,1.79.61,1,1,0,0,0,1.13.06A11.57,11.57,0,0,1,16,11a11.57,11.57,0,0,1,6.08,1.67,1,1,0,0,0,1.13-.06A3,3,0,0,1,25,12a3,3,0,0,1,3,3A3,3,0,0,1,26.47,17.59Z'/><circle cx='11.5' cy='16.5' r='1.5'/><circle cx='20.5' cy='16.5' r='1.5'/><path d='M18.25,21.34A3.24,3.24,0,0,1,16,22a3.24,3.24,0,0,1-2.25-.66,1,1,0,1,0-1.5,1.32A5.06,5.06,0,0,0,16,24a5,5,0,0,0,3.75-1.34,1,1,0,0,0-1.5-1.32Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Quora ]-->
+    <b:includable id='svg.quora'>
+      <svg viewBox='0 0 32 32'><g><path d='M28.32,25.05a1,1,0,0,0-1.27.63l-.2.6a2.51,2.51,0,0,1-4.75.06l-.25-.68A13.32,13.32,0,0,0,27,15C27,7.83,21.62,2,15,2S3,7.83,3,15,8.38,28,15,28a11.1,11.1,0,0,0,5.11-1.26l.11.29a4.52,4.52,0,0,0,8.53-.12l.2-.59A1,1,0,0,0,28.32,25.05ZM15,26C9.49,26,5,21.07,5,15S9.49,4,15,4,25,8.93,25,15a11.39,11.39,0,0,1-3.87,8.67l-.78-2.14A8.75,8.75,0,0,0,14.24,16,1,1,0,0,0,13.76,18a6.75,6.75,0,0,1,4.71,4.25l1,2.63A9.22,9.22,0,0,1,15,26Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Dribble ]-->
+    <b:includable id='svg.dribble'>
+      <svg viewBox='0 0 32 32'><g><path d='M30,16A14,14,0,1,0,16,30a16,16,0,0,0,1.7-.11A1.09,1.09,0,0,0,18,30a1,1,0,0,0,.59-.21A14,14,0,0,0,30,16Zm-2.63,3.8a14,14,0,0,0-6.56-2.67,22.26,22.26,0,0,0-1-4.37,14,14,0,0,0,5.47-4.41A11.92,11.92,0,0,1,27.37,19.8ZM23.79,6.89a11.86,11.86,0,0,1-4.77,4,22,22,0,0,0-4.78-6.74A12.79,12.79,0,0,1,16,4,11.89,11.89,0,0,1,23.79,6.89ZM11.93,4.73l0,0a20,20,0,0,1,5.19,6.82A12.13,12.13,0,0,1,14,12,11.9,11.9,0,0,1,6.2,9.1,12,12,0,0,1,11.93,4.73ZM4,16a12,12,0,0,1,1.17-5.14A14,14,0,0,0,14,14a14,14,0,0,0,3.89-.55A19.5,19.5,0,0,1,18.77,17,14,14,0,0,0,7,23.86,11.89,11.89,0,0,1,4,16Zm4.44,9.31A12,12,0,0,1,19,19c0,.33,0,.67,0,1a19.68,19.68,0,0,1-1.64,7.92A12.12,12.12,0,0,1,16,28,11.94,11.94,0,0,1,8.44,25.31ZM19.72,27.4A21.73,21.73,0,0,0,21,20c0-.28,0-.55,0-.83a12,12,0,0,1,5.58,2.52A12.06,12.06,0,0,1,19.72,27.4Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Behance ]-->
+    <b:includable id='svg.behance'>
+      <svg viewBox='0 0 32 32'><g><path d='M13.09,15.65A5.49,5.49,0,0,0,9.5,6H3A1,1,0,0,0,2,7V25a1,1,0,0,0,1,1h7.5a5.5,5.5,0,0,0,2.59-10.35ZM4,8H9.5a3.5,3.5,0,0,1,0,7H4Zm6.5,16H4V17h6.5a3.5,3.5,0,0,1,0,7Z'/><path d='M23.5,13a6.5,6.5,0,0,0,0,13c4.05,0,5.33-2.26,5.38-2.35a1,1,0,0,0-.4-1.36,1,1,0,0,0-1.36.4S26.28,24,23.5,24a4.5,4.5,0,0,1-4.38-3.5H29a1,1,0,0,0,1-1A6.51,6.51,0,0,0,23.5,13Zm0,2a4.5,4.5,0,0,1,4.38,3.5H19.12A4.5,4.5,0,0,1,23.5,15Z'/><path d='M21,11h6a1,1,0,0,0,0-2H21a1,1,0,0,0,0,2Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Soundcloud ]-->
+    <b:includable id='svg.soundcloud'>
+      <svg viewBox='0 0 32 32'><g><path d='M11,8a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V9A1,1,0,0,0,11,8Z'/><path d='M7,12a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V13A1,1,0,0,0,7,12Z'/><path d='M3,16a1,1,0,0,0-1,1v6a1,1,0,0,0,2,0V17A1,1,0,0,0,3,16Z'/><path d='M25,14h-.26A8.05,8.05,0,0,0,17,8H15a1,1,0,0,0-1,1V23a1,1,0,0,0,1,1H25a5,5,0,0,0,0-10Zm0,8H16V10h1a6,6,0,0,1,5.93,5.14,1,1,0,0,0,1,.86H25a3,3,0,0,1,0,6Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Messenger ]-->
+    <b:includable id='svg.messenger'>
+      <svg viewBox='0 0 32 32'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'/><path d='M21.4,13.2l-3.31,2.48-3.38-3.39a1,1,0,0,0-1.31-.09l-4,3a1,1,0,1,0,1.2,1.6l3.31-2.48,3.38,3.39a1,1,0,0,0,1.31.09l4-3a1,1,0,1,0-1.2-1.6Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Github ]-->
+    <b:includable id='svg.github'>
+      <svg viewBox='0 0 24 24'><path d='M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/></svg>
+    </b:includable>
+
+    <!--[ svg | Skype ]-->
+    <b:includable id='svg.skype'>
+      <svg viewBox='0 0 32 32'><g><path d='M28.66,18.89A12.52,12.52,0,0,0,29,16,13,13,0,0,0,16,3a12.52,12.52,0,0,0-2.89.34,7,7,0,0,0-9.77,9.77A12.52,12.52,0,0,0,3,16,13,13,0,0,0,16,29a12.52,12.52,0,0,0,2.89-.34,7,7,0,0,0,9.77-9.77ZM23,28a5,5,0,0,1-3.23-1.19,1,1,0,0,0-.65-.23l-.26,0A11,11,0,0,1,5.39,13.14a1,1,0,0,0-.2-.91,5,5,0,0,1,7-7,1,1,0,0,0,.91.2A11,11,0,0,1,26.61,18.86a1,1,0,0,0,.2.91A5,5,0,0,1,23,28Z'/><path d='M14.5,12H18a1,1,0,0,1,1,1,1,1,0,0,0,2,0,3,3,0,0,0-3-3H14.5a3.5,3.5,0,0,0,0,7h3a1.5,1.5,0,0,1,0,3H14a1,1,0,0,1-1-1,1,1,0,0,0-2,0,3,3,0,0,0,3,3h3.5a3.5,3.5,0,0,0,0-7h-3a1.5,1.5,0,0,1,0-3Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Circle icon ]-->
+    <b:includable id='circle-icon'>
+      <svg viewBox='0 0 32 32'><path d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/><path class='c' d='M16,9.5A6.5,6.5,0,1,0,22.5,16,6.51,6.51,0,0,0,16,9.5Zm0,11A4.5,4.5,0,1,1,20.5,16,4.51,4.51,0,0,1,16,20.5Z'/></svg>
+    </b:includable>
+
+    <!--[ Home alt icon ]-->
+    <b:includable id='home-alt-icon'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(2.400000, 2.000000)'><path d='M1.24344979e-14,11.713 C1.24344979e-14,6.082 0.614,6.475 3.919,3.41 C5.365,2.246 7.615,0 9.558,0 C11.5,0 13.795,2.235 15.254,3.41 C18.559,6.475 19.172,6.082 19.172,11.713 C19.172,20 17.213,20 9.586,20 C1.959,20 1.24344979e-14,20 1.24344979e-14,11.713 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Document icon ]-->
+    <b:includable id='document-icon'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(3.610000, 2.750100)'><line class='c' x1='11.9858' x2='4.7658' y1='12.9463' y2='12.9463'/><line class='c' x1='11.9858' x2='4.7658' y1='9.1865' y2='9.1865'/><line class='c' x1='7.521' x2='4.766' y1='5.4272' y2='5.4272'/><path d='M7.63833441e-14,9.25 C7.63833441e-14,16.187 2.098,18.5 8.391,18.5 C14.685,18.5 16.782,16.187 16.782,9.25 C16.782,2.313 14.685,0 8.391,0 C2.098,0 7.63833441e-14,2.313 7.63833441e-14,9.25 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Buy icon ]-->
+    <b:includable id='buy-icon'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(3.650200, 2.850200)'><path d='M2.044,3.58024493 C7.3705141,2.243 13.9926469,2.32498848 15.5231061,4.06777179 C17.0535652,5.8105551 17.0220031,11.638 15.2330031,13.237 C13.4450031,14.836 5.68,14.988 3.22,13.237 C0.621,11.386 2.129,5.692 2.044,2.243 C2.095,0.313 -1.13686838e-13,0 -1.13686838e-13,0'/><line class='c' x1='10.5059' x2='13.2789' y1='7.8696' y2='7.8696'/><path class='c' d='M3.6138,17.2773 C3.9138,17.2773 4.1578,17.5213 4.1578,17.8213 C4.1578,18.1223 3.9138,18.3663 3.6138,18.3663 C3.3128,18.3663 3.0688,18.1223 3.0688,17.8213 C3.0688,17.5213 3.3128,17.2773 3.6138,17.2773 Z'/><path class='c' d='M13.9453,17.2773 C14.2463,17.2773 14.4903,17.5213 14.4903,17.8213 C14.4903,18.1223 14.2463,18.3663 13.9453,18.3663 C13.6453,18.3663 13.4013,18.1223 13.4013,17.8213 C13.4013,17.5213 13.6453,17.2773 13.9453,17.2773 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Plus icon ]-->
+    <b:includable id='plus-icon'>
+      <svg viewBox='0 0 512 512'><path d='M417.4,224H288V94.6c0-16.9-14.3-30.6-32-30.6c-17.7,0-32,13.7-32,30.6V224H94.6C77.7,224,64,238.3,64,256 c0,17.7,13.7,32,30.6,32H224v129.4c0,16.9,14.3,30.6,32,30.6c17.7,0,32-13.7,32-30.6V288h129.4c16.9,0,30.6-14.3,30.6-32 C448,238.3,434.3,224,417.4,224z'/></svg>
+    </b:includable>
+
+    <!--[ Moon icon ]-->
+    <b:includable id='moon-sun-icon'>
+      <svg class='line' viewBox='0 0 24 24'>
+        <g class='d1'><path d='M183.72453,170.371a10.4306,10.4306,0,0,1-.8987,3.793,11.19849,11.19849,0,0,1-5.73738,5.72881,10.43255,10.43255,0,0,1-3.77582.89138,1.99388,1.99388,0,0,0-1.52447,3.18176,10.82936,10.82936,0,1,0,15.118-15.11819A1.99364,1.99364,0,0,0,183.72453,170.371Z' transform='translate(-169.3959 -166.45548)'/></g>
+        <g class='d2'><path d='M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z'/><path class='c' d='M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z' stroke-width='2'/></g></svg>
+    </b:includable>
+
+    <!--[ Sun icon ]-->
+    <b:includable id='sun-moon-icon'>
+      <svg class='line' viewBox='0 0 24 24'>
+        <g class='d1'><path d='M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z'/><path class='c' d='M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z' stroke-width='2'/></g>
+        <g class='d2'><path d='M183.72453,170.371a10.4306,10.4306,0,0,1-.8987,3.793,11.19849,11.19849,0,0,1-5.73738,5.72881,10.43255,10.43255,0,0,1-3.77582.89138,1.99388,1.99388,0,0,0-1.52447,3.18176,10.82936,10.82936,0,1,0,15.118-15.11819A1.99364,1.99364,0,0,0,183.72453,170.371Z' transform='translate(-169.3959 -166.45548)'/></g></svg>
+    </b:includable>
+
+    <!--[ Chat icon ]-->
+    <b:includable id='chat-icon'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(2.000000, 2.000000)'><path d='M17.0710351,17.0698449 C14.0159481,20.1263505 9.48959549,20.7867004 5.78630747,19.074012 C5.23960769,18.8538953 1.70113357,19.8338667 0.933341969,19.0669763 C0.165550368,18.2990808 1.14639409,14.7601278 0.926307229,14.213354 C-0.787154393,10.5105699 -0.125888852,5.98259958 2.93020311,2.9270991 C6.83146881,-0.9756997 13.1697694,-0.9756997 17.0710351,2.9270991 C20.9803405,6.8359285 20.9723008,13.1680512 17.0710351,17.0698449 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Menu icon ]-->
+    <b:includable id='menu-icon'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(3.000000, 3.000000)'><path d='M18.00036,3.6738 C18.00036,5.7024 16.35516,7.3476 14.32656,7.3476 C12.29796,7.3476 10.65366,5.7024 10.65366,3.6738 C10.65366,1.6452 12.29796,-6.39488462e-15 14.32656,-6.39488462e-15 C16.35516,-6.39488462e-15 18.00036,1.6452 18.00036,3.6738 Z'/><path class='c' d='M7.3467,3.6738 C7.3467,5.7024 5.7024,7.3476 3.6729,7.3476 C1.6452,7.3476 4.79616347e-15,5.7024 4.79616347e-15,3.6738 C4.79616347e-15,1.6452 1.6452,-6.39488462e-15 3.6729,-6.39488462e-15 C5.7024,-6.39488462e-15 7.3467,1.6452 7.3467,3.6738 Z'/><path class='c' d='M18.00036,14.26194 C18.00036,16.29054 16.35516,17.93484 14.32656,17.93484 C12.29796,17.93484 10.65366,16.29054 10.65366,14.26194 C10.65366,12.23334 12.29796,10.58814 14.32656,10.58814 C16.35516,10.58814 18.00036,12.23334 18.00036,14.26194 Z'/><path d='M7.3467,14.26194 C7.3467,16.29054 5.7024,17.93484 3.6729,17.93484 C1.6452,17.93484 4.79616347e-15,16.29054 4.79616347e-15,14.26194 C4.79616347e-15,12.23334 1.6452,10.58814 3.6729,10.58814 C5.7024,10.58814 7.3467,12.23334 7.3467,14.26194 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ Link icon ]-->
+    <b:includable id='link-icon'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M13 11L21.2 2.80005'/><path class='c' d='M22 6.8V2H17.2'/><path d='M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13'/></svg>
+    </b:includable>
+
+    <!--[ Tag icon ]-->
+    <b:includable id='tag-icon'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M4.16989 15.3L8.69989 19.83C10.5599 21.69 13.5799 21.69 15.4499 19.83L19.8399 15.44C21.6999 13.58 21.6999 10.56 19.8399 8.69005L15.2999 4.17005C14.3499 3.22005 13.0399 2.71005 11.6999 2.78005L6.69989 3.02005C4.69989 3.11005 3.10989 4.70005 3.00989 6.69005L2.76989 11.69C2.70989 13.04 3.21989 14.35 4.16989 15.3Z'/><path class='c' d='M9.5 12C10.8807 12 12 10.8807 12 9.5C12 8.11929 10.8807 7 9.5 7C8.11929 7 7 8.11929 7 9.5C7 10.8807 8.11929 12 9.5 12Z'/></svg>
+    </b:includable>
+
+    <!--[ Link icon alt ]-->
+    <b:includable id='link-alt-icon'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M13.0601 10.9399C15.3101 13.1899 15.3101 16.8299 13.0601 19.0699C10.8101 21.3099 7.17009 21.3199 4.93009 19.0699C2.69009 16.8199 2.68009 13.1799 4.93009 10.9399'/><path class='c' d='M10.59 13.4099C8.24996 11.0699 8.24996 7.26988 10.59 4.91988C12.93 2.56988 16.73 2.57988 19.08 4.91988C21.43 7.25988 21.42 11.0599 19.08 13.4099'/></svg>
+    </b:includable>
+
+    <!--[ Location icon ]-->
+    <b:includable id='location-icon'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M12 13.4299C13.7231 13.4299 15.12 12.0331 15.12 10.3099C15.12 8.58681 13.7231 7.18994 12 7.18994C10.2769 7.18994 8.88 8.58681 8.88 10.3099C8.88 12.0331 10.2769 13.4299 12 13.4299Z'/><path d='M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Archive ]-->
+    <b:includable id='svg.archive'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArchiveAdd ]-->
+    <b:includable id='svg.archive-add'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c h' d='M14.5 10.6499H9.5' stroke-miterlimit='10'/><path class='c v' d='M12 8.20996V13.21' stroke-miterlimit='10'/><path d='M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArchiveAddTick ]-->
+    <b:includable id='svg.archive-add-tick'>
+      <svg class='line' viewBox='0 0 24 24'><path class='a h c' d='M14.5 10.6499H9.5' stroke-miterlimit='10'/><path class='a v c' d='M12 8.20996V13.21' stroke-miterlimit='10'/><path d='M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z'/><path class='t' d='M9.58997 11L11.09 12.5L15.09 8.5'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowDownNarrowWide ]-->
+    <b:includable id='svg.arrow-down-narrow-wide'>
+      <svg class='line' viewBox='0 0 24 24'><path d='m3 16 4 4 4-4'/><path d='M7 20V4'/><path class='c' d='M11 4h4'/><path class='c' d='M11 8h7'/><path class='c' d='M11 12h10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowLeft ]-->
+    <b:includable id='svg.arrow-left'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M9.57 5.92993L3.5 11.9999L9.57 18.0699' stroke-miterlimit='10'/><path d='M20.5 12H3.67004' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowLeft2 ]-->
+    <b:includable id='svg.arrow-left-2'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M15 19.9201L8.47997 13.4001C7.70997 12.6301 7.70997 11.3701 8.47997 10.6001L15 4.08008' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowLeft4 ]-->
+    <b:includable id='svg.arrow-left-4'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)'><polyline points='14 0 7 7 0 0'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowRight ]-->
+    <b:includable id='svg.arrow-right'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M14.4301 5.92993L20.5001 11.9999L14.4301 18.0699' stroke-miterlimit='10'/><path d='M3.5 12H20.33' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowRight2 ]-->
+    <b:includable id='svg.arrow-right-2'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowRight4 ]-->
+    <b:includable id='svg.arrow-right-4'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)'><polyline points='14 0 7 7 0 0'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowSwapHorizontal ]-->
+    <b:includable id='svg.arrow-swap-horizontal'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M20.5 14.99L15.49 20.01' stroke-miterlimit='10'/><path d='M3.5 14.99H20.5' stroke-miterlimit='10'/><path class='c' d='M3.5 9.00999L8.51 3.98999' stroke-miterlimit='10'/><path class='c' d='M20.5 9.01001H3.5' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | ArrowUp4 ]-->
+    <b:includable id='svg.arow-up-4'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(2.500000, 3.000000)'><path d='M9.5,18 C3.00557739,18 0.456662548,17.5386801 0.0435259337,15.2033146 C-0.36961068,12.8679491 2.27382642,8.47741935 3.08841712,7.02846996 C5.81256986,2.18407813 7.66371927,0 9.5,0 C11.3362807,0 13.1874301,2.18407813 15.9115829,7.02846996 C16.7261736,8.47741935 19.3696107,12.8679491 18.9564741,15.2033146 C18.5443995,17.5386801 15.9944226,18 9.5,18 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Clipboard1 ]-->
+    <b:includable id='svg.clipboard-1'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><rect class='c' height='4' rx='1' ry='1' width='8' x='8' y='2'/></svg>
+    </b:includable>
+
+    <!--[ svg | Copy ]-->
+    <b:includable id='svg.close'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999'/></svg>
+    </b:includable>
+
+    <!--[ svg | Copy ]-->
+    <b:includable id='svg.copy'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M16 12.9V17.1C16 20.6 14.6 22 11.1 22H6.9C3.4 22 2 20.6 2 17.1V12.9C2 9.4 3.4 8 6.9 8H11.1C14.6 8 16 9.4 16 12.9Z'/><path d='M22 6.9V11.1C22 14.6 20.6 16 17.1 16H16V12.9C16 9.4 14.6 8 11.1 8H8V6.9C8 3.4 9.4 2 12.9 2H17.1C20.6 2 22 3.4 22 6.9Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Delete1 ]-->
+    <b:includable id='svg.delete-1'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z'/><path class='c' d='m12 9 6 6'/><path class='c' d='m18 9-6 6'/></svg>
+    </b:includable>
+
+    <!--[ svg | Document ]-->
+    <b:includable id='svg.document'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z'/><path d='M15.75 9H8.25'/><path d='M15.75 15H8.25'/></svg>
+    </b:includable>
+
+    <!--[ svg | DocumentText ]-->
+    <b:includable id='svg.document-text'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z' stroke-miterlimit='10'/><path d='M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5' stroke-miterlimit='10'/><path d='M8 13H12' stroke-miterlimit='10'/><path d='M8 17H16' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Download ]-->
+    <b:includable id='svg.download'>
+      <svg class='line' viewBox='0 0 24 24'><polyline class='c' points='8 17 12 21 16 17'/><line class='c' x1='12' x2='12' y1='12' y2='21'/><path d='M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29'/></svg>
+    </b:includable>
+
+    <!--[ svg | Download1 ]-->
+    <b:includable id='svg.download-1'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(2.000000, 2.000000)'><line class='c' x1='9.8791' x2='9.8791' y1='12.791' y2='0.75'/><polyline class='c' points='12.7951 9.8642 9.8791 12.7922 6.9631 9.8642'/><path d='M14.3703,5.2587 C17.9493,5.5887 19.2503,6.9287 19.2503,12.2587 C19.2503,19.3587 16.9393,19.3587 10.0003,19.3587 C3.0593,19.3587 0.7503,19.3587 0.7503,12.2587 C0.7503,6.9287 2.0503,5.5887 5.6303,5.2587'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Edit3 ]-->
+    <b:includable id='svg.edit-3'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(3.500000, 3.500000)'><line class='c' x1='9.8352' x2='16.2122' y1='16.0078' y2='16.0078'/><path d='M12.5578,1.3589 L12.5578,1.3589 C11.2138,0.3509 9.3078,0.6229 8.2998,1.9659 C8.2998,1.9659 3.2868,8.6439 1.5478,10.9609 C-0.1912,13.2789 1.4538,16.1509 1.4538,16.1509 C1.4538,16.1509 4.6978,16.8969 6.4118,14.6119 C8.1268,12.3279 13.1638,5.6169 13.1638,5.6169 C14.1718,4.2739 13.9008,2.3669 12.5578,1.3589 Z'/><line x1='7.0041' x2='11.8681' y1='3.7114' y2='7.3624'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | EmojiHappy ]-->
+    <b:includable id='svg.emoji-happy'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z'/><path class='c' d='M15.5 9.75C16.3284 9.75 17 9.07843 17 8.25C17 7.42157 16.3284 6.75 15.5 6.75C14.6716 6.75 14 7.42157 14 8.25C14 9.07843 14.6716 9.75 15.5 9.75Z' stroke-miterlimit='10'/><path class='c' d='M8.5 9.75C9.32843 9.75 10 9.07843 10 8.25C10 7.42157 9.32843 6.75 8.5 6.75C7.67157 6.75 7 7.42157 7 8.25C7 9.07843 7.67157 9.75 8.5 9.75Z' stroke-miterlimit='10'/><path d='M8.4 13.3H15.6C16.1 13.3 16.5 13.7 16.5 14.2C16.5 16.69 14.49 18.7 12 18.7C9.51 18.7 7.5 16.69 7.5 14.2C7.5 13.7 7.9 13.3 8.4 13.3Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Eye ]-->
+    <b:includable id='svg.eye'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M15.58 12C15.58 13.98 13.98 15.58 12 15.58C10.02 15.58 8.42004 13.98 8.42004 12C8.42004 10.02 10.02 8.42004 12 8.42004C13.98 8.42004 15.58 10.02 15.58 12Z'/><path d='M12 20.27C15.53 20.27 18.82 18.19 21.11 14.59C22.01 13.18 22.01 10.81 21.11 9.39997C18.82 5.79997 15.53 3.71997 12 3.71997C8.46997 3.71997 5.17997 5.79997 2.88997 9.39997C1.98997 10.81 1.98997 13.18 2.88997 14.59C5.17997 18.19 8.46997 20.27 12 20.27Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Flash ]-->
+    <b:includable id='svg.flash'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M6.08998 13.28H9.17998V20.48C9.17998 22.16 10.09 22.5 11.2 21.24L18.77 12.64C19.7 11.59 19.31 10.72 17.9 10.72H14.81V3.52002C14.81 1.84002 13.9 1.50002 12.79 2.76002L5.21998 11.36C4.29998 12.42 4.68998 13.28 6.08998 13.28Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Hierarchy4 ]-->
+    <b:includable id='svg.hierarchy-4'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M6 12H18'/><path d='M18 4H14C12 4 11 5 11 7V17C11 19 12 20 14 20H18'/><path class='c' d='M20 14C21.1046 14 22 13.1046 22 12C22 10.8954 21.1046 10 20 10C18.8954 10 18 10.8954 18 12C18 13.1046 18.8954 14 20 14Z'/><path class='c' d='M20 6C21.1046 6 22 5.10457 22 4C22 2.89543 21.1046 2 20 2C18.8954 2 18 2.89543 18 4C18 5.10457 18.8954 6 20 6Z'/><path class='c' d='M20 22C21.1046 22 22 21.1046 22 20C22 18.8954 21.1046 18 20 18C18.8954 18 18 18.8954 18 20C18 21.1046 18.8954 22 20 22Z'/><path class='c' d='M4 14C5.10457 14 6 13.1046 6 12C6 10.8954 5.10457 10 4 10C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Home ]-->
+    <b:includable id='svg.home'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M12 18V15'/><path d='M10.07 2.81997L3.14002 8.36997C2.36002 8.98997 1.86002 10.3 2.03002 11.28L3.36002 19.24C3.60002 20.66 4.96002 21.81 6.40002 21.81H17.6C19.03 21.81 20.4 20.65 20.64 19.24L21.97 11.28C22.13 10.3 21.63 8.98997 20.86 8.36997L13.93 2.82997C12.86 1.96997 11.13 1.96997 10.07 2.81997Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Folder ]-->
+    <b:includable id='svg.folder'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M22 11V17C22 21 21 22 17 22H7C3 22 2 21 2 17V7C2 3 3 2 7 2H8.5C10 2 10.33 2.44 10.9 3.2L12.4 5.2C12.78 5.7 13 6 14 6H17C21 6 22 7 22 11Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Folder2 ]-->
+    <b:includable id='svg.folder-2'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M8 2H17C19 2 20 3 20 5V6.38' stroke-miterlimit='10'/><path d='M22 11V17C22 21 21 22 17 22H7C3 22 2 21 2 17V7C2 3 3 2 7 2H8.5C10 2 10.33 2.44 10.9 3.2L12.4 5.2C12.78 5.7 13 6 14 6H17C21 6 22 7 22 11Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | FolderFavorite ]-->
+    <b:includable id='svg.folder-favorite'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M9.19997 14.78L11.78 17.04C11.9 17.15 12.09 17.15 12.21 17.04L14.79 14.78C15.46 14.19 15.55 13.19 14.99 12.49C14.43 11.79 13.41 11.66 12.7 12.2L12 12.74L11.29 12.21C10.57 11.67 9.55997 11.8 8.99997 12.5C8.43997 13.19 8.52997 14.2 9.19997 14.78Z'/><path d='M22 11V17C22 21 21 22 17 22H7C3 22 2 21 2 17V7C2 3 3 2 7 2H8.5C10 2 10.33 2.44 10.9 3.2L12.4 5.2C12.78 5.7 13 6 14 6H17C21 6 22 7 22 11Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Link21 ]-->
+    <b:includable id='svg.link-21'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M13.0601 10.9399C15.3101 13.1899 15.3101 16.8299 13.0601 19.0699C10.8101 21.3099 7.17009 21.3199 4.93009 19.0699C2.69009 16.8199 2.68009 13.1799 4.93009 10.9399'/><path class='c' d='M10.59 13.4099C8.24996 11.0699 8.24996 7.26988 10.59 4.91988C12.93 2.56988 16.73 2.57988 19.08 4.91988C21.43 7.25988 21.42 11.0599 19.08 13.4099'/></svg>
+    </b:includable>
+
+    <!--[ svg | Lock2 ]-->
+    <b:includable id='svg.lock-2'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(3.500000, 2.000000)'><path d='M12.9709,7.4033 L12.9709,5.2543 C12.9399,2.7353 10.8719,0.7193 8.3539,0.7503 C5.8869,0.7813 3.8919,2.7673 3.8499,5.2343 L3.8499,7.4033'/><line class='c' x1='8.4103' x2='8.4103' y1='12.1562' y2='14.3772'/><path d='M8.4103,6.8242 C2.6653,6.8242 0.7503,8.3922 0.7503,13.0952 C0.7503,17.7992 2.6653,19.3672 8.4103,19.3672 C14.1553,19.3672 16.0713,17.7992 16.0713,13.0952 C16.0713,8.3922 14.1553,6.8242 8.4103,6.8242 Z'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | MenuHamburger ]-->
+    <b:includable id='svg.menu-hamburger'>
+      <svg class='line' viewBox='0 0 24 24'><polyline class='c' points='2 17 7 12 2 7'/><line x1='8' x2='22' y1='5' y2='5'/><line x1='12' x2='22' y1='12' y2='12'/><line x1='8' x2='22' y1='19' y2='19'/></svg>
+    </b:includable>
+
+    <!--[ svg | MessageNotif1 ]-->
+    <b:includable id='svg.message-notif-1'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M22 10V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H14'/><path class='c' d='M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1193 2 17 3.11929 17 4.5C17 5.88071 18.1193 7 19.5 7Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Profile1 ]-->
+    <b:includable id='svg.profile-1'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z'/><path d='M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22'/></svg>
+    </b:includable>
+
+    <!--[ svg | Profile2User ]-->
+    <b:includable id='svg.profile-2user'>
+      <svg class='line' viewBox='0 0 24 24'><g transform='translate(2.749500, 2.549500)'><path d='M6.809,18.9067 C3.137,18.9067 9.41469125e-14,18.3517 9.41469125e-14,16.1277 C9.41469125e-14,13.9037 3.117,11.8997 6.809,11.8997 C10.481,11.8997 13.617,13.8847 13.617,16.1077 C13.617,18.3307 10.501,18.9067 6.809,18.9067 Z'/><path d='M6.809,8.728 C9.219,8.728 11.173,6.774 11.173,4.364 C11.173,1.954 9.219,-2.48689958e-14 6.809,-2.48689958e-14 C4.399,-2.48689958e-14 2.44496883,1.954 2.44496883,4.364 C2.436,6.766 4.377,8.72 6.778,8.728 L6.809,8.728 Z'/><path class='c' d='M14.0517,7.5293 C15.4547,7.1543 16.4887007,5.8753 16.4887007,4.3533 C16.4897,2.7653 15.3627,1.4393 13.8647,1.1323'/><path class='c' d='M14.7113,11.104 C16.6993,11.104 18.3973,12.452 18.3973,13.655 C18.3973,14.364 17.8123,15.092 16.9223,15.301'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Ranking ]-->
+    <b:includable id='svg.ranking'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M13.3 8.10998L14.62 10.75C14.8 11.11 15.28 11.47 15.68 11.53L18.07 11.93C19.6 12.19 19.96 13.29 18.86 14.39L17 16.25C16.69 16.56 16.51 17.17 16.61 17.61L17.14 19.92C17.56 21.74 16.59 22.45 14.98 21.5L12.74 20.17C12.33 19.93 11.67 19.93 11.26 20.17L9.01996 21.5C7.40996 22.45 6.43995 21.74 6.85995 19.92L7.38998 17.61C7.48998 17.18 7.30997 16.57 6.99997 16.25L5.13998 14.39C4.03998 13.29 4.39996 12.18 5.92996 11.93L8.31997 11.53C8.71997 11.46 9.19997 11.11 9.37997 10.75L10.7 8.10998C11.41 6.67998 12.59 6.67998 13.3 8.10998Z'/><path class='c' d='M6 9V2'/><path class='c' d='M18 9V2'/><path class='c' d='M12 4V2'/></svg>
+    </b:includable>
+
+    <!--[ svg | SearchNormal1 ]-->
+    <b:includable id='svg.search-normal-1'>
+      <svg class='line' viewBox='0 0 24 24'><g><circle cx='11.36167' cy='11.36167' r='9.36167'/><line class='c' x1='22' x2='19.9332' y1='22' y2='19.9332'/></g></svg>
+    </b:includable>
+
+    <!--[ svg | Share1 ]-->
+    <b:includable id='svg.share-1'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z'/><path class='c' d='M10.11 13.6501L13.69 10.0601'/></svg>
+    </b:includable>
+
+    <!--[ svg | Share2 ]-->
+    <b:includable id='svg.share-2'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M92.30583,264.72053a3.42745,3.42745,0,0,1-.37,1.57,3.51,3.51,0,1,1,0-3.13995A3.42751,3.42751,0,0,1,92.30583,264.72053Z' transform='translate(-83.28571 -252.73452)'/><circle class='c' cx='18.48892' cy='5.49436' r='3.51099'/><circle class='c' cx='18.48892' cy='18.50564' r='3.51099'/><line class='cls-3' x1='12.53012' x2='8.65012' y1='8.476' y2='10.416'/><line class='cls-3' x1='12.53012' x2='8.65012' y1='15.496' y2='13.556'/></svg>
+    </b:includable>
+
+    <!--[ svg | SmsEdit ]-->
+    <b:includable id='svg.sms-edit'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M12 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V11.5' stroke-miterlimit='10'/><path d='M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9' stroke-miterlimit='10'/><path class='c' d='M19.21 14.77L15.6701 18.31C15.5301 18.45 15.4 18.71 15.37 18.9L15.18 20.25C15.11 20.74 15.45 21.0801 15.94 21.0101L17.29 20.82C17.48 20.79 17.75 20.66 17.88 20.52L21.4201 16.9801C22.0301 16.3701 22.3201 15.6601 21.4201 14.7601C20.5301 13.8701 19.82 14.16 19.21 14.77Z' stroke-miterlimit='10'/><path class='c' d='M18.7001 15.28C19.0001 16.36 19.8401 17.2 20.9201 17.5' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Speedometer ]-->
+    <b:includable id='svg.speedometer'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M19.14 19.5C20.91 17.7 22 15.22 22 12.5C22 6.98 17.52 2.5 12 2.5C6.48 2.5 2 6.98 2 12.5C2 15.22 3.08 17.68 4.84 19.49' stroke-miterlimit='10'/><path class='c' d='M12 21.5C13.8667 21.5 15.38 19.9867 15.38 18.12C15.38 16.2533 13.8667 14.74 12 14.74C10.1333 14.74 8.62 16.2533 8.62 18.12C8.62 19.9867 10.1333 21.5 12 21.5Z' stroke-miterlimit='10'/><path class='c' d='M15.25 12H16C16.82 12 17.5 11.33 17.5 10.5C17.5 9.68 16.82 9 16 9C15.18 9 14.5 9.67 14.5 10.5V11.25C14.5 11.66 14.84 12 15.25 12Z' stroke-miterlimit='10'/></svg>
+    </b:includable>
+
+    <!--[ svg | Translate ]-->
+    <b:includable id='svg.translate'>
+      <svg class='line' viewBox='0 0 24 24'><path class='c' d='M19.06 18.6699L16.92 14.3999L14.78 18.6699'/><path class='c' d='M15.1699 17.9099H18.6899'/><path d='M16.9201 22.0001C14.1201 22.0001 11.8401 19.73 11.8401 16.92C11.8401 14.12 14.1101 11.8401 16.9201 11.8401C19.7201 11.8401 22.0001 14.11 22.0001 16.92C22.0001 19.73 19.7301 22.0001 16.9201 22.0001Z'/><path d='M5.02 2H8.94C11.01 2 12.01 3.00002 11.96 5.02002V8.94C12.01 11.01 11.01 12.01 8.94 11.96H5.02C3 12 2 11 2 8.92999V5.01001C2 3.00001 3 2 5.02 2Z'/><path class='c' d='M9.00995 5.84985H4.94995'/><path class='c' d='M6.96997 5.16992V5.84991'/><path class='c' d='M7.98994 5.83984C7.98994 7.58984 6.61994 9.00983 4.93994 9.00983'/><path class='c' d='M9.0099 9.01001C8.2799 9.01001 7.61991 8.62 7.15991 8'/><path d='M2 15C2 18.87 5.13 22 9 22L7.95 20.25'/><path d='M22 9C22 5.13 18.87 2 15 2L16.05 3.75'/></svg>
+    </b:includable>
+
+    <!--[ svg | Translate1 ]-->
+    <b:includable id='svg.translate-1'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M.5,2V18A1.5,1.5,0,0,0,2,19.5H17L10.5.5H2A1.5,1.5,0,0,0,.5,2Z'/><path d='M12,4.5H22A1.5,1.5,0,0,1,23.5,6V22A1.5,1.5,0,0,1,22,23.5H13.5l-1.5-4'/><line x1='17' x2='13.5' y1='19.5' y2='23.5'/><line class='c' x1='14.5' x2='21.5' y1='10.5' y2='10.5'/><line class='c' x1='17.5' x2='17.5' y1='9.5' y2='10.5'/><path class='c' d='M20,10.5c0,1.1-1.77,4.42-4,6'/><path class='c' d='M16,13c.54,1.33,4,4.5,4,4.5'/><path class='c' d='M10.1,7.46a4,4,0,1,0,1.4,3h-4'/></svg>
+    </b:includable>
+
+    <!--[ svg | Verify1 ]-->
+    <b:includable id='svg.verify-1'>
+      <svg viewBox='0 0 24 24'><path d='m21.56 10.739-1.36-1.58c-.26-.3-.47-.86-.47-1.26v-1.7c0-1.06-.87-1.93-1.93-1.93h-1.7c-.39 0-.96-.21-1.26-.47l-1.58-1.36c-.69-.59-1.82-.59-2.52 0l-1.57 1.37c-.3.25-.87.46-1.26.46H6.18c-1.06 0-1.93.87-1.93 1.93v1.71c0 .39-.21.95-.46 1.25l-1.35 1.59c-.58.69-.58 1.81 0 2.5l1.35 1.59c.25.3.46.86.46 1.25v1.71c0 1.06.87 1.93 1.93 1.93h1.73c.39 0 .96.21 1.26.47l1.58 1.36c.69.59 1.82.59 2.52 0l1.58-1.36c.3-.26.86-.47 1.26-.47h1.7c1.06 0 1.93-.87 1.93-1.93v-1.7c0-.39.21-.96.47-1.26l1.36-1.58c.58-.69.58-1.83-.01-2.52Zm-5.4-.63-4.83 4.83a.75.75 0 0 1-1.06 0l-2.42-2.42a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l1.89 1.89 4.3-4.3c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06Z'/></svg>
+    </b:includable>
+
+    <!--[ svg | Warning2 ]-->
+    <b:includable id='svg.warning-2'>
+      <svg class='line' viewBox='0 0 24 24'><path d='M21.08 8.58003V15.42C21.08 16.54 20.48 17.58 19.51 18.15L13.57 21.58C12.6 22.14 11.4 22.14 10.42 21.58L4.47998 18.15C3.50998 17.59 2.90997 16.55 2.90997 15.42V8.58003C2.90997 7.46003 3.50998 6.41999 4.47998 5.84999L10.42 2.42C11.39 1.86 12.59 1.86 13.57 2.42L19.51 5.84999C20.48 6.41999 21.08 7.45003 21.08 8.58003Z'/><path class='c' d='M12 7.75V13'/><path class='c' d='M12 16.2V16.2999'/></svg>
+    </b:includable>
+
+    <!--[ json.data | Restricted area]-->
+    <b:includable id='json.data'>{
+&quot;tm&quot;:{&quot;nm&quot;:&quot;<b:eval expr='(data:vars.template_name + &quot;&quot;).jsonEscaped'/>&quot;,&quot;id&quot;:&quot;<b:eval expr='(data:vars.template_id + &quot;&quot;).jsonEscaped'/>&quot;,&quot;v&quot;:&quot;<b:eval expr='(data:vars.template_version + &quot;&quot;).jsonEscaped'/>&quot;,&quot;sg&quot;:&quot;<b:eval expr='(data:vars.template_stage + &quot;&quot;).jsonEscaped'/>&quot;,&quot;tp&quot;:&quot;<b:eval expr='(data:vars.template_type + &quot;&quot;).jsonEscaped'/>&quot;,&quot;fn&quot;:&quot;<b:eval expr='(data:vars.template_filename + &quot;&quot;).jsonEscaped'/>&quot;,&quot;pb&quot;:&quot;<b:eval expr='(data:vars.template_published + &quot;&quot;).jsonEscaped'/>&quot;,&quot;up&quot;:&quot;<b:eval expr='(data:vars.template_updated + &quot;&quot;).jsonEscaped'/>&quot;,&quot;pf&quot;:&quot;<b:eval expr='(data:vars.template_platform + &quot;&quot;).jsonEscaped'/>&quot;,&quot;cp&quot;:&quot;<b:eval expr='(data:vars.template_copyright + &quot;&quot;).jsonEscaped'/>&quot;,&quot;dv&quot;:&quot;<b:eval expr='(data:vars.template_developers + &quot;&quot;).jsonEscaped'/>&quot;,&quot;wb&quot;:&quot;<b:eval expr='(data:vars.template_website + &quot;&quot;).jsonEscaped'/>&quot;,&quot;dm&quot;:&quot;<b:eval expr='(data:vars.template_demo + &quot;&quot;).jsonEscaped'/>&quot;},
+&quot;bg&quot;:{&quot;iPr&quot;:<b:eval expr='data:blog.isPrivate ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iPrB&quot;:<b:eval expr='data:blog.isPrivateBlog ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iMb&quot;:<b:eval expr='data:blog.isMobile ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iMbR&quot;:<b:eval expr='data:blog.isMobileRequest ? &quot;true&quot; : &quot;false&quot;'/>,&quot;fvU&quot;:&quot;<data:blog.blogspotFaviconUrl.jsonEscaped/>&quot;,&quot;bgrU&quot;:&quot;<data:blog.bloggerUrl.jsonEscaped/>&quot;,&quot;bgId&quot;:&quot;<b:eval expr='(data:blog.blogId + &quot;&quot;).jsonEscaped'/>&quot;<b:if cond='data:view.isPost'>,&quot;psId&quot;:&quot;<b:eval expr='(data:blog.postId + &quot;&quot;).jsonEscaped'/>&quot;<b:if cond='data:blog.postImageThumbnailUrl'>,&quot;psTh&quot;:&quot;<data:blog.postImageThumbnailUrl/>&quot;</b:if><b:if cond='data:blog.postImageUrl'>,&quot;psIm&quot;:&quot;<data:blog.postImageUrl/>&quot;</b:if></b:if><b:if cond='data:view.isPage'>,&quot;pgId&quot;:&quot;<b:eval expr='(data:blog.pageId + &quot;&quot;).jsonEscaped'/>&quot;,&quot;pgIm&quot;:&quot;<b:eval expr='data:widgets.Blog.first.posts.first.featuredImage ? resizeImage(data:widgets.Blog.first.posts.first.featuredImage, 0).jsonEscaped : &quot;&quot;'/>&quot;</b:if><b:if cond='data:view.isSingleItem'>,&quot;siId&quot;:&quot;<b:if cond='data:view.isPage'><b:eval expr='(data:blog.pageId + &quot;&quot;).jsonEscaped'/><b:else/><b:eval expr='(data:blog.postId + &quot;&quot;).jsonEscaped'/></b:if>&quot;</b:if>,&quot;hDmn&quot;:<b:eval expr='data:blog.hasCustomDomain ? &quot;true&quot; : &quot;false&quot;'/>,&quot;hAds&quot;:<b:eval expr='data:blog.adsenseHasAds ? &quot;true&quot; : &quot;false&quot;'/>,&quot;eSsl&quot;:<b:eval expr='data:blog.httpsEnabled ? &quot;true&quot; : &quot;false&quot;'/>,&quot;lnDr&quot;:&quot;<data:blog.languageDirection/>&quot;,&quot;ttl&quot;:&quot;<data:blog.title.jsonEscaped/>&quot;,&quot;cnU&quot;:&quot;<data:blog.canonicalUrl.jsonEscaped/>&quot;,&quot;cnHmU&quot;:&quot;<data:blog.canonicalHomepageUrl.jsonEscaped/>&quot;,<b:if cond='data:blog.searchLabel'>&quot;srL&quot;:&quot;<data:blog.searchLabel.jsonEscaped/>&quot;,</b:if>&quot;des&quot;:null,&quot;mDes&quot;:<b:if cond='data:blog.metaDescription'>&quot;<data:blog.metaDescription.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;anAc&quot;:<b:if cond='data:blog.analyticsAccountNumber'>&quot;<data:blog.analyticsAccountNumber.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;adAt&quot;:<b:eval expr='data:blog.adsenseAutoAds ? &quot;true&quot; : &quot;false&quot;'/>,&quot;adCi&quot;:<b:if cond='data:blog.adsenseClientId'>&quot;<data:blog.adsenseClientId.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;adHi&quot;:<b:if cond='data:blog.adsenseHostId'>&quot;<data:blog.adsenseHostId.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;adlC&quot;:<b:eval expr='data:blog.adultContent ? &quot;true&quot; : &quot;false&quot;'/>,&quot;vw&quot;:&quot;<data:blog.view.jsonEscaped/>&quot;,&quot;hmU&quot;:&quot;<data:blog.homepageUrl.jsonEscaped/>&quot;,&quot;pgNm&quot;:&quot;<data:blog.pageName.jsonEscaped/>&quot;,&quot;pgTtl&quot;:&quot;<data:blog.pageTitle.jsonEscaped/>&quot;,&quot;pgTyp&quot;:&quot;<data:blog.pageType.jsonEscaped/>&quot;,&quot;url&quot;:&quot;<data:blog.url.jsonEscaped/>&quot;,&quot;srU&quot;:&quot;<data:blog.searchUrl.jsonEscaped/>&quot;,&quot;enc&quot;:&quot;<data:blog.encoding.jsonEscaped/>&quot;,&quot;lc&quot;:&quot;<data:blog.locale.jsonEscaped/>&quot;,&quot;lcLn&quot;:&quot;<data:blog.locale.language.jsonEscaped/>&quot;,&quot;lcCn&quot;:<b:if cond='data:blog.locale.country'>&quot;<data:blog.locale.country.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;lcUn&quot;:&quot;<b:eval expr='data:blog.locale.language + (data:blog.locale.country ? &quot;_&quot; + data:blog.locale.country : &quot;&quot;)'/>&quot;,&quot;lcUnDl&quot;:&quot;<data:blog.localeUnderscoreDelimited.jsonEscaped/>&quot;,&quot;pcore&quot;:&quot;<b:eval expr='&quot;ht&quot; + &quot;tp&quot; + &quot;s://&quot; + &quot;cdn.&quot; + &quot;jsde&quot; + &quot;livr.&quot; + &quot;net/gh/&quot; + &quot;blo&quot; + &quot;gger&quot; + &quot;-&quot; + &quot;tem&quot; + &quot;pla&quot; + &quot;tes&quot; + &quot;/js/&quot; + &quot;core&quot; + &quot;.min&quot; + &quot;.j&quot; + &quot;s&quot;'/>&quot;},
+&quot;vw&quot;:{&quot;iHm&quot;:<b:eval expr='data:view.isHomepage ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iSi&quot;:<b:eval expr='data:view.isSingleItem ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iPs&quot;:<b:eval expr='data:view.isPost ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iPg&quot;:<b:eval expr='data:view.isPage ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iPv&quot;:<b:eval expr='data:view.isPreview ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iAr&quot;:<b:eval expr='data:view.isArchive ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iEr&quot;:<b:eval expr='data:view.isError ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iSr&quot;:<b:eval expr='data:view.isSearch ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iSrL&quot;:<b:eval expr='data:view.isLabelSearch ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iMi&quot;:<b:eval expr='data:view.isMultipleItems ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iMb&quot;:<b:eval expr='data:view.isMobile ? &quot;true&quot; : &quot;false&quot;'/>,&quot;iBt&quot;:false,&quot;iAi&quot;:false,&quot;sr&quot;:<b:if cond='data:view.search and (data:view.search.query or data:view.search.label)'>{<b:if cond='data:view.search.query'>&quot;q&quot;:&quot;<data:view.search.query.jsonEscaped/>&quot;,</b:if><b:if cond='data:view.search.label'>&quot;l&quot;:&quot;<data:view.search.label.jsonEscaped/>&quot;,</b:if>&quot;mes&quot;:&quot;<data:view.search.resultsMessage.jsonEscaped/>&quot;,&quot;mesH&quot;:&quot;<data:view.search.resultsMessageHtml.jsonEscaped/>&quot;}<b:else/>null</b:if>,<b:if cond='data:view.isPost'>&quot;psId&quot;:&quot;<b:eval expr='(data:view.postId + &quot;&quot;).jsonEscaped'/>&quot;,</b:if><b:if cond='data:view.isPage'>&quot;pgId&quot;:&quot;<b:eval expr='(data:view.pageId + &quot;&quot;).jsonEscaped'/>&quot;,</b:if>&quot;typ&quot;:&quot;<data:view.type.jsonEscaped/>&quot;,&quot;des&quot;:&quot;<data:view.description.jsonEscaped/>&quot;,&quot;ttl&quot;:&quot;<data:view.title.jsonEscaped/>&quot;,&quot;url&quot;:&quot;<data:view.url.jsonEscaped/>&quot;},
+&quot;ms&quot;:{&quot;home&quot;:&quot;<data:messages.home.jsonEscaped/>&quot;,&quot;edit&quot;:&quot;<data:messages.edit.jsonEscaped/>&quot;,&quot;postAComment&quot;:&quot;<data:messages.postAComment.jsonEscaped/>&quot;,&quot;share&quot;:&quot;<data:messages.share.jsonEscaped/>&quot;,&quot;newerPosts&quot;:&quot;<data:messages.newerPosts.jsonEscaped/>&quot;,&quot;olderPosts&quot;:&quot;<data:messages.olderPosts.jsonEscaped/>&quot;,&quot;shareToOtherApps&quot;:&quot;<data:messages.shareToOtherApps.jsonEscaped/>&quot;,&quot;home&quot;:&quot;<data:messages.home.jsonEscaped/>&quot;,&quot;subscribeTo&quot;:&quot;<data:messages.subscribeTo.jsonEscaped/>&quot;,&quot;emailPost&quot;:&quot;<data:messages.emailPost.jsonEscaped/>&quot;,&quot;comments&quot;:&quot;<data:messages.comments.jsonEscaped/>&quot;,&quot;postAComment&quot;:&quot;<data:messages.postAComment.jsonEscaped/>&quot;,&quot;newer&quot;:&quot;<data:messages.newer.jsonEscaped/>&quot;,&quot;newest&quot;:&quot;<data:messages.newest.jsonEscaped/>&quot;,&quot;older&quot;:&quot;<data:messages.older.jsonEscaped/>&quot;,&quot;oldest&quot;:&quot;<data:messages.oldest.jsonEscaped/>&quot;,&quot;deleteComment&quot;:&quot;<data:messages.deleteComment.jsonEscaped/>&quot;,&quot;linkCopiedToClipboard&quot;:&quot;<data:messages.linkCopiedToClipboard.jsonEscaped/>&quot;,&quot;ok&quot;:&quot;<data:messages.ok.jsonEscaped/>&quot;,&quot;postLink&quot;:&quot;<data:messages.postLink.jsonEscaped/>&quot;,&quot;jumpLink&quot;:&quot;<data:blog.jumpLinkMessage/>&quot;,&quot;showLess&quot;:&quot;<data:messages.showLess.jsonEscaped/>&quot;,&quot;showMore&quot;:&quot;<data:messages.showMore.jsonEscaped/>&quot;,&quot;showAll&quot;:&quot;<data:messages.showAll.jsonEscaped/>&quot;,&quot;youMayLikeThesePosts&quot;:&quot;<data:messages.youMayLikeThesePosts.jsonEscaped/>&quot;,&quot;moreEllipsis&quot;:&quot;<data:messages.moreEllipsis.jsonEscaped/>&quot;,&quot;viewAll&quot;:&quot;<data:messages.viewAll.jsonEscaped/>&quot;,&quot;poweredByBlogger&quot;:&quot;<data:messages.poweredByBlogger.jsonEscaped/>&quot;,&quot;posts&quot;:&quot;<data:messages.posts.jsonEscaped/>&quot;,&quot;labels&quot;:&quot;<data:messages.labels.jsonEscaped/>&quot;,&quot;archive&quot;:&quot;<data:messages.archive.jsonEscaped/>&quot;,&quot;search&quot;:&quot;<data:messages.search.jsonEscaped/>&quot;,&quot;searchThisBlog&quot;:&quot;<data:messages.searchThisBlog.jsonEscaped/>&quot;,&quot;latestPosts&quot;:&quot;<data:messages.latestPosts.jsonEscaped/>&quot;,&quot;blogArchive&quot;:&quot;<data:messages.blogArchive.jsonEscaped/>&quot;,&quot;image&quot;:&quot;<data:messages.image.jsonEscaped/>&quot;,&quot;copyToClipboard&quot;:&quot;<data:messages.copyToClipboard.jsonEscaped/>&quot;,&quot;joinTheConversation&quot;:&quot;<data:messages.joinTheConversation.jsonEscaped/>&quot;,&quot;loadMorePosts&quot;:&quot;<data:messages.loadMorePosts.jsonEscaped/>&quot;,&quot;loading&quot;:&quot;<data:messages.loading.jsonEscaped/>&quot;,&quot;noResultsFound&quot;:&quot;<data:messages.noResultsFound.jsonEscaped/>&quot;,&quot;postedBy&quot;:&quot;<data:messages.postedBy.jsonEscaped/>&quot;,&quot;theresNothingHere&quot;:&quot;<data:messages.theresNothingHere.jsonEscaped/>&quot;,&quot;viewMyCompleteProfile&quot;:&quot;<data:messages.viewMyCompleteProfile.jsonEscaped/>&quot;,&quot;adsGoHere&quot;:&quot;<data:messages.adsGoHere.jsonEscaped/>&quot;,&quot;visitProfile&quot;:&quot;<data:messages.visitProfile.jsonEscaped/>&quot;,&quot;emailAddress&quot;:&quot;<data:messages.emailAddress.jsonEscaped/>&quot;,&quot;keepReading&quot;:&quot;<data:messages.keepReading.jsonEscaped/>&quot;},
+&quot;ml&quot;:{&quot;labels&quot;:&quot;<data:widgets.Blog.first.allBylineItems.labels.label.jsonEscaped/>&quot;,&quot;location&quot;:&quot;<data:widgets.Blog.first.allBylineItems.location.label.jsonEscaped/>&quot;},
+&quot;mc&quot;:{&quot;new&quot;:&quot;<b:eval expr='(data:vars.m_new + &quot;&quot;).jsonEscaped'/>&quot;,&quot;free&quot;:&quot;<b:eval expr='(data:vars.m_free + &quot;&quot;).jsonEscaped'/>&quot;,&quot;open&quot;:&quot;<b:eval expr='(data:vars.m_open + &quot;&quot;).jsonEscaped'/>&quot;,&quot;close&quot;:&quot;<b:eval expr='(data:vars.m_close + &quot;&quot;).jsonEscaped'/>&quot;,&quot;hideAll&quot;:&quot;<b:eval expr='(data:vars.m_hideAll + &quot;&quot;).jsonEscaped'/>&quot;,&quot;showAll&quot;:&quot;<b:eval expr='(data:vars.m_showAll + &quot;&quot;).jsonEscaped'/>&quot;,&quot;previous&quot;:&quot;<b:eval expr='(data:vars.m_previous + &quot;&quot;).jsonEscaped'/>&quot;,&quot;next&quot;:&quot;<b:eval expr='(data:vars.m_next + &quot;&quot;).jsonEscaped'/>&quot;,&quot;copy&quot;:&quot;<b:eval expr='(data:vars.m_copy + &quot;&quot;).jsonEscaped'/>&quot;,&quot;copied&quot;:&quot;<b:eval expr='(data:vars.m_copied + &quot;&quot;).jsonEscaped'/>&quot;,&quot;published&quot;:&quot;<b:eval expr='(data:vars.m_published + &quot;&quot;).jsonEscaped'/>&quot;,&quot;updated&quot;:&quot;<b:eval expr='(data:vars.m_updated + &quot;&quot;).jsonEscaped'/>&quot;,&quot;save&quot;:&quot;<b:eval expr='(data:vars.m_save + &quot;&quot;).jsonEscaped'/>&quot;,&quot;saved&quot;:&quot;<b:eval expr='(data:vars.m_saved + &quot;&quot;).jsonEscaped'/>&quot;,&quot;appearance&quot;:&quot;<b:eval expr='(data:vars.m_appearance + &quot;&quot;).jsonEscaped'/>&quot;,&quot;mode&quot;:&quot;<b:eval expr='(data:vars.m_mode + &quot;&quot;).jsonEscaped'/>&quot;,&quot;theme&quot;:&quot;<b:eval expr='(data:vars.m_theme + &quot;&quot;).jsonEscaped'/>&quot;,&quot;light&quot;:&quot;<b:eval expr='(data:vars.m_light + &quot;&quot;).jsonEscaped'/>&quot;,&quot;dark&quot;:&quot;<b:eval expr='(data:vars.m_dark + &quot;&quot;).jsonEscaped'/>&quot;,&quot;system&quot;:&quot;<b:eval expr='(data:vars.m_system + &quot;&quot;).jsonEscaped'/>&quot;,&quot;reply&quot;:&quot;<b:eval expr='(data:vars.m_reply + &quot;&quot;).jsonEscaped'/>&quot;,&quot;delete&quot;:&quot;<b:eval expr='(data:vars.m_delete + &quot;&quot;).jsonEscaped'/>&quot;,&quot;aboutTheAuthor&quot;:&quot;<b:eval expr='(data:vars.m_aboutTheAuthor + &quot;&quot;).jsonEscaped'/>&quot;,&quot;welcome&quot;:&quot;<b:eval expr='(data:vars.m_welcome + &quot;&quot;).jsonEscaped'/>&quot;,&quot;goodMorning&quot;:&quot;<b:eval expr='(data:vars.m_goodMorning + &quot;&quot;).jsonEscaped'/>&quot;,&quot;goodAfternoon&quot;:&quot;<b:eval expr='(data:vars.m_goodAfternoon + &quot;&quot;).jsonEscaped'/>&quot;,&quot;goodEvening&quot;:&quot;<b:eval expr='(data:vars.m_goodEvening + &quot;&quot;).jsonEscaped'/>&quot;,&quot;goodNight&quot;:&quot;<b:eval expr='(data:vars.m_goodNight + &quot;&quot;).jsonEscaped'/>&quot;,&quot;timeToSleep&quot;:&quot;<b:eval expr='(data:vars.m_timeToSleep + &quot;&quot;).jsonEscaped'/>&quot;,&quot;haveSweetDreams&quot;:&quot;<b:eval expr='(data:vars.m_haveSweetDreams + &quot;&quot;).jsonEscaped'/>&quot;,&quot;estimatedReadTime&quot;:&quot;<b:eval expr='(data:vars.m_estimatedReadTime + &quot;&quot;).jsonEscaped'/>&quot;,&quot;continueReading&quot;:&quot;<b:eval expr='(data:vars.m_continueReading + &quot;&quot;).jsonEscaped'/>&quot;,&quot;commentMessage&quot;:&quot;<b:eval expr='(data:vars.m_commentMessage + &quot;&quot;).jsonEscaped'/>&quot;,&quot;mediaPlus&quot;:&quot;<b:eval expr='(data:vars.m_mediaPlus + &quot;&quot;).jsonEscaped'/>&quot;,&quot;commentMediaParserMessage&quot;:&quot;<b:eval expr='(data:vars.m_commentMediaParserMessage + &quot;&quot;).jsonEscaped'/>&quot;,&quot;commentMediaInputPlaceholder&quot;:&quot;<b:eval expr='(data:vars.m_commentMediaInputPlaceholder + &quot;&quot;).jsonEscaped'/>&quot;,&quot;codeBlock&quot;:&quot;<b:eval expr='(data:vars.m_codeBlock + &quot;&quot;).jsonEscaped'/>&quot;,&quot;inlineCode&quot;:&quot;<b:eval expr='(data:vars.m_inlineCode + &quot;&quot;).jsonEscaped'/>&quot;,&quot;quote&quot;:&quot;<b:eval expr='(data:vars.m_quote + &quot;&quot;).jsonEscaped'/>&quot;,&quot;imageUrl&quot;:&quot;<b:eval expr='(data:vars.m_imageUrl + &quot;&quot;).jsonEscaped'/>&quot;,&quot;tag&quot;:&quot;<b:eval expr='(data:vars.m_tag + &quot;&quot;).jsonEscaped'/>&quot;,&quot;link&quot;:&quot;<b:eval expr='(data:vars.m_link + &quot;&quot;).jsonEscaped'/>&quot;,&quot;clear&quot;:&quot;<b:eval expr='(data:vars.m_clear + &quot;&quot;).jsonEscaped'/>&quot;,&quot;copyCode&quot;:&quot;<b:eval expr='(data:vars.m_copyCode + &quot;&quot;).jsonEscaped'/>&quot;,&quot;copiedCode&quot;:&quot;<b:eval expr='(data:vars.m_copiedCode + &quot;&quot;).jsonEscaped'/>&quot;,&quot;notAValidURL&quot;:&quot;<b:eval expr='(data:vars.m_notAValidURL + &quot;&quot;).jsonEscaped'/>&quot;,&quot;failedToLoad&quot;:&quot;<b:eval expr='(data:vars.m_failedToLoad + &quot;&quot;).jsonEscaped'/>&quot;,&quot;orCopyLink&quot;:&quot;<b:eval expr='(data:vars.m_orCopyLink + &quot;&quot;).jsonEscaped'/>&quot;,&quot;youAreOffline&quot;:&quot;<b:eval expr='(data:vars.m_youAreOffline + &quot;&quot;).jsonEscaped'/>&quot;,&quot;youAreOnline&quot;:&quot;<b:eval expr='(data:vars.m_youAreOnline + &quot;&quot;).jsonEscaped'/>&quot;,&quot;image&quot;:&quot;<b:eval expr='(data:vars.m_image + &quot;&quot;).jsonEscaped'/>&quot;,&quot;noImage&quot;:&quot;<b:eval expr='(data:vars.m_noImage + &quot;&quot;).jsonEscaped'/>&quot;,&quot;relatedPosts&quot;:&quot;<b:eval expr='(data:vars.m_relatedPosts + &quot;&quot;).jsonEscaped'/>&quot;,&quot;relatedProducts&quot;:&quot;<b:eval expr='(data:vars.m_relatedProducts + &quot;&quot;).jsonEscaped'/>&quot;,&quot;addedToBookmarks&quot;:&quot;<b:eval expr='(data:vars.m_addedToBookmarks + &quot;&quot;).jsonEscaped'/>&quot;,&quot;removedFromBookmarks&quot;:&quot;<b:eval expr='(data:vars.m_removedFromBookmarks + &quot;&quot;).jsonEscaped'/>&quot;,&quot;imNotARobot&quot;:&quot;<b:eval expr='(data:vars.m_imNotARobot + &quot;&quot;).jsonEscaped'/>&quot;,&quot;pleaseWaitNSeconds&quot;:&quot;<b:eval expr='(data:vars.m_pleaseWaitNSeconds + &quot;&quot;).jsonEscaped'/>&quot;,&quot;generatingLink&quot;:&quot;<b:eval expr='(data:vars.m_generatingLink + &quot;&quot;).jsonEscaped'/>&quot;,&quot;goToLink&quot;:&quot;<b:eval expr='(data:vars.m_goToLink + &quot;&quot;).jsonEscaped'/>&quot;,&quot;safelinkScrollDownMessage&quot;:&quot;<b:eval expr='(data:vars.m_safelinkScrollDownMessage + &quot;&quot;).jsonEscaped'/>&quot;},
+&quot;pl&quot;:{
+  &quot;ad&quot;:<b:with value='{ status: (data:vars.adsense_status == &quot;2px&quot;), clientId: (data:vars.adsense_clientId ? (&quot;ca-pub-&quot; + snippet(data:vars.adsense_clientId)) : data:blog.adsenseClientId), hostId: (data:vars.adsense_hostId ? (&quot;ca-host-pub-&quot; + snippet(data:vars.adsense_hostId)) : data:blog.adsenseHostId), hostStatus: (data:vars.adsense_hostStatus == &quot;2px&quot;) }' var='adsense'>{&quot;ok&quot;:<b:eval expr='data:adsense.status ? &quot;true&quot; : &quot;false&quot;'/>,&quot;typ&quot;:<b:switch var='data:vars.adsense_loadType'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:default/>1</b:switch>,&quot;cId&quot;:<b:if cond='data:adsense.clientId'>&quot;<data:adsense.clientId.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;hId&quot;:<b:if cond='data:adsense.hostId'>&quot;<data:adsense.hostId.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;hOk&quot;:<b:eval expr='data:adsense.hostStatus ? &quot;true&quot; : &quot;false&quot;'/>,&quot;src&quot;:<b:if cond='data:adsense.clientId'>&quot;<b:eval expr='((&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=&quot;) + data:adsense.clientId + (data:adsense.hostStatus and data:adsense.hostId ? (&quot;&amp;host=&quot; + data:adsense.hostId) : (&quot;&quot;))).jsonEscaped'/>&quot;<b:else/>null</b:if>,&quot;ampAa&quot;:<b:eval expr='data:vars.adsense_ampAutoAds == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;uaF&quot;:<b:eval expr='data:vars.adsense_unfilledFallback == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;dWa&quot;:false}</b:with>,
+  &quot;an&quot;:<b:with value='{ status: (data:vars.analytics_status == &quot;2px&quot;), trackingId: (data:vars.analytics_accountNumber ? snippet(data:vars.analytics_accountNumber) : data:blog.analyticsAccountNumber) }' var='analytics'>{&quot;ok&quot;:<b:eval expr='data:analytics.status ? &quot;true&quot; : &quot;false&quot;'/>,&quot;typ&quot;:<b:switch var='data:vars.analytics_loadType'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:default/>1</b:switch>,&quot;trId&quot;:<b:if cond='data:analytics.trackingId'>&quot;<data:analytics.trackingId.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;src&quot;:<b:if cond='data:analytics.trackingId'>&quot;<b:eval expr='((&quot;https://www.googletagmanager.com/gtag/js?id=&quot;) + data:analytics.trackingId).jsonEscaped'/>&quot;<b:else/>null</b:if>}</b:with>,
+  &quot;cl&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.clarity_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;typ&quot;:<b:switch var='data:vars.clarity_loadType'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:default/>1</b:switch>,&quot;trId&quot;:<b:if cond='data:vars.clarity_trackingId'>&quot;<b:eval expr='snippet(data:vars.clarity_trackingId).jsonEscaped'/>&quot;<b:else/>null</b:if>,&quot;src&quot;:<b:if cond='data:vars.clarity_trackingId'>&quot;<b:eval expr='(&quot;https://www.clarity.ms/tag/&quot; + snippet(data:vars.clarity_trackingId)).jsonEscaped'/>&quot;<b:else/>null</b:if>},
+  &quot;lb&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.lightbox_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;cap&quot;:<b:eval expr='data:vars.lightbox_caption == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;sy&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.syntax_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;cp&quot;:<b:eval expr='data:vars.syntax_copy == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;ln&quot;:<b:eval expr='data:vars.syntax_lines == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;hl&quot;:<b:eval expr='data:vars.syntax_highlight == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;cm&quot;:{&quot;blgOk&quot;:<b:eval expr='data:vars.comments_blogger == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;disOk&quot;:<b:eval expr='data:vars.comments_disqus == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;fbOk&quot;:<b:eval expr='data:vars.comments_facebook == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;pop&quot;:<b:eval expr='data:vars.comments_popup == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;ifSt&quot;:<b:switch var='data:vars.comments_iframeStyle'><b:case value='1px'/>1<b:case value='2px'/>2<b:default/>1</b:switch>,&quot;exRp&quot;:<b:eval expr='data:vars.comments_expandedReplies == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;or&quot;:<b:switch var='data:vars.comments_order'><b:case value='1px'/>1<b:case value='2px'/>2<b:default/>1</b:switch>,&quot;par&quot;:<b:eval expr='data:vars.comments_parser == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;lnk&quot;:<b:eval expr='data:vars.comments_links == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;im&quot;:<b:eval expr='data:vars.comments_images == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;disSn&quot;:<b:if cond='data:vars.disqus_shortname'>&quot;<b:eval expr='snippet(data:vars.disqus_shortname).jsonEscaped'/>&quot;<b:else/>null</b:if>},
+  &quot;mt&quot;:{&quot;wsOk&quot;:<b:eval expr='data:vars.metadata_WebSite == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;arTyp&quot;:<b:switch var='data:vars.metadata_Article'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:default/>1</b:switch>,&quot;dpt&quot;:&quot;<b:switch var='data:vars.metadata_defaultPostType'><b:case value='2px'/>Article<b:case value='3px'/>NewsArticle<b:default/>BlogPosting</b:switch>&quot;,&quot;uJs&quot;:<b:eval expr='data:vars.metadata_useJs == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;orgLg&quot;:<b:with value='resizeImage(snippet(data:vars.metadata_organizationLogo), 512, &quot;1:1&quot;)' var='image'><b:if cond='data:image'>&quot;<data:image.jsonEscaped/>&quot;<b:else/>null</b:if></b:with>,&quot;defTh&quot;:<b:with value='resizeImage(snippet(data:vars.metadata_defaultThumbnail), 1280, &quot;16:9&quot;)' var='image'><b:if cond='data:image'>&quot;<data:image.jsonEscaped/>&quot;<b:else/>null</b:if></b:with>},
+  &quot;amp&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.amp_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;typ&quot;:<b:switch var='data:vars.amp_type'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:default/>1</b:switch>,&quot;strOk&quot;:<b:eval expr='data:vars.amp_story != &quot;1px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;strTyp&quot;:<b:switch var='data:vars.amp_story'><b:case value='3px'/>2<b:case value='2px'/>1<b:default/>1</b:switch>},
+  &quot;vw&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.views_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;av&quot;:<b:eval expr='data:vars.views_abbreviate == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;wm&quot;:<b:eval expr='data:vars.views_watch == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;rp&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.related_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;mr&quot;:<b:switch var='data:vars.related_maxResults'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:case value='5px'/>5<b:case value='6px'/>6<b:case value='7px'/>7<b:case value='8px'/>8<b:case value='9px'/>9<b:case value='10px'/>10<b:case value='11px'/>11<b:case value='12px'/>12<b:case value='13px'/>13<b:case value='14px'/>14<b:case value='15px'/>15<b:case value='16px'/>16<b:case value='17px'/>17<b:case value='18px'/>18<b:case value='19px'/>19<b:case value='20px'/>20<b:case value='21px'/>21<b:case value='22px'/>22<b:case value='23px'/>23<b:case value='24px'/>24<b:case value='25px'/>25<b:default/>1</b:switch>,&quot;sb&quot;:&quot;<b:eval expr='(data:vars.related_sortBy == &quot;2px&quot; ? &quot;updated&quot; : &quot;published&quot;).jsonEscaped'/>&quot;,&quot;ld&quot;:<b:switch var='data:vars.related_loadType'><b:case value='1px'/>1<b:case value='2px'/>2<b:default/>1</b:switch>},
+  &quot;pg&quot;:{&quot;bgTyp&quot;:<b:switch var='data:vars.pagination_blog'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:default/>1</b:switch>,&quot;ifTyp&quot;:<b:switch var='data:vars.pagination_infinite'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:default/>1</b:switch>,&quot;psOk&quot;:<b:eval expr='data:vars.pagination_posts == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;psLd&quot;:<b:switch var='data:vars.pagination_postsLoadType'><b:case value='1px'/>1<b:case value='2px'/>2<b:default/>1</b:switch>},
+  &quot;ls&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.livesearch_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;mr&quot;:50},
+  &quot;pl&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.preloader_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;qe&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.quickedit_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;eps&quot;:<b:eval expr='data:vars.quickedit_editPost == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;sc&quot;:<b:eval expr='data:vars.quickedit_shortcuts == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;dlC&quot;:<b:eval expr='data:vars.quickedit_deleteComment == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;pb&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.progress_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;sb&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.scroll_status == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>},
+  &quot;op&quot;:{&quot;exLz&quot;:<b:eval expr='data:vars.optimization_externalLazy == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;imgLd&quot;:<b:switch var='data:vars.optimization_imageLoading'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:default/>1</b:switch>,&quot;fntLd&quot;:<b:switch var='data:vars.optimization_fontLoading'><b:case value='1px'/>1<b:case value='2px'/>2<b:default/>1</b:switch>,&quot;spR&quot;:true},
+  &quot;sl&quot;:{&quot;ok&quot;:<b:eval expr='data:vars.safelink_status == &quot;2px&quot; or data:vars.safelink_status == &quot;3px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;pg&quot;:[<b:if cond='data:vars.safelink_page1 != &quot;&quot;'>&quot;<b:eval expr='data:vars.safelink_page1'/>&quot;<b:if cond='data:vars.safelink_page2 != &quot;&quot; or data:vars.safelink_page3 != &quot;&quot; or data:vars.safelink_page4 != &quot;&quot;'>,</b:if></b:if><b:if cond='data:vars.safelink_page2 != &quot;&quot;'>&quot;<b:eval expr='data:vars.safelink_page2'/>&quot;<b:if cond='data:vars.safelink_page3 != &quot;&quot; or data:vars.safelink_page4 != &quot;&quot;'>,</b:if></b:if><b:if cond='data:vars.safelink_page3 != &quot;&quot;'>&quot;<b:eval expr='data:vars.safelink_page3'/>&quot;<b:if cond='data:vars.safelink_page4 != &quot;&quot;'>,</b:if></b:if><b:if cond='data:vars.safelink_page4 != &quot;&quot;'>&quot;<b:eval expr='data:vars.safelink_page4'/>&quot;</b:if>],&quot;cdS&quot;:<b:switch var='data:vars.safelink_cdS'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:case value='5px'/>5<b:case value='6px'/>6<b:case value='7px'/>7<b:case value='8px'/>8<b:case value='9px'/>9<b:case value='10px'/>10<b:case value='11px'/>11<b:case value='12px'/>12<b:case value='13px'/>13<b:case value='14px'/>14<b:case value='15px'/>15<b:case value='16px'/>16<b:case value='17px'/>17<b:case value='18px'/>18<b:case value='19px'/>19<b:case value='20px'/>20<b:case value='21px'/>21<b:case value='22px'/>22<b:case value='23px'/>23<b:case value='24px'/>24<b:case value='25px'/>25<b:case value='26px'/>26<b:case value='27px'/>27<b:case value='28px'/>28<b:case value='29px'/>29<b:case value='30px'/>30<b:case value='31px'/>31<b:case value='32px'/>32<b:case value='33px'/>33<b:case value='34px'/>34<b:case value='35px'/>35<b:case value='36px'/>36<b:case value='37px'/>37<b:case value='38px'/>38<b:case value='39px'/>39<b:case value='40px'/>40<b:case value='41px'/>41<b:case value='42px'/>42<b:case value='43px'/>43<b:case value='44px'/>44<b:case value='45px'/>45<b:case value='46px'/>46<b:case value='47px'/>47<b:case value='48px'/>48<b:case value='49px'/>49<b:case value='50px'/>50<b:case value='51px'/>51<b:case value='52px'/>52<b:case value='53px'/>53<b:case value='54px'/>54<b:case value='55px'/>55<b:case value='56px'/>56<b:case value='57px'/>57<b:case value='58px'/>58<b:case value='59px'/>59<b:default/>1</b:switch>,&quot;dAc&quot;:<b:eval expr='data:vars.safelink_dAc == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;an&quot;:<b:eval expr='data:vars.safelink_an == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;aNt&quot;:<b:eval expr='data:vars.safelink_aNt == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;dNt&quot;:<b:eval expr='data:vars.safelink_dNt == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;ver&quot;:<b:eval expr='data:vars.safelink_status == &quot;3px&quot; ? &quot;true&quot; : &quot;false&quot;'/>, &quot;toSteps&quot;:<b:switch var='data:vars.safelink_totalSteps'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:case value='5px'/>5<b:case value='6px'/>6<b:case value='7px'/>7<b:case value='8px'/>8<b:case value='9px'/>9<b:default/>1</b:switch>, &quot;autoscroll&quot;:<b:eval expr='data:vars.safelink_autoscroll == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;sCon&quot;: []},
+  &quot;rt&quot;:{&quot;ok&quot;:true},
+  &quot;pwa&quot;:{&quot;wbm&quot;:null,&quot;use&quot;:false}
+},
+&quot;st&quot;:{
+  &quot;ui&quot;: {&quot;csOk&quot;:<b:eval expr='data:vars.style_themeStatus == &quot;2px&quot; ? &quot;true&quot; : &quot;false&quot;'/>,&quot;csH&quot;:<b:with value='[data:vars.theme_0, data:vars.theme_1, data:vars.theme_2, data:vars.theme_3, data:vars.theme_4, data:vars.theme_5, data:vars.theme_6, data:vars.theme_7, data:vars.theme_8, data:vars.theme_9, data:vars.theme_10, data:vars.theme_11, data:vars.theme_12, data:vars.theme_13, data:vars.theme_14, data:vars.theme_15] map (e =&gt; snippet(e))' var='themes'>[<b:loop index='i' values='data:themes' var='theme'><b:if cond='data:theme != &quot;transparent&quot;'>&quot;<data:theme.jsonEscaped/>&quot;<b:else/>null</b:if><b:if cond='data:i &lt; (data:themes.length - 1)'>,</b:if></b:loop>]</b:with>,&quot;dft&quot;:&quot;<b:switch var='data:vars.style_defaultMode'><b:case value='1px'/>light<b:case value='2px'/>dark<b:case value='3px'/>system<b:default/>light</b:switch>&quot;,&quot;dfs&quot;:<b:switch var='data:vars.style_defaultTheme'><b:case value='1px'/>1<b:case value='2px'/>2<b:case value='3px'/>3<b:case value='4px'/>4<b:case value='5px'/>5<b:case value='6px'/>6<b:case value='7px'/>7<b:case value='8px'/>8<b:case value='9px'/>9<b:case value='10px'/>10<b:case value='11px'/>11<b:case value='12px'/>12<b:case value='13px'/>13<b:case value='14px'/>14<b:case value='15px'/>15<b:case value='16px'/>0<b:default/>0</b:switch>,&quot;vt&quot;:true},
+  &quot;fnt&quot;:{&quot;css&quot;:<b:if cond='data:vars.font_css'>&quot;<b:eval expr='(data:vars.font_css + &quot;&quot;).jsonEscaped'/>&quot;<b:else/>null</b:if>,&quot;lnk&quot;:<b:with value='[data:vars.font_link1, data:vars.font_link2, data:vars.font_link3, data:vars.font_link4, data:vars.font_link5] map (e =&gt; e + &quot;&quot;) filter (e =&gt; e != &quot;&quot;)' var='links'>[<b:loop index='i' values='data:links' var='link'>&quot;<data:link.jsonEscaped/>&quot;<b:if cond='data:i &lt; (data:links.length - 1)'>,</b:if></b:loop>]</b:with>}
+},
+&quot;cf&quot;:{&quot;con&quot;:{},&quot;bst&quot;:{},&quot;gtr&quot;:{},&quot;blk&quot;:{&quot;ip&quot;:[],&quot;ctry&quot;:[],&quot;tzn&quot;:[]},&quot;mtm&quot;:null,&quot;mad&quot;:[]},
+&quot;fb&quot;:{&quot;v&quot;:&quot;10.12.4&quot;,&quot;cf&quot;:{}},
+&quot;lb&quot;:{},
+&quot;ps&quot;:{},
+&quot;pg&quot;:{&quot;new&quot;:null,&quot;old&quot;:null}
+}</b:includable>
+
+    <!--[ json.post | Restricted area ]-->
+    <b:includable id='json.post' var='post'>{&quot;ttl&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;sum&quot;:&quot;<b:eval expr='snippet(data:post.snippets.long, { length: 400, links: false, linebreaks: false, ellipsis: true }).jsonEscaped'/>&quot;,&quot;snp&quot;:&quot;<b:eval expr='snippet(data:post.body, { links: false, linebreaks: false, ellipsis: true }).jsonEscaped'/>&quot;,&quot;con&quot;:null,&quot;thm&quot;:<b:if cond='data:post.featuredImage'>&quot;<b:eval expr='resizeImage((data:post.featuredImage not contains &quot;http://&quot; and data:post.featuredImage not contains &quot;https://&quot; ? &quot;https:&quot; + data:post.featuredImage : data:post.featuredImage), &quot;1280&quot;, &quot;16:9&quot;).jsonEscaped'/>&quot;<b:else/>null</b:if>,&quot;url&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;,&quot;id&quot;:&quot;<data:post.id/>&quot;,&quot;pub&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;pubTs&quot;:&quot;<b:eval expr='format(data:post.date, &quot;MMM d, YYYY&quot;).jsonEscaped'/>&quot;,&quot;upd&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;updTs&quot;:&quot;<b:eval expr='format(data:post.lastUpdated, &quot;MMM d, YYYY&quot;).jsonEscaped'/>&quot;,&quot;lab&quot;:[<b:if cond='data:post.labels'><b:with value='data:post.labels.length' var='length'><b:loop index='i' values='data:post.labels' var='label'>&quot;<data:label.name.jsonEscaped/>&quot;<b:if cond='(data:i + 1) &lt; data:length'>,</b:if></b:loop></b:with></b:if>],&quot;aut&quot;:{&quot;nm&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;,&quot;url&quot;:<b:if cond='data:post.author.profileUrl'>&quot;<data:post.author.profileUrl.jsonEscaped/>&quot;<b:else/>null</b:if>,&quot;im&quot;:<b:if cond='data:post.author.authorPhoto.image'>&quot;<b:eval expr='resizeImage((data:post.author.authorPhoto.image not contains &quot;http://&quot; and data:post.author.authorPhoto.image not contains &quot;https://&quot; ? &quot;https:&quot; + data:post.author.authorPhoto.image : data:post.author.authorPhoto.image), &quot;512&quot;, &quot;1:1&quot;).jsonEscaped'/>&quot;<b:else/>null</b:if>},&quot;com&quot;:{&quot;num&quot;:<b:eval expr='data:post.numberOfComments'/>,&quot;ttl&quot;:&quot;<b:message name='messages.numberOfComments'><b:param expr:value='data:post.numberOfComments' name='numComments'/></b:message>&quot;},&quot;loc&quot;: <b:if cond='data:post.location'>{&quot;nm&quot;:&quot;<data:post.location.name.jsonEscaped/>&quot;,&quot;mpU&quot;:&quot;<data:post.location.mapsUrl.jsonEscaped/>&quot;}<b:else/>null</b:if>}</b:includable>
+
+    <!--[ json.posts | Restricted area ]-->
+    <b:includable id='json.posts' var='posts'>{<b:loop index='i' values='data:posts' var='post'>&quot;<data:post.id/>&quot;:<b:include data='post' name='json.post'/><b:if cond='(data:i + 1) &lt; data:posts.length'>,</b:if></b:loop>}</b:includable>
+
+    <!--[ Post metadata json ]-->
+    <b:includable id='post-metadataJSON' var='post'>
+      <script type='application/ld+json'>{&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;<b:if cond='data:post.id == data:view.pageId'>Article<b:elseif cond='data:post.labels any (l =&gt; l.name in [&quot;Blog&quot;])'/>BlogPosting<b:elseif cond='(data:post.labels any (l =&gt; l.name in [&quot;Article&quot;])) or data:vars.metadata_defaultPostType == &quot;2px&quot;'/>Article<b:elseif cond='(data:post.labels any (l =&gt; l.name in [&quot;News&quot;])) or data:vars.metadata_defaultPostType == &quot;3px&quot;'/>NewsArticle<b:else/>BlogPosting</b:if>&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;},&quot;headline&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;description&quot;:&quot;<b:eval expr='snippet(data:post.snippets.long, { length: 250, links: false, linebreaks: false, ellipsis: true }).jsonEscaped'/>&quot;<b:if cond='data:view.isPost ? data:post.id == data:view.postId : (data:view.isPage ? data:post.id == data:view.pageId : false)'>,&quot;articleBody&quot;:&quot;<b:eval expr='snippet(data:post.body, { links: false, linebreaks: false, ellipsis: true }).jsonEscaped'/>&quot;</b:if>,&quot;datePublished&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;dateModified&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;image&quot;:<b:with value='{ width: 1280, height: 720 }' var='c'><b:with value='resizeImage((data:post.featuredImage ?: snippet(data:vars.metadata_defaultThumbnail)), data:c.width, (data:c.width + &quot;:&quot; + data:c.height))' var='image'>{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;<b:eval expr='(data:image not contains &quot;http://&quot; and data:image not contains &quot;https://&quot; ? &quot;https:&quot; + data:image : data:image).jsonEscaped'/>&quot;,&quot;width&quot;:<b:eval expr='data:logo.width ?: data:c.width'/>,&quot;height&quot;:<b:eval expr='data:logo.height ?: data:c.height'/>}</b:with></b:with>,&quot;publisher&quot;:<b:with value='{ width: 512, height: 512 }' var='c'><b:with value='resizeImage(snippet(data:vars.metadata_organizationLogo), data:c.width, (data:c.width + &quot;:&quot; + data:c.height))' var='logo'>{&quot;@type&quot;:&quot;<b:eval expr='(&quot;Organization&quot;).jsonEscaped'/>&quot;,&quot;name&quot;:&quot;<data:blog.title.jsonEscaped/>&quot;,&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;<b:eval expr='(data:logo not contains &quot;http://&quot; and data:logo not contains &quot;https://&quot; ? &quot;https:&quot; + data:logo : data:logo).jsonEscaped'/>&quot;,&quot;width&quot;:<b:eval expr='data:logo.width ?: data:c.width'/>,&quot;height&quot;:<b:eval expr='data:logo.height ?: data:c.height'/>}}</b:with></b:with>,&quot;author&quot;:<b:with value='{ width: 512, height: 512 }' var='c'><b:with value='resizeImage((data:post.author.authorPhoto.image ?: &quot;&quot;), data:c.width, (data:c.width + &quot;:&quot; + data:c.height))' var='image'>{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;,&quot;url&quot;:&quot;<b:eval expr='(data:post.author.profileUrl ?: data:blog.homepageUrl.canonical).jsonEscaped'/>&quot;<b:if cond='data:image'>,&quot;image&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;<b:eval expr='(data:image not contains &quot;http://&quot; and data:image not contains &quot;https://&quot; ? &quot;https:&quot; + data:image : data:image).jsonEscaped'/>&quot;,&quot;width&quot;: <b:eval expr='data:image.width ?: data:c.width'/>,&quot;height&quot;: <b:eval expr='data:image.height ?: data:c.height'/>}</b:if>}</b:with></b:with>}</script>
+    </b:includable>
+
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Group ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Group.widgetNotSupportedMessage'>[<data:widget.sectionId/>.<data:widget.instanceId/>] : Plus UI currently doesn&#39;t support <data:widget.type/> gadget added from Layout.<span class='show-if-user'> Consider reporting about this message to the admin of this blog.</span><span class='show-if-admin'> Looks like you are the admin of this blog, remove this widget from <a expr:href='&quot;https://www.blogger.com/blog/layout/&quot; + data:blog.blogId' rel='noopener noreferrer' target='_blank'>Layout</a> to hide this message.</span></b:includable>
+
+    <b:includable id='Group.defaultAdUnit'>
+      <b:comment><!--[ Clear out style (needs to be a non-empty string) ]--></b:comment>
+      <b:with value='&quot;/* Done in css. */&quot;' var='style'>
+        <b:include name='super.defaultAdUnit'/>
+      </b:with>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | LinkList ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='LinkList.main'>
+      <b:if cond='data:title contains &quot;[Ad]&quot;'>
+        <b:if cond='((data:title contains &quot;[Mobile]&quot; and data:blog.isMobileRequest) or (data:title contains &quot;[Desktop]&quot; and !data:blog.isMobileRequest) or (data:title not contains &quot;[Mobile]&quot; and data:title not contains &quot;[Desktop]&quot;))'>
+          <b:include name='ManualAd.main'/>
+          <b:else/>
+          <b:class name='hidden'/>
+        </b:if>
+
+        <b:else/>
+        <b:include cond='data:title not contains &quot;[NoTitle]&quot;' name='widget-title'/>
+        <b:include name='content'/>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='LinkList.content'>
+      <b:if cond='data:title contains &quot;[Ad]&quot;'>
+        <b:include name='ManualAd.content'/>
+
+        <b:else/>
+        <ul>
+          <b:loop values='data:links' var='link'>
+            <li><a expr:href='data:link.target'><data:link.name/></a></li>
+          </b:loop>
+        </ul>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='LinkList.get' var='c'><b:if cond='data:c and (data:c.links ?: data:links) and (data:c.name or data:c.names)'><b:with value='(data:c.links ?: data:links) filter (l =&gt; (l.name == data:c.name or l.name in (data:c.names ?: [])) and (data:l.target in (data:c.include ?: [data:l.target])) and (data:l.target not in (data:c.exclude ?: [&quot;https://&quot;, &quot;#&quot;])))' var='valids'><b:if cond='data:valids.notEmpty'><b:loop index='i' values='data:valids' var='l'><b:with value='data:l.target' var='value'><b:with value='data:c.escape == &quot;json&quot; ? data:value.jsonEscaped : (data:c.escape == &quot;html&quot; ? data:value.escaped : (data:c.escape == &quot;css&quot; ? data:value.cssEscaped : (data:c.escape == &quot;js&quot; ? data:value.jsEscaped : data:value)))' var='escaped'><b:if cond='data:i == 0'><b:if cond='data:c.attribute'><b:attr expr:name='data:c.attribute' expr:value='data:escaped.escaped'/><b:elseif cond='data:c.class'/><b:class expr:name='data:escaped.escaped'/><b:else/><data:escaped/></b:if></b:if></b:with></b:with></b:loop><b:elseif cond='data:c.default.length'/><b:with value='data:c.escape == &quot;json&quot; ? data:c.default.jsonEscaped : (data:c.default == &quot;html&quot; ? data:c.default.escaped : (data:c.escape == &quot;css&quot; ? data:c.default.cssEscaped : (data:c.escape == &quot;js&quot; ? data:c.default.jsEscaped : data:c.default)))' var='escaped'><b:if cond='data:c.attribute'><b:attr expr:name='data:c.attribute' expr:value='data:escaped.escaped'/><b:elseif cond='data:c.class'/><b:class expr:name='data:escaped.escaped'/><b:else/><data:escaped/></b:if></b:with></b:if></b:with></b:if></b:includable>
+
+    <b:includable id='LinkList.json' var='c'><b:if cond='data:c and (data:c.links or data:links)'><b:with value='(data:c.links ?: data:links) filter (l =&gt; (l.name in (data:c.include ?: [l.name])) and (l.name not in (data:c.exclude ?: [])))' var='filtered'><b:with value='data:filtered filter (l =&gt; (l.target in (data:c.includeValues ?: [l.target])) and (l.target not in (data:c.excludeValues ?: [])))' var='valids'>{<b:loop index='i' values='data:valids' var='l'>&quot;<data:l.name.jsonEscaped/>&quot;:&quot;<data:l.target.jsonEscaped/>&quot;<b:if cond='data:i &lt; (data:valids.length - 1)'>,</b:if></b:loop>}</b:with></b:with></b:if></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | LinkList ]-->
+  <b:defaultmarkup type='LinkList'>
+    <b:includable id='main'><b:include name='LinkList.main'/></b:includable>
+    <b:includable id='content' var='content'><b:include name='LinkList.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | AdSense ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='AdSense.main'>
+      <b:if cond='!data:amp.active'>
+        <b:if cond='data:adCode'>
+          &lt;!-- <data:adCode/>
+
+          <b:else/>
+          <b:include name='defaultAdUnit'/>
+        </b:if>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='AdSense.defaultAdUnit'>
+      <b:include name='Group.defaultAdUnit'/>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | AdSense ]-->
+  <b:defaultmarkup type='AdSense'>
+    <b:includable id='main'><b:include name='AdSense.main'/></b:includable>
+    <b:includable id='defaultAdUnit'><b:include name='AdSense.defaultAdUnit'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | HTML ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='HTML.main'>
+      <b:if cond='!data:amp.active'>
+        <b:if cond='((data:title contains &quot;[Mobile]&quot; and data:blog.isMobileRequest) or (data:title contains &quot;[Desktop]&quot; and !data:blog.isMobileRequest) or (data:title not contains &quot;[Mobile]&quot; and data:title not contains &quot;[Desktop]&quot;))'>
+          <b:include cond='data:title not contains &quot;[NoTitle]&quot;' name='widget-title'/>
+          <b:include name='content'/>
+          <b:else/>
+          <b:class name='hidden'/>
+        </b:if>
+      </b:if>
+    </b:includable>
+
+    <b:includable id='HTML.content'>
+      <data:content/>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | HTML ]-->
+  <b:defaultmarkup type='HTML'>
+    <b:includable id='main'><b:include name='HTML.main'/></b:includable>
+    <b:includable id='content'><b:include name='HTML.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | ContactForm ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='ContactForm.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='ContactForm.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | ContactForm ]-->
+  <b:defaultmarkup type='ContactForm'>
+    <b:includable id='main'><b:include name='ContactForm.main'/></b:includable>
+    <b:includable id='content'><b:include name='ContactForm.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Translate ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Translate.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='Translate.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | Translate ]-->
+  <b:defaultmarkup type='Translate'>
+    <b:includable id='main'><b:include name='Translate.main'/></b:includable>
+    <b:includable id='content'><b:include name='Translate.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Stats ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Stats.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='Stats.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | Stats ]-->
+  <b:defaultmarkup type='Stats'>
+    <b:includable id='main'><b:include name='Stats.main'/></b:includable>
+    <b:includable id='content'><b:include name='Stats.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Subscribe ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Subscribe.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='Subscribe.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+    <b:includable id='Subscribe.feeds'><!--[ removed ]--></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | Subscribe ]-->
+  <b:defaultmarkup type='Subscribe'>
+    <b:includable id='main'><b:include name='Subscribe.main'/></b:includable>
+    <b:includable id='content'><b:include name='Subscribe.content'/></b:includable>
+    <b:includable id='feeds' var='feeds'><b:include data='feeds' name='Subscribe.feeds'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | BlogList ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='BlogList.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='BlogList.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | BlogList ]-->
+  <b:defaultmarkup type='BlogList'>
+    <b:includable id='main'><b:include name='BlogList.main'/></b:includable>
+    <b:includable id='content'><b:include name='BlogList.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Feed ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Feed.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='Feed.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | Feed ]-->
+  <b:defaultmarkup type='Feed'>
+    <b:includable id='main'><b:include name='Feed.main'/></b:includable>
+    <b:includable id='content'><b:include name='Feed.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | Wikipedia ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='Wikipedia.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='Wikipedia.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | Wikipedia ]-->
+  <b:defaultmarkup type='Wikipedia'>
+    <b:includable id='main'><b:include name='Wikipedia.main'/></b:includable>
+    <b:includable id='content'><b:include name='Wikipedia.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | ReportAbuse ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='ReportAbuse.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='ReportAbuse.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | ReportAbuse ]-->
+  <b:defaultmarkup type='ReportAbuse'>
+    <b:includable id='main'><b:include name='ReportAbuse.main'/></b:includable>
+    <b:includable id='content'><b:include name='ReportAbuse.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | BloggerButton ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='BloggerButton.main'>
+      <b:include name='content'/>
+    </b:includable>
+
+    <b:includable id='BloggerButton.content'>
+      <p class='note'><b:include name='Group.widgetNotSupportedMessage'/></p>
+    </b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Default> | BloggerButton ]-->
+  <b:defaultmarkup type='BloggerButton'>
+    <b:includable id='main'><b:include name='BloggerButton.main'/></b:includable>
+    <b:includable id='content'><b:include name='BloggerButton.content'/></b:includable>
+  </b:defaultmarkup>
+
+  <!--[ <Common> | ManualAd ]-->
+  <b:defaultmarkup type='Common'>
+    <b:includable id='ManualAd.main'>
+      <b:with value='data:links filter (l =&gt; data:amp.active ? l.name in [&quot;amp&quot;, &quot;AMP&quot;] : l.name in [&quot;noamp&quot;, &quot;NOAMP&quot;])' var='items'>
+        <b:if cond='data:items.notEmpty'>
+          <b:class cond='!data:amp.active' name='show-if-js'/>
+          <b:with value='(data:items filter (l =&gt; l.target not in [&quot;https://&quot;, &quot;#&quot;, &quot;ad_code&quot;])).first.target ?: &quot;&quot;' var='content'>
+            <b:include data='data:content' name='content'/>
+          </b:with>
+
+          <b:else/>
+          <b:class name='hidden'/>
+        </b:if>
+      </b:with>
+    </b:includable>
+
+    <b:includable id='ManualAd.content'>
+      <b:if cond='data:content'>
+        <data:content/>
+
+        <b:else/>
+        <!--[ Blank ad ]-->
+        <div class='adB' expr:data-text='data:messages.adsGoHere + &quot; (&quot; + data:title + &quot;)&quot;'>
+          <b:class cond='data:widget.sectionId == &quot;sec_Side_Sticky&quot;' name='h240'/>
+        </div>
+      </b:if>
+    </b:includable>
+  </b:defaultmarkup>
+</b:defaultmarkups>
+
+<b:if cond='data:story.active'>&lt;!--</b:if>
