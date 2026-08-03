@@ -8,15 +8,25 @@ import 'html_components.dart';
 class BloggerTheme extends Component {
   final Iterable<Component> head;
   final Iterable<Component> body;
+  final Iterable<Component>? children;
   final Map<String, String>? attributes;
 
-  const BloggerTheme({required this.head, required this.body, this.attributes});
+  const BloggerTheme({
+    required this.head,
+    required this.body,
+    this.children,
+    this.attributes,
+  });
+
   @override
   Iterable<Component> build() {
+    final filteredChildren =
+        children?.where((c) => c is! Head && c is! Body) ?? const [];
     return [
       Html(
         attributesz: attributes,
         children: [
+          ...filteredChildren,
           Head(children: head),
           Body(children: body),
         ],
