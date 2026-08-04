@@ -24,7 +24,7 @@ class BloggerTheme extends Component {
         children?.where((c) => c is! Head && c is! Body) ?? const [];
     return [
       Html(
-        attributesz: attributes,
+        attributes: attributes,
         children: [
           ...filteredChildren,
           if (head.isNotEmpty) Head(children: head),

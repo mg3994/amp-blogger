@@ -2,19 +2,7 @@ import 'core.dart';
 
 /// The root HTML element for a Blogger template.
 class Html extends DomComponent {
-  final Map<String, String?>? attributesz;
-
-  Html({this.attributesz, super.children})
-    : super(
-        'html',
-        attributes: attributesz == null
-            ? null
-            : Map.fromEntries(
-                attributesz.entries
-                    .where((entry) => entry.value != null)
-                    .map((entry) => MapEntry(entry.key, entry.value!)),
-              ),
-      );
+  const Html({super.attributes, super.children}) : super('html');
 }
 
 /// The document head element.

@@ -44,36 +44,44 @@ class Fragment extends Component {
   Iterable<Component> build() => children;
 }
 
-/// Escapes XML reserved characters in text content.
+/// Escapes XML reserved characters, filters XML 1.0 restricted control characters (C0 and C1),
+/// and converts non-ASCII Unicode characters into safe XML hexadecimal Numeric Character References (NCRs).
 String _escapeXml(String text) {
-  var sb = StringBuffer();
-  for (var i = 0; i < text.length; i++) {
-    var char = text[i];
-    var code = char.codeUnitAt(0);
-
-    // Escape basic XML characters
-    if (char == '&') {
+  final sb = StringBuffer();
+  for (final rune in text.runes) {
+    if (rune == 38) {
+      // '&'
       sb.write('&amp;');
-    } else if (char == '<') {
+    } else if (rune == 60) {
+      // '<'
       sb.write('&lt;');
-    } else if (char == '>') {
+    } else if (rune == 62) {
+      // '>'
       sb.write('&gt;');
-    } else if (char == '"') {
+    } else if (rune == 34) {
+      // '"'
       sb.write('&quot;');
-    } else if (char == "'") {
+    } else if (rune == 39) {
+      // "'"
       sb.write('&apos;');
-    }
-    // XML 1.0 restricted control characters (0x00 to 0x1F except 0x09, 0x0A, 0x0D)
-    else if ((code >= 0x00 && code <= 0x08) ||
-        (code >= 0x0B && code <= 0x0C) ||
-        (code >= 0x0E && code <= 0x1F)) {
-      // Replace with a space or just skip. For JS, replacing with space is safer.
+    } else if ((rune >= 0x00 && rune <= 0x08) ||
+        rune == 0x0B ||
+        rune == 0x0C ||
+        (rune >= 0x0E && rune <= 0x1F) ||
+        (rune >= 0x7F && rune <= 0x9F)) {
       sb.write(' ');
-    }
-    // Handle non-printable or potentially problematic characters by hex encoding if needed
-    // but for now, the above covers the critical XML requirements.
-    else {
-      sb.write(char);
+    } else if (rune >= 0x09 && rune <= 0x0A) {
+      // Tab, LF
+      sb.writeCharCode(rune);
+    } else if (rune == 0x0D) {
+      // CR
+      sb.writeCharCode(rune);
+    } else if (rune >= 0x20 && rune <= 0x7E) {
+      // Standard ASCII printable
+      sb.writeCharCode(rune);
+    } else {
+      // Non-ASCII Unicode character - convert to hex NCR
+      sb.write('&#x${rune.toRadixString(16).toUpperCase()};');
     }
   }
   return sb.toString();
