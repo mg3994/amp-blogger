@@ -230,6 +230,11 @@ class Span extends DomComponent {
   const Span({super.attributes, super.children}) : super('span');
 }
 
+/// A noscript element shown when scripts are disabled.
+class Noscript extends DomComponent {
+  const Noscript({super.attributes, super.children}) : super('noscript');
+}
+
 /// A semantic header section element.
 class Header extends DomComponent {
   const Header({super.attributes, super.children}) : super('header');

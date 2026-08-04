@@ -153,8 +153,14 @@ class BSkin extends Component {
   final String css;
   final List<dynamic>? variables; // List of BVariable or BGroup
   final String version;
+  final bool? contentInCDATA;
 
-  const BSkin(this.css, {this.variables, this.version = '1.3.0'});
+  const BSkin(
+    this.css, {
+    this.variables,
+    this.version = '1.3.0',
+    this.contentInCDATA = true,
+  });
 
   @override
   Iterable<Component> build() {
@@ -176,7 +182,12 @@ class BSkin extends Component {
       DomComponent(
         'b:skin',
         attributes: {'version': version},
-        children: [RawText('<![CDATA[\n$content\n]]>')],
+        children: [
+          if (contentInCDATA == true)
+            RawText('<![CDATA[\n$content\n]]>')
+          else
+            Text(content),
+        ],
       ),
     ];
   }
@@ -208,15 +219,15 @@ class BIncludable extends DomComponent {
 class BAttr extends DomComponent {
   final String? cond;
   final String name;
-  final String value;
+  final String? value;
   final String? exprValue;
 
-  BAttr({this.cond, required this.name, required this.value, this.exprValue})
+  BAttr({this.cond, required this.name, this.value, this.exprValue})
     : super(
         'b:attr',
         attributes: {
           'name': name,
-          'value': value,
+          'value': ?value,
           'expr:value': ?exprValue,
           'cond': ?cond,
         },
@@ -285,8 +296,9 @@ class BSwitch extends DomComponent {
 class BCase extends DomComponent {
   final String value;
 
-  BCase({required this.value, super.children})
-    : super('b:case', attributes: {'value': value});
+  BCase({required this.value}) : super('b:case', attributes: {'value': value});
+  @override
+  Iterable<Component> build() => [];
 }
 
 /// Represents the default branch of a `b:switch` block.
