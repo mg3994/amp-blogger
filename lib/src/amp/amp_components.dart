@@ -23,6 +23,79 @@ class AmpImg extends DomComponent {
        );
 }
 
+/// An interactive mega navigation menu.
+class AmpMegaMenu extends DomComponent {
+  AmpMegaMenu({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-mega-menu', attributes: attributes);
+}
+
+/// Allows zooming and panning of child components.
+class AmpPanZoom extends DomComponent {
+  AmpPanZoom({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-pan-zoom', attributes: attributes);
+}
+
+/// Creates a side-by-side visual comparison of two images.
+class AmpImageSlider extends DomComponent {
+  AmpImageSlider({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-image-slider', attributes: attributes);
+}
+
+/// An interactive multi-level dynamic dropdown menu.
+class AmpNestedMenu extends DomComponent {
+  AmpNestedMenu({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-nested-menu', attributes: attributes);
+}
+
+/// Shows personalized content recommendation blocks.
+class AmpRecommender extends DomComponent {
+  AmpRecommender({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-recommender', attributes: attributes);
+}
+
+/// A highly-optimized horizontal scrolling stream gallery.
+class AmpStreamGallery extends DomComponent {
+  AmpStreamGallery({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-stream-gallery', attributes: attributes);
+}
+
+/// Integrates animations created using Google Web Designer (GWD).
+class AmpGwdAnimation extends DomComponent {
+  AmpGwdAnimation({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-gwd-animation', attributes: attributes);
+}
+
+/// Prompts users to download your mobile app.
+class AmpAppBanner extends DomComponent {
+  AmpAppBanner({
+    String? id,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-app-banner',
+         attributes: {
+           'id': ?id,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
 /// An AMP video component replacing the standard HTML video tag.
 class AmpVideo extends DomComponent {
   AmpVideo({
