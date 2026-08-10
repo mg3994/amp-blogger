@@ -1243,6 +1243,115 @@ class AmpRuntimeScript extends DomComponent {
         );
 }
 
+/// Sandboxed custom JS engine running in a Web Worker.
+class AmpScript extends DomComponent {
+  AmpScript({
+    String? src,
+    String? script,
+    String? nodom,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-script',
+         attributes: {
+           'src': ?src,
+           'script': ?script,
+           'nodom': ?nodom,
+           ...?attributes,
+         },
+       );
+}
+
+/// Renders 3D glTF models directly in the web browser.
+class Amp3dGltf extends DomComponent {
+  Amp3dGltf({
+    String? src,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-3d-gltf',
+         attributes: {
+           'src': ?src,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// Displays Adobe After Effects (Lottie) JSON animations.
+class AmpBodymovinAnimation extends DomComponent {
+  AmpBodymovinAnimation({
+    String? loop,
+    String? autoplay,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-bodymovin-animation',
+         attributes: {
+           'loop': ?loop,
+           'autoplay': ?autoplay,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// Integrates interactive quizzes and polls from Riddle.com.
+class AmpRiddleQuiz extends DomComponent {
+  AmpRiddleQuiz({
+    String? riddleId,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-riddle-quiz',
+         attributes: {
+           'data-riddle-id': ?riddleId,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates interactive Apester media cards.
+class AmpApesterMedia extends DomComponent {
+  AmpApesterMedia({
+    String? mediaId,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-apester-media',
+         attributes: {
+           'data-media-id': ?mediaId,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// An AMP HTML root helper component.
 class AmpHtml extends DomComponent {
   AmpHtml({

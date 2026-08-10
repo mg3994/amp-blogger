@@ -85,5 +85,20 @@ void main() {
   }
   print('✓ AmpHtml layouts and AmpBaseCarousel rendering passed');
 
+  // Test 6: AmpScript, Amp3dGltf, AmpBodymovinAnimation
+  final dynamicAmp = AmpHtml(children: [
+    AmpScript(src: 'worker.js', nodom: 'true'),
+    Amp3dGltf(src: 'model.gltf', width: '100', height: '100', layout: 'responsive'),
+    AmpBodymovinAnimation(loop: 'true', autoplay: 'true', width: '200', height: '200', layout: 'fixed'),
+  ]).render();
+
+  if (!dynamicAmp.contains('<amp-script src="worker.js" nodom="true"/>') ||
+      !dynamicAmp.contains('<amp-3d-gltf src="model.gltf" width="100" height="100" layout="responsive"/>') ||
+      !dynamicAmp.contains('<amp-bodymovin-animation loop="true" autoplay="true" width="200" height="200" layout="fixed"/>')) {
+    print('Failed Test 6: $dynamicAmp');
+    throw Exception('Dynamic/Advanced AMP elements rendering mismatch');
+  }
+  print('✓ AmpScript, Amp3dGltf, AmpBodymovinAnimation rendering passed');
+
   print('All AMP tests passed successfully!');
 }
