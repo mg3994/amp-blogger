@@ -152,6 +152,14 @@ void main() {
 
 - Standard HTML wrappers like `Div` plus other helpers in `html_components.dart`
 
+### AMP (Accelerated Mobile Pages) components
+
+- **Full-featured AMP HTML support** under `lib/src/amp/` category files.
+- **80+ AMP elements covered**, including basic media (`AmpImg`, `AmpVideo`, `AmpAudio`), layouts (`AmpCarousel`, `AmpBaseCarousel`, `AmpSidebar`, `AmpAccordion`, `AmpLightbox`), social embeds (`AmpYoutube`, `AmpInstagram`), web stories (`AmpStory`, `AmpStoryPage`, `AmpStoryGridLayer`), dynamic bindings (`AmpState`, `AmpList`, `AmpMustache`), and paywalls (`AmpAccess`).
+- **Core document layouts**: `AmpHtml`, `AmpCharset`, `AmpViewport`, `AmpCanonical`.
+- **Mandatory boilerplate loader elements**: `AmpBoilerplate`, `AmpRuntimeScript`, `AmpExtensionScript`.
+- **Pre-compilation Static Analysis**: Integrated `AmpValidator` utility to audit and validate your rendered theme pages against standard AMP specifications.
+
 ---
 
 ## Project Structure
