@@ -193,5 +193,20 @@ void main() {
   }
   print('✓ Video and Social Review components (IMA, Wistia, Yotpo) rendering passed');
 
+  // Test 13: Recaptcha, Imgur, and story social sharing elements
+  final advancedWidgets = AmpHtml(children: [
+    AmpRecaptchaInput(sitekey: 'recaptcha-key', action: 'submit'),
+    AmpImgur(imgurid: 'imgur-id', width: '200', height: '200', layout: 'fixed'),
+    AmpStorySocialShare(),
+  ]).render();
+
+  if (!advancedWidgets.contains('<amp-recaptcha-input data-sitekey="recaptcha-key" data-action="submit"/>') ||
+      !advancedWidgets.contains('<amp-imgur data-imgurid="imgur-id" width="200" height="200" layout="fixed"/>') ||
+      !advancedWidgets.contains('<amp-story-social-share/>')) {
+    print('Failed Test 13: $advancedWidgets');
+    throw Exception('Advanced widget components rendering mismatch');
+  }
+  print('✓ Advanced widget components (Recaptcha, Imgur, Story social share) rendering passed');
+
   print('All AMP tests passed successfully!');
 }

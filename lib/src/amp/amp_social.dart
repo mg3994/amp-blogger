@@ -407,6 +407,29 @@ class AmpGist extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds a secure Imgur image or gallery.
+class AmpImgur extends DomComponent {
+  AmpImgur({
+    String? imgurid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-imgur',
+         attributes: {
+           'data-imgurid': ?imgurid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// An AMP social sharing button component.
 class AmpSocialShare extends DomComponent {
   AmpSocialShare({

@@ -71,6 +71,17 @@ class AmpStoryBookend extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Renders standard social sharing buttons within Web Stories.
+class AmpStorySocialShare extends DomComponent {
+  AmpStorySocialShare({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-social-share',
+         attributes: attributes,
+       );
+}
+
 /// A player for embedding and playing AMP Web Stories on standard pages.
 class AmpStoryPlayer extends DomComponent {
   AmpStoryPlayer({

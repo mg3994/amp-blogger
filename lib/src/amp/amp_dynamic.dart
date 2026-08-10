@@ -210,6 +210,36 @@ class AmpInstallServiceworker extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Appends a reCAPTCHA v3 token to AMP form submissions.
+class AmpRecaptchaInput extends DomComponent {
+  AmpRecaptchaInput({
+    String? sitekey,
+    String? action,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-recaptcha-input',
+         attributes: {
+           'data-sitekey': ?sitekey,
+           'data-action': ?action,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Dynamically rewrites target URLs on click (e.g., for affiliate linking).
+class AmpLinkRewriter extends DomComponent {
+  AmpLinkRewriter({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-link-rewriter',
+         attributes: attributes,
+       );
+}
+
 /// An AMP push notifications module.
 class AmpWebPush extends DomComponent {
   AmpWebPush({
