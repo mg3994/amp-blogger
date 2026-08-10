@@ -73,4 +73,15 @@ void main() {
   final xml = theme.generate();
   print('Generated AMP-compliant Blogger Theme XML:');
   print(xml);
+
+  print('\nRunning pre-compilation AMP Static Analysis...');
+  final errors = AmpValidator.validate(xml);
+  if (errors.isEmpty) {
+    print('✓ Congratulations! Your generated Blogger theme is 100% AMP-compliant!');
+  } else {
+    print('✗ AMP Validation Errors Found:');
+    for (var error in errors) {
+      print('  - $error');
+    }
+  }
 }
