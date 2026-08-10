@@ -125,8 +125,8 @@ void main() {
       BAttr(name: 'xmlns:b', value: ''),
       BAttr(name: 'xmlns:expr', value: ''),
       BAttr(name: 'xmlns:data', value: ''),
-      // Conditionally adds class="amp" to <html> when ?amp=1 is in the URL
-      BClass(cond: 'data:view.url.params.amp == "1"', name: 'amp'),
+      // Conditionally adds amp="amp" attribute to <html> on mobile requests
+      BAttr(cond: 'data:blog.isMobileRequest', name: 'amp', value: 'amp'),
     ],
     head: [
       Title(children: [Text('Generated Blogger Theme')]),
