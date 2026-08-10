@@ -132,5 +132,21 @@ void main() {
   }
   print('✓ Extended AMP components (Mathml, Gist, Font) rendering passed');
 
+  // Test 9: AmpValidator static analysis
+  final invalidHtml = '<html><body>Hello World</body></html>';
+  final invalidErrors = AmpValidator.validate(invalidHtml);
+  if (invalidErrors.isEmpty) {
+    throw Exception('AmpValidator failed to catch invalid AMP layout');
+  }
+  print('✓ AmpValidator correctly caught invalid AMP layout (${invalidErrors.length} errors found)');
+
+  final validAmpDoc = '<!DOCTYPE html><html amp=""><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="canonical" href="."/><style amp-boilerplate="amp-boilerplate"></style><script async="async" src="https://cdn.ampproject.org/v0.js"/></head><body>Hello</body></html>';
+  final validErrors = AmpValidator.validate(validAmpDoc);
+  if (validErrors.isNotEmpty) {
+    print('Errors found in valid layout: $validErrors');
+    throw Exception('AmpValidator failed on valid layout');
+  }
+  print('✓ AmpValidator correctly validated valid AMP layout');
+
   print('All AMP tests passed successfully!');
 }

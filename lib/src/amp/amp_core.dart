@@ -55,6 +55,60 @@ class AmpHtml extends DomComponent {
        );
 }
 
+/// Helper utility to run pre-compilation validation on rendered AMP theme HTML string.
+class AmpValidator {
+  /// Validates if the given [renderedHtml] conforms to the standard AMP specifications.
+  /// Returns a list of validation errors/warnings found.
+  static List<String> validate(String renderedHtml) {
+    final errors = <String>[];
+
+    // 1. Check for DOCTYPE
+    if (!renderedHtml.toUpperCase().contains('<!DOCTYPE HTML>')) {
+      errors.add('Missing mandatory standard HTML5 doctype declaration: `<!DOCTYPE html>`.');
+    }
+
+    // 2. Check for amp attribute in html tag
+    if (!renderedHtml.contains('<html') || (!renderedHtml.contains('amp=') && !renderedHtml.contains('amp ') && !renderedHtml.contains('amp>'))) {
+      errors.add('Missing mandatory `amp` or `⚡` attribute inside the `<html>` tag.');
+    }
+
+    // 3. Check for head and body tags
+    if (!renderedHtml.contains('<head') || !renderedHtml.contains('</head>')) {
+      errors.add('Missing mandatory `<head>` tag.');
+    }
+    if (!renderedHtml.contains('<body') || !renderedHtml.contains('</body>')) {
+      errors.add('Missing mandatory `<body>` tag.');
+    }
+
+    // 4. Check for charset
+    if (!renderedHtml.contains('charset="utf-8"')) {
+      errors.add('Missing mandatory `<meta charset="utf-8">` tag inside `<head>`.');
+    }
+
+    // 5. Check for viewport
+    if (!renderedHtml.contains('name="viewport"') || !renderedHtml.contains('width=device-width')) {
+      errors.add('Missing mandatory viewport meta tag `<meta name="viewport" content="width=device-width,...">`.');
+    }
+
+    // 6. Check for canonical link
+    if (!renderedHtml.contains('rel="canonical"')) {
+      errors.add('Missing mandatory `<link rel="canonical" href="...">` tag.');
+    }
+
+    // 7. Check for AMP runtime engine
+    if (!renderedHtml.contains('src="https://cdn.ampproject.org/v0.js"')) {
+      errors.add('Missing mandatory core AMP runtime engine `<script async src="https://cdn.ampproject.org/v0.js"></script>`.');
+    }
+
+    // 8. Check for AMP boilerplate styles
+    if (!renderedHtml.contains('amp-boilerplate')) {
+      errors.add('Missing mandatory `<style amp-boilerplate>` or `<noscript><style amp-boilerplate>` CSS rules.');
+    }
+
+    return errors;
+  }
+}
+
 /// Standard AMP Charset Meta tag.
 class AmpCharset extends DomComponent {
   AmpCharset() : super('meta', attributes: {'charset': 'utf-8'});
