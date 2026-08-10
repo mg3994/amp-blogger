@@ -1243,6 +1243,282 @@ class AmpRuntimeScript extends DomComponent {
         );
 }
 
+/// Displays a MathML formula.
+class AmpMathml extends DomComponent {
+  AmpMathml({
+    String? formula,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-mathml',
+         attributes: {
+           'data-formula': ?formula,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Displays a countdown sequence to a specified date.
+class AmpDateCountdown extends DomComponent {
+  AmpDateCountdown({
+    String? enddate,
+    String? timeleftMs,
+    String? offsetSeconds,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-date-countdown',
+         attributes: {
+           'enddate': ?enddate,
+           'timeleft-ms': ?timeleftMs,
+           'offset-seconds': ?offsetSeconds,
+           ...?attributes,
+         },
+       );
+}
+
+/// Adds several dynamic CSS class names onto the `<body>` element.
+class AmpDynamicCssClasses extends DomComponent {
+  AmpDynamicCssClasses({
+    Map<String, String>? attributes,
+  }) : super('amp-dynamic-css-classes', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Triggers and monitors the loading of custom fonts.
+class AmpFont extends DomComponent {
+  AmpFont({
+    String? fontFamily,
+    String? timeout,
+    String? onInsertClass,
+    String? onRemoveClass,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-font',
+         attributes: {
+           'font-family': ?fontFamily,
+           'timeout': ?timeout,
+           'on-insert-class': ?onInsertClass,
+           'on-remove-class': ?onRemoveClass,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Truncates text with an ellipsis, optionally showing an overflow/expand element.
+class AmpTruncateText extends DomComponent {
+  AmpTruncateText({
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-truncate-text',
+         attributes: {
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// A player for embedding and playing AMP Web Stories on standard pages.
+class AmpStoryPlayer extends DomComponent {
+  AmpStoryPlayer({
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-player',
+         attributes: {
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// A shopping experience container inside AMP story pages.
+class AmpStoryShopping extends DomComponent {
+  AmpStoryShopping({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-story-shopping', attributes: attributes);
+}
+
+/// A CTA outlink button inside AMP story pages.
+class AmpStoryPageOutlink extends DomComponent {
+  AmpStoryPageOutlink({
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-page-outlink',
+         attributes: {
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// Custom video captions renderer for Web Stories.
+class AmpStoryCaptions extends DomComponent {
+  AmpStoryCaptions({
+    Map<String, String>? attributes,
+  }) : super('amp-story-captions', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds a GitHub Gist securely via an iframe.
+class AmpGist extends DomComponent {
+  AmpGist({
+    String? gistid,
+    String? file,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-gist',
+         attributes: {
+           'data-gistid': ?gistid,
+           'data-file': ?file,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Interactive subscription widget for Web Push notifications.
+class AmpWebPushWidget extends DomComponent {
+  AmpWebPushWidget({
+    String? id,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-web-push-widget',
+         attributes: {
+           'id': ?id,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// Handles content subscription paywalls and user access.
+class AmpAccess extends DomComponent {
+  AmpAccess({
+    String? id,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-access',
+         attributes: {
+           'id': ?id,
+           ...?attributes,
+         },
+       );
+}
+
+/// Dynamically and automatically inserts advertisements into an AMP page.
+class AmpAutoAds extends DomComponent {
+  AmpAutoAds({
+    String? type,
+    String? adJson,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-auto-ads',
+         attributes: {
+           'type': ?type,
+           'data-ad-json': ?adJson,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Dynamically replaces phone numbers in links to enable call tracking.
+class AmpCallTracking extends DomComponent {
+  AmpCallTracking({
+    String? config,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-call-tracking',
+         attributes: {
+           'config': ?config,
+           ...?attributes,
+         },
+       );
+}
+
+/// Used to conduct user experience (A/B testing) experiments on AMP pages.
+class AmpExperiment extends DomComponent {
+  AmpExperiment({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-experiment', attributes: attributes);
+}
+
+/// Shows multiple images along a horizontal axis for tap navigation.
+class AmpInlineGallery extends DomComponent {
+  AmpInlineGallery({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-inline-gallery', attributes: attributes);
+}
+
+/// Provides input masking capabilities inside form fields.
+class AmpInputmask extends DomComponent {
+  AmpInputmask({
+    String? mask,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-inputmask',
+         attributes: {
+           'mask': ?mask,
+           ...?attributes,
+         },
+       );
+}
+
+/// Provides customizable behavior for ad exits in AMPHTML ads.
+class AmpAdExit extends DomComponent {
+  AmpAdExit({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-ad-exit', attributes: attributes);
+}
+
+/// Automatically generates analytics configs for Web Stories.
+class AmpStoryAutoAnalytics extends DomComponent {
+  AmpStoryAutoAnalytics({
+    Map<String, String>? attributes,
+  }) : super('amp-story-auto-analytics', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Sandboxed custom JS engine running in a Web Worker.
 class AmpScript extends DomComponent {
   AmpScript({

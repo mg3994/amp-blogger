@@ -100,5 +100,37 @@ void main() {
   }
   print('✓ AmpScript, Amp3dGltf, AmpBodymovinAnimation rendering passed');
 
+  // Test 7: Paywall, experiments, and inputmask elements
+  final enterpriseAmp = AmpHtml(children: [
+    AmpAccess(id: 'membership-paywall'),
+    AmpAutoAds(type: 'adsense'),
+    AmpExperiment(),
+    AmpInputmask(mask: '99-999'),
+  ]).render();
+
+  if (!enterpriseAmp.contains('<amp-access id="membership-paywall"/>') ||
+      !enterpriseAmp.contains('<amp-auto-ads type="adsense"/>') ||
+      !enterpriseAmp.contains('<amp-experiment/>') ||
+      !enterpriseAmp.contains('<amp-inputmask mask="99-999"/>')) {
+    print('Failed Test 7: $enterpriseAmp');
+    throw Exception('Enterprise AMP elements rendering mismatch');
+  }
+  print('✓ Enterprise AMP components (Access, Auto-ads, Experiment, Inputmask) rendering passed');
+
+  // Test 8: Mathml, Gist, and Font loading components
+  final extendedAmp = AmpHtml(children: [
+    AmpMathml(formula: 'x^2'),
+    AmpGist(gistid: '12345'),
+    AmpFont(fontFamily: 'Roboto'),
+  ]).render();
+
+  if (!extendedAmp.contains('<amp-mathml data-formula="x^2"/>') ||
+      !extendedAmp.contains('<amp-gist data-gistid="12345"/>') ||
+      !extendedAmp.contains('<amp-font font-family="Roboto"/>')) {
+    print('Failed Test 8: $extendedAmp');
+    throw Exception('Extended AMP components rendering mismatch');
+  }
+  print('✓ Extended AMP components (Mathml, Gist, Font) rendering passed');
+
   print('All AMP tests passed successfully!');
 }
