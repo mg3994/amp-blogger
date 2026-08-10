@@ -177,3 +177,52 @@ final displayAd = AmpAd(
   layout: 'fixed',
 );
 ```
+
+---
+
+## 7. AMP Document Core & Layout Helpers
+
+### Purpose
+Simplifies constructing perfectly valid AMP HTML page structures, including mandatory head tags, runtime engines, boilerplate CSS blocks, and extension script loaders.
+
+### Classes
+- `AmpHtml`: High level `<html>` helper with native `amp` tags.
+- `AmpCharset`: `<meta charset="utf-8"/>` tag.
+- `AmpViewport`: Standard responsive viewport meta tag.
+- `AmpCanonical`: High level Canonical link tag helper.
+- `AmpBoilerplate`: Generates the mandatory AMP stylesheet and noscript fallbacks.
+- `AmpRuntimeScript`: Loads the main AMP JS engine.
+- `AmpExtensionScript`: Helper component to easily pull in external AMP element files (like `amp-sidebar` or `amp-carousel`).
+
+### Dart Example
+```dart
+final fullAmpTheme = BloggerTheme(
+  attributes: {
+    'xmlns': 'http://www.w3.org/1999/xhtml',
+    'xmlns:b': 'http://www.google.com/2005/gml/b',
+    'xmlns:expr': 'http://www.google.com/2005/gml/expr',
+    'xmlns:data': 'http://www.google.com/2005/gml/data',
+  },
+  head: [
+    AmpCharset(),
+    AmpViewport(),
+    AmpCanonical('https://example.blogspot.com/'),
+    const AmpBoilerplate(),
+    AmpRuntimeScript(),
+    AmpExtensionScript(extension: 'amp-sidebar'),
+    AmpExtensionScript(extension: 'amp-carousel', version: '0.2'),
+  ],
+  body: [
+    AmpHtml(
+      children: [
+        Div(
+          attributes: {'class': 'content'},
+          children: [
+            H1(children: [Text('Valid AMP Page')]),
+          ],
+        ),
+      ],
+    ),
+  ],
+);
+```

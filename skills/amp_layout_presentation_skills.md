@@ -180,3 +180,67 @@ final flyingCarpetSection = AmpFxFlyingCarpet(
   ],
 );
 ```
+
+---
+
+## 7. AmpBaseCarousel Skill
+
+### Purpose
+Implements the newer, more modern AMP carousel component for customizable content sliders with better touch gestures.
+
+### Parameters
+- `width` / `height` / `layout`: Component bounds.
+- `loop` (bool, optional): Loop slide sequence.
+- `snap` (bool, optional): Snapping behaviour on slides.
+
+### Dart Example
+```dart
+final modernCarousel = AmpBaseCarousel(
+  width: '600',
+  height: '300',
+  layout: 'responsive',
+  loop: true,
+  snap: true,
+  children: [
+    Div(children: [Text('Slide A')]),
+    Div(children: [Text('Slide B')]),
+  ],
+);
+```
+
+---
+
+## 8. AMP Web Stories (amp-story)
+
+### Purpose
+Creates visually rich, tap-through Web Stories with nested pages, grid layers, and background/foreground graphics.
+
+### Classes
+- `AmpStory`: Story canvas.
+- `AmpStoryPage`: An individual slide story view.
+- `AmpStoryGridLayer`: Arranges elements inside a page (e.g. template layouts: `"vertical"`, `"horizontal"`, `"third-thirds"`).
+- `AmpStoryBookend`: Story CTA bookend config file reference.
+
+### Dart Example
+```dart
+final webStory = AmpStory(
+  title: 'My First Story',
+  publisher: 'Blogger Author',
+  publisherLogoSrc: 'logo.png',
+  posterPortraitSrc: 'poster.jpg',
+  children: [
+    AmpStoryPage(
+      id: 'page1',
+      children: [
+        AmpStoryGridLayer(
+          template: 'vertical',
+          children: [
+            H1(children: [Text('The Adventure Begins')]),
+            AmpImg(src: 'scene1.jpg', width: '720', height: '1280', layout: 'responsive'),
+          ],
+        ),
+      ],
+    ),
+  ],
+);
+```
