@@ -21,7 +21,7 @@ body#layout .headP{width:50%}
 <b:if cond="data:view.isLayoutMode">
 <!-- prettier-ignore -->
 <b:template-skin><![CDATA[
-  /* Override defaults */
+/* Override defaults */
 body#layout::-webkit-scrollbar{-webkit-appearance:none;width:8px;height:8px}
 body#layout::-webkit-scrollbar-track{background:#f9f9f9}
 body#layout::-webkit-scrollbar-thumb{background:#d1d1d1;border-radius:2px}
@@ -75,8 +75,13 @@ body#layout .headR{display:flex;width:70%}
 body#layout .headS{width:50%;height:fit-content}
 body#layout .headP{width:50%}
 
-  
-  
+body#layout .mainN{display:flex}
+body#layout .mainL{width:30%}
+body#layout .mainR{width:70%}
+
+body#layout .mainB{display:flex}
+body#layout .blogB{width:60%}
+body#layout .sideB{width:40%}
   
 ]]></b:template-skin>
 </b:if></head><body><b:section id="header-area" class="header-section" maxwidgets="1" showaddelement="yes"><b:widget id="Header1" type="Header" title="Blog Header Title" locked="true"/></b:section></body></html>

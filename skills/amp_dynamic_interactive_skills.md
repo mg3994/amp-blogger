@@ -1,0 +1,179 @@
+# AMP Dynamic, Interactive & Utility Skills
+
+This skill set enables an AI Agent to construct robust client-side interactivity, dynamic list rendering, forms processing, and utility components using AMP HTML's native functional tags.
+
+---
+
+## 1. AmpState Skill (AMP-Bind)
+
+### Purpose
+Supports complex client-side client state tracking and variable bindings via `<amp-state>` variables.
+
+### Parameters
+- `id` (String, optional): The name of the state object.
+- `src` (String, optional): JSON source file for initializing state variables.
+
+### Dart Example
+```dart
+import 'package:blogger_theme/blogger_theme.dart';
+
+final clientState = AmpState(
+  id: 'blogPreferences',
+  children: [
+    RawText('{"theme": "dark", "fontSize": "medium"}'),
+  ],
+);
+```
+
+---
+
+## 2. AmpList & AmpMustache Skill
+
+### Purpose
+Retrieves remote JSON payloads and generates dynamic HTML content layouts using client-side Mustache templates.
+
+### Parameters
+- `src` (String, optional): Endpoint URL yielding the items array.
+- `width` / `height` / `layout`: Dimension guidelines.
+- `binding` (String, optional): Binding behaviors (e.g., `"no"` or `"refresh"`).
+
+### Dart Example
+```dart
+final recentPostsList = AmpList(
+  src: 'https://example.com/api/posts.json',
+  width: '600',
+  height: '400',
+  layout: 'responsive',
+  children: [
+    AmpMustache(
+      children: [
+        Div(
+          attributes: {'class': 'post-card'},
+          children: [
+            H3(children: [Text('{{title}}')]),
+            P(children: [Text('{{snippet}}')]),
+          ],
+        ),
+      ],
+    ),
+  ],
+);
+```
+
+---
+
+## 3. AmpForm Skill
+
+### Purpose
+Implements secure form submissions and dynamic response processing natively within AMP HTML pages.
+
+### Parameters
+- `method` (String, optional): Form HTTP submission method (typically `"post"`).
+- `actionXhr` (String, optional): Target endpoint taking XMLHttpRequests.
+- `target` (String, optional): Context target (e.g., `"_top"`).
+
+### Dart Example
+```dart
+final contactForm = AmpForm(
+  method: 'post',
+  actionXhr: 'https://example.com/api/submit-form',
+  target: '_top',
+  children: [
+    Input(attributes: {'type': 'text', 'name': 'name', 'required': 'required'}),
+    Input(attributes: {'type': 'email', 'name': 'email', 'required': 'required'}),
+    Button(attributes: {'type': 'submit'}, children: [Text('Submit Now')]),
+  ],
+);
+```
+
+---
+
+## 4. Selector & Inputs (Autocomplete & Pickers)
+
+### Purpose
+Provides selectors and complex inputs like Autocomplete inputs and Date calendars natively.
+
+### Classes
+- `AmpSelector`: Choice/Selection list items.
+- `AmpAutocomplete`: Dynamic autocomplete text list.
+- `AmpDatePicker`: Date selection widgets.
+
+### Dart Example
+```dart
+final modeSelector = AmpSelector(
+  name: 'display-mode',
+  children: [
+    Div(attributes: {'option': 'list'}, children: [Text('List View')]),
+    Div(attributes: {'option': 'grid'}, children: [Text('Grid View')]),
+  ],
+);
+```
+
+---
+
+## 5. Client Date-Time Helpers
+
+### Purpose
+Formats and handles dates and relative times dynamically inside the user's browser.
+
+### Classes
+- `AmpDateDisplay`: Formats date strings on the client.
+- `AmpTimeago`: Shows friendly relative times (e.g. `"2 hours ago"`).
+
+### Dart Example
+```dart
+final dateDisplay = AmpDateDisplay(
+  datetime: '2023-11-15T09:30:00Z',
+  displayIn: 'local',
+  children: [
+    AmpMustache(children: [Text('{{dayName}}, {{day}} {{monthName}} {{year}}')]),
+  ],
+);
+
+final agoDisplay = AmpTimeago(
+  datetime: '2023-11-15T09:30:00Z',
+  width: '100',
+  height: '20',
+  layout: 'fixed',
+  children: [Text('2023-11-15')],
+);
+```
+
+---
+
+## 6. Service Worker, Geo, Push & Notifications
+
+### Purpose
+Injects service workers, handles geolocation, push preferences, user notifications, cookie consent, and advertising.
+
+### Classes
+- `AmpInstallServiceworker`: Registers a service worker.
+- `AmpWebPush`: Configures web push modules.
+- `AmpUserNotification`: Prompts banner warnings.
+- `AmpConsent`: Collects compliance consents.
+- `AmpGeo`: Extracts geo-location keys.
+- `AmpAd`: Inserts monetized ads dynamically.
+
+### Dart Example
+```dart
+final consentPrompt = AmpConsent(
+  id: 'gdpr-consent',
+  layout: 'nodisplay',
+  children: [
+    Div(
+      attributes: {'class': 'consent-dialog'},
+      children: [
+        P(children: [Text('We use cookies to enhance your experience.')]),
+        Button(attributes: {'on': 'tap:gdpr-consent.accept'}, children: [Text('Accept')]),
+      ],
+    ),
+  ],
+);
+
+final displayAd = AmpAd(
+  type: 'doubleclick',
+  width: '320',
+  height: '50',
+  layout: 'fixed',
+);
+```
