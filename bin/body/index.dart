@@ -1,7 +1,7 @@
 import 'package:blogger_theme/blogger_theme.dart';
 import 'default.dart';
 
-class BodyComponents extends Body {
+class BodyComponents extends Component {
   const BodyComponents();
 
   @override

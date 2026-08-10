@@ -150,15 +150,17 @@ class BData extends DomComponent {
 
 /// Builds a Blogger template skin block with optional CSS variables.
 class BSkin extends Component {
-  final String css;
   final List<dynamic>? variables; // List of BVariable or BGroup
   final String version;
   final bool? contentInCDATA;
 
-  const BSkin(
-    this.css, {
+  /// Mainly the RawText
+  final Iterable<Component>? children;
+
+  const BSkin({
     this.variables,
     this.version = '1.3.0',
+    this.children,
     this.contentInCDATA = true,
   });
 
@@ -173,22 +175,34 @@ class BSkin extends Component {
       }
       sb.writeln(" */");
     }
-    sb.write(css);
+    // sb.write(css);
 
     var content = sb.toString();
 
     return [
+      Text("\n"),
       XmlComment('prettier-ignore'),
+      Text("\n"),
       DomComponent(
         'b:skin',
         attributes: {'version': version},
         children: [
-          if (contentInCDATA == true)
-            RawText('<![CDATA[\n$content\n]]>')
-          else
-            Text(content),
+          if (contentInCDATA == true) RawText('<![CDATA[\n'),
+
+          Text(content, escape: !contentInCDATA!),
+          ...?children,
+
+          if (contentInCDATA == true) RawText('\n]]>'),
         ],
+
+        // [
+        //   if (contentInCDATA == true)
+        //     RawText('<![CDATA[\n$content\n]]>')
+        //   else
+        //     Text(content),
+        // ],
       ),
+      Text("\n"),
     ];
   }
 }
@@ -379,22 +393,40 @@ class XmlComment extends Component {
 
 /// Wraps raw CSS content in a Blogger `b:template-skin` block.
 class BTemplateSkin extends Component {
-  final String css;
+  final String content;
+  final bool? contentInCDATA;
+  final Map<String, String>? attributes;
 
-  const BTemplateSkin(this.css);
+  const BTemplateSkin(
+    this.content, {
+    this.contentInCDATA = true,
+    this.attributes,
+  });
 
   @override
   Iterable<Component> build() => [
+    Text("\n"),
     XmlComment('prettier-ignore'),
+    Text("\n"),
     DomComponent(
       'b:template-skin',
-      children: [RawText('<![CDATA[\n$css\n]]>')],
+      children: [
+        if (contentInCDATA == true) RawText('<![CDATA[\n'),
+
+        Text(content, escape: !contentInCDATA!),
+
+        if (contentInCDATA == true) RawText('\n]]>'),
+      ],
+
+      attributes: attributes,
     ),
+    Text("\n"),
   ];
 }
 
 /// Declares a Blogger template script dependency.
 class BTemplateScript extends DomComponent {
+  /// TODO:
   final String name;
   final String version;
   final bool? async;

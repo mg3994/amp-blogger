@@ -103,41 +103,21 @@ class Hr extends DomComponent {
 
 /// A script element, supporting embedded text or a CDATA-wrapped script body.
 class Script extends DomComponent {
-  final String? src;
-  final bool? async;
-  final String? type;
-  final String? content;
-  final bool? contentInCDATA;
-  final Iterable<Component>? childrenz;
-  final Map<String, String>? attributesz;
+  Script({super.attributes, super.children})
+    : super(
+        'script',
 
-  Script({
-    this.src,
-    this.async,
-    this.type,
-    this.content,
-    this.contentInCDATA,
-    this.childrenz,
-    this.attributesz,
-  }) : super(
-         'script',
-         attributes: {
-           'src': ?src,
-           'type': ?type,
-           if (async != null) 'async': async.toString(),
-           ...?attributesz,
-         },
-         children:
-             childrenz ??
-             (content != null
-                 ? [
-                     if (contentInCDATA == true)
-                       RawText('//<![CDATA[\n$content\n//]]>')
-                     else
-                       Text(content),
-                   ]
-                 : null),
-       );
+        // children:
+        //     childrenz ??
+        //     (content != null
+        //         ? [
+        //             if (contentInCDATA == true)
+        //               RawText('//<![CDATA[\n$content\n//]]>')
+        //             else
+        //               Text(content),
+        //           ]
+        // : null),
+      );
 }
 
 /// Converts a plain attribute map into Blogger expression attributes.

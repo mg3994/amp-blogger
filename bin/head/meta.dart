@@ -135,7 +135,7 @@ class BloggerMeta extends Component {
           BComment(children: [Text('[ Link Canonical ]')]),
           Link(
             attributes: {
-              'expr:href': 'data:blog.url.canonical',
+              'expr:href': 'data:view.url.canonical',
               'rel': 'canonical',
             },
           ),
@@ -145,7 +145,7 @@ class BloggerMeta extends Component {
             children: [
               Link(
                 attributes: {
-                  'expr:href': 'params(data:blog.url.canonical, { amp: "1" })',
+                  'expr:href': 'params(data:view.url.canonical, { amp: "1" })',
                   'rel': 'amphtml',
                 },
               ),

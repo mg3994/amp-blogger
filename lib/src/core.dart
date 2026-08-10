@@ -139,3 +139,6 @@ extension RenderComponentExtension on Component {
     return renderer.render(this);
   }
 }
+
+
+// TODO : extension on DomComponent for making all those other tags that we have not defined here or in html or anywhere in project

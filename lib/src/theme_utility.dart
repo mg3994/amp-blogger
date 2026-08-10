@@ -37,7 +37,8 @@ class BloggerTheme extends Component {
   /// Renders this theme to a full Blogger-compatible XML document.
   String generate() {
     var renderer = Renderer();
-    return '<?xml version="1.0" encoding="UTF-8" ?>\n'
+    return '<?xml version="1.0" encoding="UTF-8" ?>\n<!DOCTYPE html>\n'
+        // TODO: that doc type
         '${renderer.render(this)}';
   }
 }
