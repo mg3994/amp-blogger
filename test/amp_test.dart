@@ -132,6 +132,21 @@ void main() {
   }
   print('✓ Extended AMP components (Mathml, Gist, Font) rendering passed');
 
+  // Test 10: Interactive Web Story elements
+  final storyInteractives = AmpHtml(children: [
+    AmpStoryInteractiveQuiz(id: 'quiz-1', question: 'What is 2+2?', option1: '3', option2: '4'),
+    AmpStoryInteractivePoll(id: 'poll-1', question: 'Favorite color?', option1: 'Blue', option2: 'Red'),
+    AmpStoryInteractiveSlider(id: 'slider-1', question: 'Rate this', emoji: '🌟'),
+  ]).render();
+
+  if (!storyInteractives.contains('<amp-story-interactive-quiz id="quiz-1" chip-text="What is 2+2?" option-1-text="3" option-2-text="4"/>') ||
+      !storyInteractives.contains('<amp-story-interactive-poll id="poll-1" chip-text="Favorite color?" option-1-text="Blue" option-2-text="Red"/>') ||
+      !storyInteractives.contains('<amp-story-interactive-slider id="slider-1" chip-text="Rate this" emoji="&#x1F31F;"/>')) {
+    print('Failed Test 10: $storyInteractives');
+    throw Exception('Interactive Story components rendering mismatch');
+  }
+  print('✓ Interactive Story components (Quiz, Poll, Slider) rendering passed');
+
   // Test 9: AmpValidator static analysis
   final invalidHtml = '<html><body>Hello World</body></html>';
   final invalidErrors = AmpValidator.validate(invalidHtml);

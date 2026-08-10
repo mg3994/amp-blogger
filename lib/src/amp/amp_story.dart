@@ -122,3 +122,124 @@ class AmpStoryCaptions extends DomComponent {
   @override
   Iterable<Component> build() => [];
 }
+
+/// An attachment layer for an individual story page that allows swiping up.
+class AmpStoryPageAttachment extends DomComponent {
+  AmpStoryPageAttachment({
+    String? layout,
+    String? href,
+    String? theme,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-page-attachment',
+         attributes: {
+           'layout': ?layout,
+           'href': ?href,
+           'theme': ?theme,
+           ...?attributes,
+         },
+       );
+}
+
+/// A layer for links and buttons inside an AMP Web Story page.
+class AmpStoryCtaLayer extends DomComponent {
+  AmpStoryCtaLayer({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-story-cta-layer', attributes: attributes);
+}
+
+/// An interactive quiz widget inside AMP Web Story pages.
+class AmpStoryInteractiveQuiz extends DomComponent {
+  AmpStoryInteractiveQuiz({
+    String? id,
+    String? question,
+    String? option1,
+    String? option2,
+    String? option3,
+    String? option4,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-story-interactive-quiz',
+         attributes: {
+           'id': ?id,
+           'chip-text': ?question,
+           'option-1-text': ?option1,
+           'option-2-text': ?option2,
+           'option-3-text': ?option3,
+           'option-4-text': ?option4,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// An interactive poll widget inside AMP Web Story pages.
+class AmpStoryInteractivePoll extends DomComponent {
+  AmpStoryInteractivePoll({
+    String? id,
+    String? question,
+    String? option1,
+    String? option2,
+    String? option3,
+    String? option4,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-story-interactive-poll',
+         attributes: {
+           'id': ?id,
+           'chip-text': ?question,
+           'option-1-text': ?option1,
+           'option-2-text': ?option2,
+           'option-3-text': ?option3,
+           'option-4-text': ?option4,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Displays interactive results matching poll/quiz selections.
+class AmpStoryInteractiveResults extends DomComponent {
+  AmpStoryInteractiveResults({
+    String? id,
+    String? prompt,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-story-interactive-results',
+         attributes: {
+           'id': ?id,
+           'prompt-text': ?prompt,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// An interactive emoji slider inside AMP Web Story pages.
+class AmpStoryInteractiveSlider extends DomComponent {
+  AmpStoryInteractiveSlider({
+    String? id,
+    String? question,
+    String? emoji,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-story-interactive-slider',
+         attributes: {
+           'id': ?id,
+           'chip-text': ?question,
+           'emoji': ?emoji,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
