@@ -105,6 +105,27 @@ class AmpValidator {
       errors.add('Missing mandatory `<style amp-boilerplate>` or `<noscript><style amp-boilerplate>` CSS rules.');
     }
 
+    // 9. Check for forbidden standard/inline script tags
+    // Valid script tags in AMP must be async, JSON types, or template templates.
+    // Convert any self-closing script tags to standard closing tags in a temp string for reliable parsing
+    final normalizedHtml = renderedHtml.replaceAllMapped(
+      RegExp(r'<script([^>]*?)\/>', caseSensitive: false),
+      (match) => '<script${match.group(1)}></script>',
+    );
+
+    final scriptRegex = RegExp(r'<script([^>]*?)>([\s\S]*?)</script>', caseSensitive: false);
+    final matches = scriptRegex.allMatches(normalizedHtml);
+    for (var match in matches) {
+      final attrs = match.group(1) ?? '';
+      final isAsync = attrs.contains('async');
+      final isJson = attrs.contains('application/json') || attrs.contains('application/ld+json');
+      final isCustom = attrs.contains('custom-element') || attrs.contains('custom-template');
+
+      if (!isAsync && !isJson && !isCustom) {
+        errors.add('Forbidden script tag found: `<script$attrs>`. AMP HTML forbids standard inline or synchronous script tags.');
+      }
+    }
+
     return errors;
   }
 }
