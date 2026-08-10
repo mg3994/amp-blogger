@@ -71,6 +71,14 @@ class AmpStoryBookend extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Dynamically and automatically inserts advertisements into an AMP Web Story.
+class AmpStoryAutoAds extends DomComponent {
+  AmpStoryAutoAds({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-story-auto-ads', attributes: attributes);
+}
+
 /// Renders standard social sharing buttons within Web Stories.
 class AmpStorySocialShare extends DomComponent {
   AmpStorySocialShare({

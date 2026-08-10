@@ -206,15 +206,17 @@ void main() {
     AmpRecaptchaInput(sitekey: 'recaptcha-key', action: 'submit'),
     AmpImgur(imgurid: 'imgur-id', width: '200', height: '200', layout: 'fixed'),
     AmpStorySocialShare(),
+    AmpStoryAutoAds(),
   ]).render();
 
   if (!advancedWidgets.contains('<amp-recaptcha-input data-sitekey="recaptcha-key" data-action="submit"/>') ||
       !advancedWidgets.contains('<amp-imgur data-imgurid="imgur-id" width="200" height="200" layout="fixed"/>') ||
-      !advancedWidgets.contains('<amp-story-social-share/>')) {
+      !advancedWidgets.contains('<amp-story-social-share/>') ||
+      !advancedWidgets.contains('<amp-story-auto-ads/>')) {
     print('Failed Test 13: $advancedWidgets');
     throw Exception('Advanced widget components rendering mismatch');
   }
-  print('✓ Advanced widget components (Recaptcha, Imgur, Story social share) rendering passed');
+  print('✓ Advanced widget components (Recaptcha, Imgur, Story social share, Story auto ads) rendering passed');
 
   print('All AMP tests passed successfully!');
 }
