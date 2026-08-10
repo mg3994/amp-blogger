@@ -226,3 +226,47 @@ final fullAmpTheme = BloggerTheme(
   ],
 );
 ```
+
+---
+
+## 8. AMP Blogger Integration: XML Attribute Override & Resetting Technique
+
+### Purpose
+Standard Blogger XML compilers inject namespace attributes automatically (such as `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:b="..."`, `xmlns:expr="..."`, and `xmlns:data="..."`) into the top-level outer document tags. For an AMP page to validate strictly under the AMP standard, these namespace definitions must be reset or removed.
+
+### Solution
+Inside the theme declaration, you can utilize Blogger's native `BAttr` elements to override and clear those XML namespace attributes, resetting them to clean, empty strings.
+
+### Dart Example
+```dart
+final ampBloggerTheme = BloggerTheme(
+  attributes: {
+    'b:css': 'false',
+    'b:defaultwidgetversion': '2',
+    'b:layoutsVersion': '3',
+    'b:responsive': 'true',
+    'b:templateUrl': 'plus-ui.xml',
+    'b:templateVersion': '3.7.0',
+    'xmlns': 'http://www.w3.org/1999/xhtml',
+    'xmlns:b': 'http://www.google.com/2005/gml/b',
+    'xmlns:data': 'http://www.google.com/2005/gml/data',
+    'xmlns:expr': 'http://www.google.com/2005/gml/expr',
+  },
+  children: [
+    // Override and reset namespaces for strict AMP validity
+    BAttr(name: 'xmlns', value: ''),
+    BAttr(name: 'xmlns:b', value: ''),
+    BAttr(name: 'xmlns:expr', value: ''),
+    BAttr(name: 'xmlns:data', value: ''),
+  ],
+  head: [
+    AmpCharset(),
+    AmpViewport(),
+    const AmpBoilerplate(),
+    AmpRuntimeScript(),
+  ],
+  body: [
+    // Your layouts here...
+  ],
+);
+```
