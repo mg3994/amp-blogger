@@ -13,5 +13,4 @@
 - **AMP-Blogger Integration Techniques**: Integrated instructions on utilizing `BAttr` blocks to override/reset top-level XML namespaces for strict validation.
 - **Native Static Analysis Auditor (`AmpValidator`)**: Added a dynamic `AmpValidator` class to audit and analyze compiled layout templates against core AMP compliance rules.
 - **Dynamic Tag Extension**: Added `CustomDomComponentExtension` on `String` resolving the long-standing TODO of arbitrary element generation (`'custom-tag'.tag(...)`).
-- **Comprehensive Unit Testing**: Introduced a dedicated test suite with 12 validation blocks, establishing 100% compilation and rendering safety.
-- **Agentic Skills Workspace**: Added 6 detailed Markdown files under `/skills/` at the repository root to fully guide AI agents inside an agentic workspace.
+- **Comprehensive Unit Testing**: Introduced a dedicated test suite with 13 validation blocks, establishing 100% compilation and rendering safety.
