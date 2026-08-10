@@ -33,7 +33,7 @@ Add `blogger_theme` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  blogger_theme: ^3.0.0
+  blogger_theme: ^4.0.0
 ```
 
 Or add it directly with:
@@ -102,7 +102,7 @@ class BlogLayout extends Component {
 }
 ```
 
-### 2. Generate Blogger theme XML
+### 2. Generate Blogger theme XML (with AMP-compliant overrides)
 
 ```dart
 import 'package:blogger_theme/blogger_theme.dart';
@@ -113,7 +113,19 @@ void main() {
       'b:responsive': 'true',
       'b:defaultwidgetversion': '2',
       'b:layoutsversion': '3',
+      'b:css': 'false',
+      'xmlns': 'http://www.w3.org/1999/xhtml',
+      'xmlns:b': 'http://www.google.com/2005/gml/b',
+      'xmlns:data': 'http://www.google.com/2005/gml/data',
+      'xmlns:expr': 'http://www.google.com/2005/gml/expr',
     },
+    // Reset attributes to clean XML output for strict AMP validation
+    children: [
+      BAttr(name: 'xmlns', value: ''),
+      BAttr(name: 'xmlns:b', value: ''),
+      BAttr(name: 'xmlns:expr', value: ''),
+      BAttr(name: 'xmlns:data', value: ''),
+    ],
     head: [
       Title(children: [Text('Generated Blogger Theme')]),
       BSkin('body { font-family: Arial, sans-serif; }'),

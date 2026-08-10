@@ -1,6 +1,6 @@
 name: blogger_theme
 description: A lightweight standalone Dart library to design Blogger themes with Jaspr-like syntax.
-version: 3.0.0
+version: 4.0.0
 documentation: https://bloggerquickstart.blogspot.com/
 # -----------------------------------------------------------------------------
 # Metadata for pub.dev
