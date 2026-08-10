@@ -141,4 +141,10 @@ extension RenderComponentExtension on Component {
 }
 
 
-// TODO : extension on DomComponent for making all those other tags that we have not defined here or in html or anywhere in project
+/// Extension to easily create dynamic/custom [DomComponent]s using any tag name.
+extension CustomDomComponentExtension on String {
+  /// Creates a custom [DomComponent] using this string as the tag name.
+  DomComponent tag({Map<String, String>? attributes, Iterable<Component>? children}) {
+    return DomComponent(this, attributes: attributes, children: children);
+  }
+}
