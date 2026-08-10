@@ -452,3 +452,373 @@ class AmpAddthis extends DomComponent {
   @override
   Iterable<Component> build() => [];
 }
+
+/// Embeds a Google Document, Sheet, Slide, or Form securely.
+class AmpGoogleDocumentEmbed extends DomComponent {
+  AmpGoogleDocumentEmbed({
+    String? src,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-google-document-embed',
+         attributes: {
+           'src': ?src,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds a WordPress post dynamically.
+class AmpWordpressEmbed extends DomComponent {
+  AmpWordpressEmbed({
+    String? url,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-wordpress-embed',
+         attributes: {
+           'data-url': ?url,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds interactive polls or widgets from BeOpinion.
+class AmpBeopinion extends DomComponent {
+  AmpBeopinion({
+    String? myId,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-beopinion',
+         attributes: {
+           'data-my-id': ?myId,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds cloud-hosted Slike Video Players.
+class AmpSlikeplayer extends DomComponent {
+  AmpSlikeplayer({
+    String? videoid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-slikeplayer',
+         attributes: {
+           'data-videoid': ?videoid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds a RedBull TV video stream player.
+class AmpRedbullPlayer extends DomComponent {
+  AmpRedbullPlayer({
+    String? videoid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-redbull-player',
+         attributes: {
+           'data-videoid': ?videoid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Displays video ads utilizing the Google Interactive Media Ads (IMA) SDK.
+class AmpImaVideo extends DomComponent {
+  AmpImaVideo({
+    String? src,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-ima-video',
+         attributes: {
+           'data-src': ?src,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds video clips from İzlesene.com.
+class AmpIzlesene extends DomComponent {
+  AmpIzlesene({
+    String? videoid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-izlesene',
+         attributes: {
+           'data-videoid': ?videoid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds an interactive Megaphone podcast player.
+class AmpMegaphone extends DomComponent {
+  AmpMegaphone({
+    String? episode,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-megaphone',
+         attributes: {
+           'data-episode': ?episode,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds video players from MowPlayer.
+class AmpMrowplayer extends DomComponent {
+  AmpMrowplayer({
+    String? mediaid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-mowplayer',
+         attributes: {
+           'data-mediaid': ?mediaid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds O2 video player content.
+class AmpO2Player extends DomComponent {
+  AmpO2Player({
+    String? pid,
+    String? vid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-o2-player',
+         attributes: {
+           'data-pid': ?pid,
+           'data-vid': ?vid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds Ooyala video player streams.
+class AmpOoyalaPlayer extends DomComponent {
+  AmpOoyalaPlayer({
+    String? embedCode,
+    String? pcode,
+    String? playerid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-ooyala-player',
+         attributes: {
+           'data-embedcode': ?embedCode,
+           'data-pcode': ?pcode,
+           'data-playerid': ?playerid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds Springboard video streams.
+class AmpSpringboardPlayer extends DomComponent {
+  AmpSpringboardPlayer({
+    String? contentid,
+    String? playerid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-springboard-player',
+         attributes: {
+           'data-contentid': ?contentid,
+           'data-playerid': ?playerid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds animated Vine video loops.
+class AmpVine extends DomComponent {
+  AmpVine({
+    String? vineid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-vine',
+         attributes: {
+           'data-vineid': ?vineid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds Viqeo video stream players.
+class AmpViqeoPlayer extends DomComponent {
+  AmpViqeoPlayer({
+    String? videoid,
+    String? profileid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-viqeo-player',
+         attributes: {
+           'data-videoid': ?videoid,
+           'data-profileid': ?profileid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds customized Wistia video player clips.
+class AmpWistiaPlayer extends DomComponent {
+  AmpWistiaPlayer({
+    String? videoid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-wistia-player',
+         attributes: {
+           'data-videoid': ?videoid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds interactive reviews widgets from Yotpo.
+class AmpYotpo extends DomComponent {
+  AmpYotpo({
+    String? widgetType,
+    String? appKey,
+    String? productId,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-yotpo',
+         attributes: {
+           'data-widget-type': ?widgetType,
+           'data-app-key': ?appKey,
+           'data-product-id': ?productId,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}

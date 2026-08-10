@@ -243,3 +243,23 @@ class AmpStoryInteractiveSlider extends DomComponent {
   @override
   Iterable<Component> build() => [];
 }
+
+/// An audio control sticker inside AMP Web Stories allowing unmute actions.
+class AmpStoryAudioSticker extends DomComponent {
+  AmpStoryAudioSticker({
+    Map<String, String>? attributes,
+  }) : super('amp-story-audio-sticker', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Configurable subscriptions experience pane inside AMP Web Story pages.
+class AmpStorySubscriptions extends DomComponent {
+  AmpStorySubscriptions({
+    Map<String, String>? attributes,
+  }) : super('amp-story-subscriptions', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}

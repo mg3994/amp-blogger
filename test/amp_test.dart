@@ -163,5 +163,35 @@ void main() {
   }
   print('✓ AmpValidator correctly validated valid AMP layout');
 
+  // Test 11: Specialized Media & Wordpress Embeds
+  final specializedEmbeds = AmpHtml(children: [
+    AmpGoogleDocumentEmbed(src: 'doc-url'),
+    AmpWordpressEmbed(url: 'wp-post'),
+    AmpStoryAudioSticker(),
+  ]).render();
+
+  if (!specializedEmbeds.contains('<amp-google-document-embed src="doc-url"/>') ||
+      !specializedEmbeds.contains('<amp-wordpress-embed data-url="wp-post"/>') ||
+      !specializedEmbeds.contains('<amp-story-audio-sticker/>')) {
+    print('Failed Test 11: $specializedEmbeds');
+    throw Exception('Specialized Embed components rendering mismatch');
+  }
+  print('✓ Specialized Embed components (Google Doc, Wordpress, Story sticker) rendering passed');
+
+  // Test 12: Video Platforms and Social Review components
+  final socialMediaEmbeds = AmpHtml(children: [
+    AmpImaVideo(src: 'ima-ad-tag-url'),
+    AmpWistiaPlayer(videoid: 'wistia-video-id'),
+    AmpYotpo(appKey: 'yotpo-app-key'),
+  ]).render();
+
+  if (!socialMediaEmbeds.contains('<amp-ima-video data-src="ima-ad-tag-url"/>') ||
+      !socialMediaEmbeds.contains('<amp-wistia-player data-videoid="wistia-video-id"/>') ||
+      !socialMediaEmbeds.contains('<amp-yotpo data-app-key="yotpo-app-key"/>')) {
+    print('Failed Test 12: $socialMediaEmbeds');
+    throw Exception('Video and Social Review components rendering mismatch');
+  }
+  print('✓ Video and Social Review components (IMA, Wistia, Yotpo) rendering passed');
+
   print('All AMP tests passed successfully!');
 }
