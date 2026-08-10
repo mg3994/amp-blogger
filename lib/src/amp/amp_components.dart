@@ -1170,6 +1170,145 @@ class AmpRuntimeScript extends DomComponent {
         );
 }
 
+/// An AMP HTML root helper component.
+class AmpHtml extends DomComponent {
+  AmpHtml({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'html',
+         attributes: {
+           'amp': '',
+           ...?attributes,
+         },
+       );
+}
+
+/// Standard AMP Charset Meta tag.
+class AmpCharset extends DomComponent {
+  AmpCharset() : super('meta', attributes: {'charset': 'utf-8'});
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Standard AMP Viewport Meta tag.
+class AmpViewport extends DomComponent {
+  AmpViewport()
+      : super(
+          'meta',
+          attributes: {
+            'name': 'viewport',
+            'content': 'width=device-width,minimum-scale=1,initial-scale=1',
+          },
+        );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Standard AMP Canonical Link tag.
+class AmpCanonical extends DomComponent {
+  AmpCanonical(String href) : super('link', attributes: {'rel': 'canonical', 'href': href});
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// An AMP Web Story container.
+class AmpStory extends DomComponent {
+  AmpStory({
+    String? title,
+    String? publisher,
+    String? publisherLogoSrc,
+    String? posterPortraitSrc,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story',
+         attributes: {
+           'standalone': 'standalone',
+           'title': ?title,
+           'publisher': ?publisher,
+           'publisher-logo-src': ?publisherLogoSrc,
+           'poster-portrait-src': ?posterPortraitSrc,
+           ...?attributes,
+         },
+       );
+}
+
+/// A page within an AMP Web Story.
+class AmpStoryPage extends DomComponent {
+  AmpStoryPage({
+    required String id,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-page',
+         attributes: {
+           'id': id,
+           ...?attributes,
+         },
+       );
+}
+
+/// A grid layer within an AMP Web Story page.
+class AmpStoryGridLayer extends DomComponent {
+  AmpStoryGridLayer({
+    String? template,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-story-grid-layer',
+         attributes: {
+           'template': ?template,
+           ...?attributes,
+         },
+       );
+}
+
+/// A bookend element within an AMP Web Story.
+class AmpStoryBookend extends DomComponent {
+  AmpStoryBookend({
+    String? src,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-story-bookend',
+         attributes: {
+           'src': ?src,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// A newer AMP carousel component.
+class AmpBaseCarousel extends DomComponent {
+  AmpBaseCarousel({
+    String? width,
+    String? height,
+    String? layout,
+    bool? loop,
+    bool? snap,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-base-carousel',
+         attributes: {
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           if (loop == true) 'loop': 'true',
+           if (snap == true) 'snap': 'true',
+           ...?attributes,
+         },
+       );
+}
+
 /// Loads an AMP custom element extension script dynamically.
 class AmpExtensionScript extends DomComponent {
   AmpExtensionScript({

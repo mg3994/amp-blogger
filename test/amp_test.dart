@@ -67,5 +67,23 @@ void main() {
   }
   print('✓ CustomDomComponentExtension rendering passed');
 
+  // Test 5: AmpHtml, AmpCharset, AmpViewport, AmpCanonical, AmpStory and AmpBaseCarousel
+  final ampHtml = AmpHtml(children: [
+    AmpCharset(),
+    AmpViewport(),
+    AmpCanonical('https://example.com/canonical'),
+    AmpBaseCarousel(loop: true, snap: true, children: [Text('Slide 1')]),
+  ]).render();
+
+  if (!ampHtml.contains('<html amp="">') ||
+      !ampHtml.contains('<meta charset="utf-8"/>') ||
+      !ampHtml.contains('<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>') ||
+      !ampHtml.contains('<link rel="canonical" href="https://example.com/canonical"/>') ||
+      !ampHtml.contains('<amp-base-carousel loop="true" snap="true">Slide 1</amp-base-carousel>')) {
+    print('Failed Test 5: $ampHtml');
+    throw Exception('AMP Layout helper / carousel rendering mismatch');
+  }
+  print('✓ AmpHtml layouts and AmpBaseCarousel rendering passed');
+
   print('All AMP tests passed successfully!');
 }
