@@ -67,8 +67,16 @@ class AmpValidator {
       errors.add('Missing mandatory standard HTML5 doctype declaration: `<!DOCTYPE html>`.');
     }
 
-    // 2. Check for amp attribute in html tag
-    if (!renderedHtml.contains('<html') || (!renderedHtml.contains('amp=') && !renderedHtml.contains('amp ') && !renderedHtml.contains('amp>'))) {
+    // 2. Check for amp attribute in html tag (either inline or via b:attr children declarations)
+    final hasAmpOrLightning = renderedHtml.contains('amp=') ||
+                               renderedHtml.contains('amp ') ||
+                               renderedHtml.contains('amp>') ||
+                               renderedHtml.contains('⚡') ||
+                               renderedHtml.contains('name="amp"') ||
+                               renderedHtml.contains('name="⚡"') ||
+                               renderedHtml.contains('name=\'amp\'') ||
+                               renderedHtml.contains('name=\'⚡\'');
+    if (!renderedHtml.contains('<html') || !hasAmpOrLightning) {
       errors.add('Missing mandatory `amp` or `⚡` attribute inside the `<html>` tag.');
     }
 
