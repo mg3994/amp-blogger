@@ -407,6 +407,54 @@ class AmpGist extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds a secure TikTok video player.
+class AmpTiktok extends DomComponent {
+  AmpTiktok({
+    String? src,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-tiktok',
+         attributes: {
+           'data-src': ?src,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds Reddit posts or comments.
+class AmpReddit extends DomComponent {
+  AmpReddit({
+    String? src,
+    String? embedtype,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-reddit',
+         attributes: {
+           'data-src': ?src,
+           'data-embedtype': ?embedtype,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Embeds a secure Imgur image or gallery.
 class AmpImgur extends DomComponent {
   AmpImgur({

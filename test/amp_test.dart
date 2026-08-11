@@ -218,5 +218,18 @@ void main() {
   }
   print('✓ Advanced widget components (Recaptcha, Imgur, Story social share, Story auto ads) rendering passed');
 
+  // Test 14: TikTok and Reddit embeds
+  final modernSocialEmbeds = AmpHtml(children: [
+    AmpTiktok(src: 'tiktok-video-url'),
+    AmpReddit(src: 'reddit-thread-url', embedtype: 'post'),
+  ]).render();
+
+  if (!modernSocialEmbeds.contains('<amp-tiktok data-src="tiktok-video-url"/>') ||
+      !modernSocialEmbeds.contains('<amp-reddit data-src="reddit-thread-url" data-embedtype="post"/>')) {
+    print('Failed Test 14: $modernSocialEmbeds');
+    throw Exception('Modern Social Embed components rendering mismatch');
+  }
+  print('✓ Modern Social Embed components (TikTok, Reddit) rendering passed');
+
   print('All AMP tests passed successfully!');
 }
