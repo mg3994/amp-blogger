@@ -231,5 +231,20 @@ void main() {
   }
   print('✓ Modern Social Embed components (TikTok, Reddit) rendering passed');
 
+  // Test 15: Affiliate and observer components
+  final observerWidgets = AmpHtml(children: [
+    AmpSkimlinks(publisherCode: 'skim-code'),
+    AmpSmartlinks(linkid: 'smart-id'),
+    AmpOrientationObserver(id: 'orient-id'),
+  ]).render();
+
+  if (!observerWidgets.contains('<amp-skimlinks publisher-code="skim-code"/>') ||
+      !observerWidgets.contains('<amp-smartlinks link-id="smart-id"/>') ||
+      !observerWidgets.contains('<amp-orientation-observer id="orient-id"/>')) {
+    print('Failed Test 15: $observerWidgets');
+    throw Exception('Affiliate and observer components rendering mismatch');
+  }
+  print('✓ Affiliate and observer components (Skimlinks, Smartlinks, OrientationObserver) rendering passed');
+
   print('All AMP tests passed successfully!');
 }

@@ -302,3 +302,20 @@ class AmpInlineGallery extends DomComponent {
     super.children,
   }) : super('amp-inline-gallery', attributes: attributes);
 }
+
+/// Monitors screen orientation changes to dispatch interactive events.
+class AmpOrientationObserver extends DomComponent {
+  AmpOrientationObserver({
+    String? id,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-orientation-observer',
+         attributes: {
+           'id': ?id,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}

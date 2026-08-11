@@ -407,6 +407,29 @@ class AmpGist extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds video players from POWR.
+class AmpPowrPlayer extends DomComponent {
+  AmpPowrPlayer({
+    String? account,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-powr-player',
+         attributes: {
+           'data-account': ?account,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Embeds a secure TikTok video player.
 class AmpTiktok extends DomComponent {
   AmpTiktok({

@@ -240,6 +240,40 @@ class AmpLinkRewriter extends DomComponent {
        );
 }
 
+/// Automates monetizing commerce links on AMP articles with Skimlinks affiliate network.
+class AmpSkimlinks extends DomComponent {
+  AmpSkimlinks({
+    String? publisherCode,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-skimlinks',
+         attributes: {
+           'publisher-code': ?publisherCode,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Handles affiliate routing and link conversions using Smartlinks.
+class AmpSmartlinks extends DomComponent {
+  AmpSmartlinks({
+    String? linkid,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-smartlinks',
+         attributes: {
+           'link-id': ?linkid,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// An AMP push notifications module.
 class AmpWebPush extends DomComponent {
   AmpWebPush({
