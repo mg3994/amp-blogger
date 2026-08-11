@@ -407,6 +407,29 @@ class AmpGist extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds videos from 3Q SDN.
+class Amp3qPlayer extends DomComponent {
+  Amp3qPlayer({
+    String? playoutId,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-3q-player',
+         attributes: {
+           'data-playout-id': ?playoutId,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Embeds video players from POWR.
 class AmpPowrPlayer extends DomComponent {
   AmpPowrPlayer({

@@ -191,15 +191,17 @@ void main() {
     AmpImaVideo(src: 'ima-ad-tag-url'),
     AmpWistiaPlayer(videoid: 'wistia-video-id'),
     AmpYotpo(appKey: 'yotpo-app-key'),
+    Amp3qPlayer(playoutId: 'play-3q'),
   ]).render();
 
   if (!socialMediaEmbeds.contains('<amp-ima-video data-src="ima-ad-tag-url"/>') ||
       !socialMediaEmbeds.contains('<amp-wistia-player data-videoid="wistia-video-id"/>') ||
-      !socialMediaEmbeds.contains('<amp-yotpo data-app-key="yotpo-app-key"/>')) {
+      !socialMediaEmbeds.contains('<amp-yotpo data-app-key="yotpo-app-key"/>') ||
+      !socialMediaEmbeds.contains('<amp-3q-player data-playout-id="play-3q"/>')) {
     print('Failed Test 12: $socialMediaEmbeds');
     throw Exception('Video and Social Review components rendering mismatch');
   }
-  print('✓ Video and Social Review components (IMA, Wistia, Yotpo) rendering passed');
+  print('✓ Video and Social Review components (IMA, Wistia, Yotpo, 3QPlayer) rendering passed');
 
   // Test 13: Recaptcha, Imgur, and story social sharing elements
   final advancedWidgets = AmpHtml(children: [
