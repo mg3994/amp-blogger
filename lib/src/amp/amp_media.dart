@@ -23,6 +23,27 @@ class AmpImg extends DomComponent {
        );
 }
 
+/// Embeds video players securely within an AMP-friendly iframe wrapper.
+class AmpVideoIframe extends DomComponent {
+  AmpVideoIframe({
+    String? src,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-video-iframe',
+         attributes: {
+           'src': ?src,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
 /// An AMP video component replacing the standard HTML video tag.
 class AmpVideo extends DomComponent {
   AmpVideo({

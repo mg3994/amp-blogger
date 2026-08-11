@@ -71,6 +71,22 @@ class AmpStoryBookend extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds 360 degree immersive images or videos inside Web Stories.
+class AmpStory360 extends DomComponent {
+  AmpStory360({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-story-360', attributes: attributes);
+}
+
+/// Pans and zooms an image dynamically between Web Story pages.
+class AmpStoryPanningMedia extends DomComponent {
+  AmpStoryPanningMedia({
+    Map<String, String>? attributes,
+    super.children,
+  }) : super('amp-story-panning-media', attributes: attributes);
+}
+
 /// Dynamically and automatically inserts advertisements into an AMP Web Story.
 class AmpStoryAutoAds extends DomComponent {
   AmpStoryAutoAds({

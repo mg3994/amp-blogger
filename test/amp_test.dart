@@ -246,5 +246,20 @@ void main() {
   }
   print('✓ Affiliate and observer components (Skimlinks, Smartlinks, OrientationObserver) rendering passed');
 
+  // Test 16: Panning, video iframe and 360 story components
+  final immersiveWidgets = AmpHtml(children: [
+    AmpVideoIframe(src: 'video-iframe-url', width: '320', height: '180', layout: 'responsive'),
+    AmpStory360(),
+    AmpStoryPanningMedia(),
+  ]).render();
+
+  if (!immersiveWidgets.contains('<amp-video-iframe src="video-iframe-url" width="320" height="180" layout="responsive"/>') ||
+      !immersiveWidgets.contains('<amp-story-360/>') ||
+      !immersiveWidgets.contains('<amp-story-panning-media/>')) {
+    print('Failed Test 16: $immersiveWidgets');
+    throw Exception('Immersive Web Story elements rendering mismatch');
+  }
+  print('✓ Immersive Web Story components (VideoIframe, Story360, PanningMedia) rendering passed');
+
   print('All AMP tests passed successfully!');
 }
