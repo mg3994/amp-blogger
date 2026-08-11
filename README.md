@@ -125,8 +125,10 @@ void main() {
       BAttr(name: 'xmlns:b', value: ''),
       BAttr(name: 'xmlns:expr', value: ''),
       BAttr(name: 'xmlns:data', value: ''),
-      // Conditionally adds amp="amp" attribute to <html> on mobile requests
+      // Conditionally adds amp="amp" (or lightning bolt symbol ⚡) to <html> on mobile requests
       BAttr(cond: 'data:blog.isMobileRequest', name: 'amp', value: 'amp'),
+      // Alternatively, you can use the ⚡ symbol:
+      // BAttr(cond: 'data:blog.isMobileRequest', name: '⚡', value: ''),
     ],
     head: [
       Title(children: [Text('Generated Blogger Theme')]),

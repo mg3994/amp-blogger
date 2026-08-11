@@ -210,6 +210,108 @@ class AmpInstallServiceworker extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Integrates paywall systems from Fewcents platform.
+class AmpAccessFewcents extends DomComponent {
+  AmpAccessFewcents({
+    Map<String, String>? attributes,
+  }) : super('amp-access-fewcents', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates paywalls with the LaterPay platform.
+class AmpAccessLaterpay extends DomComponent {
+  AmpAccessLaterpay({
+    Map<String, String>? attributes,
+  }) : super('amp-access-laterpay', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates paywalls from Poool.
+class AmpAccessPoool extends DomComponent {
+  AmpAccessPoool({
+    Map<String, String>? attributes,
+  }) : super('amp-access-poool', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates paywalls from Scroll membership.
+class AmpAccessScroll extends DomComponent {
+  AmpAccessScroll({
+    Map<String, String>? attributes,
+  }) : super('amp-access-scroll', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates dynamic content from the BySide service.
+class AmpBysideContent extends DomComponent {
+  AmpBysideContent({
+    Map<String, String>? attributes,
+  }) : super('amp-byside-content', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Integrates a Google One Tap login widget.
+class AmpOnetapGoogle extends DomComponent {
+  AmpOnetapGoogle({
+    String? clientid,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-onetap-google',
+         attributes: {
+           'data-clientid': ?clientid,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Renders remote or inline JSON/dynamic data.
+class AmpRender extends DomComponent {
+  AmpRender({
+    String? src,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-render',
+         attributes: {
+           'src': ?src,
+           ...?attributes,
+         },
+       );
+}
+
+/// Implements subscription access protocols for Subscribe with Google.
+class AmpSubscriptionsGoogle extends DomComponent {
+  AmpSubscriptionsGoogle({
+    Map<String, String>? attributes,
+  }) : super('amp-subscriptions-google', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Implements generalized subscription protocols.
+class AmpSubscriptions extends DomComponent {
+  AmpSubscriptions({
+    Map<String, String>? attributes,
+  }) : super('amp-subscriptions', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Appends a reCAPTCHA v3 token to AMP form submissions.
 class AmpRecaptchaInput extends DomComponent {
   AmpRecaptchaInput({

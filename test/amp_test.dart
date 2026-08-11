@@ -246,6 +246,23 @@ void main() {
   }
   print('✓ Affiliate and observer components (Skimlinks, Smartlinks, OrientationObserver) rendering passed');
 
+  // Test 17: Paywalls and dynamic subscript/render widgets
+  final paywallWidgets = AmpHtml(children: [
+    AmpAccessFewcents(),
+    AmpOnetapGoogle(clientid: 'one-tap-client-id'),
+    AmpRender(src: 'render-source-url'),
+    AmpSubscriptions(),
+  ]).render();
+
+  if (!paywallWidgets.contains('<amp-access-fewcents/>') ||
+      !paywallWidgets.contains('<amp-onetap-google data-clientid="one-tap-client-id"/>') ||
+      !paywallWidgets.contains('<amp-render src="render-source-url"/>') ||
+      !paywallWidgets.contains('<amp-subscriptions/>')) {
+    print('Failed Test 17: $paywallWidgets');
+    throw Exception('Paywalls and dynamic subscript/render widgets rendering mismatch');
+  }
+  print('✓ Paywalls and dynamic subscript/render widgets (Fewcents, OneTap, Render, Subscriptions) rendering passed');
+
   // Test 16: Panning, video iframe and 360 story components
   final immersiveWidgets = AmpHtml(children: [
     AmpVideoIframe(src: 'video-iframe-url', width: '320', height: '180', layout: 'responsive'),

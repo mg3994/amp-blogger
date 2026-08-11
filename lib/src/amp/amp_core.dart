@@ -130,6 +130,42 @@ class AmpValidator {
   }
 }
 
+/// A generic, multi-purpose container element that brings AMP's layout system.
+class AmpLayout extends DomComponent {
+  AmpLayout({
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-layout',
+         attributes: {
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+}
+
+/// Creates reusable actions inside AMP pages.
+class AmpActionMacro extends DomComponent {
+  AmpActionMacro({
+    required String id,
+    String? execute,
+    Map<String, String>? attributes,
+    super.children,
+  }) : super(
+         'amp-action-macro',
+         attributes: {
+           'id': id,
+           'execute': ?execute,
+           ...?attributes,
+         },
+       );
+}
+
 /// Standard AMP Charset Meta tag.
 class AmpCharset extends DomComponent {
   AmpCharset() : super('meta', attributes: {'charset': 'utf-8'});

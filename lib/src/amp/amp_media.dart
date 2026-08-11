@@ -23,6 +23,16 @@ class AmpImg extends DomComponent {
        );
 }
 
+/// Minimizes and docks videos to a corner on page scroll.
+class AmpVideoDocking extends DomComponent {
+  AmpVideoDocking({
+    Map<String, String>? attributes,
+  }) : super('amp-video-docking', attributes: attributes);
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Embeds video players securely within an AMP-friendly iframe wrapper.
 class AmpVideoIframe extends DomComponent {
   AmpVideoIframe({
