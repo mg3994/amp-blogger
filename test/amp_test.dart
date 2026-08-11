@@ -233,6 +233,21 @@ void main() {
   }
   print('✓ Modern Social Embed components (TikTok, Reddit) rendering passed');
 
+  // Test 18: VK and Google Read Aloud embed components
+  final additionalSocialEmbeds = AmpHtml(children: [
+    AmpVk(embedId: 'vk-id'),
+    AmpGoogleReadAloudPlayer(apiKey: 'g-read-key'),
+    AmpIframely(url: 'iframely-embed-url'),
+  ]).render();
+
+  if (!additionalSocialEmbeds.contains('<amp-vk data-embed-id="vk-id"/>') ||
+      !additionalSocialEmbeds.contains('<amp-google-read-aloud-player data-api-key="g-read-key"/>') ||
+      !additionalSocialEmbeds.contains('<amp-iframely data-url="iframely-embed-url"/>')) {
+    print('Failed Test 18: $additionalSocialEmbeds');
+    throw Exception('Additional Social Embed components rendering mismatch');
+  }
+  print('✓ Additional Social Embed components (VK, ReadAloud, Iframely) rendering passed');
+
   // Test 15: Affiliate and observer components
   final observerWidgets = AmpHtml(children: [
     AmpSkimlinks(publisherCode: 'skim-code'),

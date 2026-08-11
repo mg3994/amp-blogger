@@ -407,6 +407,199 @@ class AmpGist extends DomComponent {
   Iterable<Component> build() => [];
 }
 
+/// Embeds a Brid.tv video player.
+class AmpBridPlayer extends DomComponent {
+  AmpBridPlayer({
+    String? partner,
+    String? player,
+    String? video,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-brid-player',
+         attributes: {
+           'data-partner': ?partner,
+           'data-player': ?player,
+           'data-video': ?video,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds a cloud-hosted Connatix Video Player.
+class AmpConnatixPlayer extends DomComponent {
+  AmpConnatixPlayer({
+    String? playerId,
+    String? mediaId,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-connatix-player',
+         attributes: {
+           'data-player-id': ?playerId,
+           'data-media-id': ?mediaId,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds a cloud-hosted Delight Video Player.
+class AmpDelightPlayer extends DomComponent {
+  AmpDelightPlayer({
+    String? playerid,
+    String? contentid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-delight-player',
+         attributes: {
+           'data-playerid': ?playerid,
+           'data-contentid': ?contentid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Displays an Embedly media card.
+class AmpEmbedlyCard extends DomComponent {
+  AmpEmbedlyCard({
+    String? url,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-embedly-card',
+         attributes: {
+           'data-url': ?url,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds the Google Read Aloud speech player.
+class AmpGoogleReadAloudPlayer extends DomComponent {
+  AmpGoogleReadAloudPlayer({
+    String? apiKey,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-google-read-aloud-player',
+         attributes: {
+           'data-api-key': ?apiKey,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Displays Iframely-powered rich media embeds.
+class AmpIframely extends DomComponent {
+  AmpIframely({
+    String? url,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-iframely',
+         attributes: {
+           'data-url': ?url,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds video players from Minute Media.
+class AmpMinuteMediaPlayer extends DomComponent {
+  AmpMinuteMediaPlayer({
+    String? contentid,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-minute-media-player',
+         attributes: {
+           'data-contentid': ?contentid,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds media streams from the nexxOMNIA video platform.
+class AmpNexxtvPlayer extends DomComponent {
+  AmpNexxtvPlayer({
+    String? id,
+    String? domain,
+    String? width,
+    String? height,
+    String? layout,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-nexxtv-player',
+         attributes: {
+           'data-id': ?id,
+           'data-domain': ?domain,
+           'width': ?width,
+           'height': ?height,
+           'layout': ?layout,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
+/// Embeds Reddit-like VK posts or poll widgets.
+class AmpVk extends DomComponent {
+  AmpVk({
+    String? embedId,
+    Map<String, String>? attributes,
+  }) : super(
+         'amp-vk',
+         attributes: {
+           'data-embed-id': ?embedId,
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() => [];
+}
+
 /// Embeds videos from 3Q SDN.
 class Amp3qPlayer extends DomComponent {
   Amp3qPlayer({
