@@ -23,8 +23,8 @@ class BloggerTheme extends Component {
     assert(
       children == null ||
           children!.isEmpty ||
-          (children!.first is! Head && children!.first is! Body),
-      'BloggerTheme children should not contain Head or Body elements. Use the `head` and `body` parameters instead.',
+          !children!.any((child) => child is Head || child is Body),
+      'BloggerTheme top-level children should not contain Head or Body elements. Use the `head` and `body` parameters instead.',
     );
     final filteredChildren =
         children?.where((c) => c is! Head && c is! Body) ?? const [];
