@@ -31,38 +31,55 @@ void main() {
       AmpRuntimeScript(),
       AmpExtensionScript(extension: 'amp-sidebar'),
       AmpExtensionScript(extension: 'amp-carousel'),
+      const BSkin('body { font-family: Arial, sans-serif; }'),
     ],
     body: [
       AmpHtml(
         children: [
-          Div(
-            attributes: {'class': 'wrapper'},
+          BSection(
+            id: 'main-content',
             children: [
-              H1(children: [Text('My AMP Blogger Theme')]),
-
-              // Custom Sidebar menu
-              AmpSidebar(
-                id: 'menu-drawer',
-                layout: 'nodisplay',
-                side: 'left',
+              BWidget(
+                id: 'Blog1',
+                type: 'Blog',
                 children: [
-                  Button(
-                    attributes: {'on': 'tap:menu-drawer.close'},
-                    children: [Text('Close Menu')],
+                  BIncludable(
+                    id: 'main',
+                    children: [
+                      Div(
+                        attributes: {'class': 'wrapper'},
+                        children: [
+                          H1(children: [Text('My AMP Blogger Theme')]),
+
+                          // Custom Sidebar menu
+                          AmpSidebar(
+                            id: 'menu-drawer',
+                            layout: 'nodisplay',
+                            side: 'left',
+                            children: [
+                              Button(
+                                attributes: {'on': 'tap:menu-drawer.close'},
+                                children: [Text('Close Menu')],
+                              ),
+                            ],
+                          ),
+
+                          // Custom Carousel slider
+                          AmpBaseCarousel(
+                            width: '600',
+                            height: '300',
+                            layout: 'responsive',
+                            loop: true,
+                            snap: true,
+                            children: [
+                              AmpImg(src: 'slide1.png', width: '600', height: '300', layout: 'responsive'),
+                              AmpImg(src: 'slide2.png', width: '600', height: '300', layout: 'responsive'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
-
-              // Custom Carousel slider
-              AmpBaseCarousel(
-                width: '600',
-                height: '300',
-                layout: 'responsive',
-                loop: true,
-                snap: true,
-                children: [
-                  AmpImg(src: 'slide1.png', width: '600', height: '300', layout: 'responsive'),
-                  AmpImg(src: 'slide2.png', width: '600', height: '300', layout: 'responsive'),
                 ],
               ),
             ],
