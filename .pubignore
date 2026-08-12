@@ -1,0 +1,9 @@
+# Ignore directories when publishing to pub.dev
+bin/
+old/
+skills/
+to_convert/
+test/
+build/
+.dart_tool/
+.pubignore

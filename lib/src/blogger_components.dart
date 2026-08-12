@@ -112,10 +112,25 @@ class BArg extends DomComponent {
   final String? exprValue;
 
   BArg({required this.name, this.value, this.exprValue})
-    : super(
+    : assert(
+        value != null || exprValue != null,
+        'BArg requires either value or exprValue to be provided.',
+      ),
+      super(
         'b:arg',
-        attributes: {'name': name, 'value': ?value, 'expr:value': ?exprValue},
+        attributes: {
+          'name': name,
+          if (exprValue != null)
+            'expr:value': exprValue
+          else if (value != null && value.isNotEmpty)
+            'value': value,
+        },
       );
+
+  /// Convenience constructor for dynamic argument expressions (e.g., expr:value="...")
+  factory BArg.expr({required String name, required String exprValue}) {
+    return BArg(name: name, exprValue: exprValue);
+  }
 
   @override
   Iterable<Component> build() => [];
@@ -155,12 +170,12 @@ class BSkin extends Component {
   final bool? contentInCDATA;
 
   /// Mainly the RawText
-  final Iterable<Component>? children;
+  final String? css;
 
-  const BSkin({
+  const BSkin(
+    this.css, {
     this.variables,
-    this.version = '1.3.0',
-    this.children,
+    this.version = '1.3.3',
     this.contentInCDATA = true,
   });
 
@@ -175,7 +190,7 @@ class BSkin extends Component {
       }
       sb.writeln(" */");
     }
-    // sb.write(css);
+    sb.write(css);
 
     var content = sb.toString();
 
@@ -187,20 +202,11 @@ class BSkin extends Component {
         'b:skin',
         attributes: {'version': version},
         children: [
-          if (contentInCDATA == true) RawText('<![CDATA[\n'),
-
-          Text(content, escape: !contentInCDATA!),
-          ...?children,
-
-          if (contentInCDATA == true) RawText('\n]]>'),
+          if (contentInCDATA == true)
+            RawText('<![CDATA[\n$content\n]]>')
+          else
+            Text(content),
         ],
-
-        // [
-        //   if (contentInCDATA == true)
-        //     RawText('<![CDATA[\n$content\n]]>')
-        //   else
-        //     Text(content),
-        // ],
       ),
       Text("\n"),
     ];
@@ -236,16 +242,28 @@ class BAttr extends DomComponent {
   final String? value;
   final String? exprValue;
 
-  BAttr({this.cond, required this.name, this.value, this.exprValue})
+  BAttr({required this.name, this.value, this.exprValue, this.cond})
     : super(
         'b:attr',
         attributes: {
           'name': name,
-          'value': ?value,
-          'expr:value': ?exprValue,
+          if (exprValue != null)
+            'expr:value': exprValue
+          else if ((value ?? name).isNotEmpty)
+            'value': value ?? name,
           'cond': ?cond,
         },
       );
+
+  /// Factory constructor for dynamic expressions (expr:value)
+  factory BAttr.expr({
+    required String name,
+    required String exprValue,
+    String? cond,
+  }) {
+    return BAttr(name: name, exprValue: exprValue, cond: cond);
+  }
+
   @override
   Iterable<Component> build() => [];
 }
@@ -257,10 +275,25 @@ class BClass extends DomComponent {
   final String? cond;
 
   BClass({this.name, this.exprName, this.cond})
-    : super(
+    : assert(
+        name != null || exprName != null,
+        'BClass requires either name or exprName to be provided.',
+      ),
+      super(
         'b:class',
-        attributes: {'name': ?name, 'expr:name': ?exprName, 'cond': ?cond},
+        attributes: {
+          if (exprName != null)
+            'expr:name': exprName
+          else if (name != null && name.isNotEmpty)
+            'name': name,
+          'cond': ?cond,
+        },
       );
+
+  /// Convenience constructor for dynamic class expressions (e.g., expr:name="...")
+  factory BClass.expr(String exprName, {String? cond}) {
+    return BClass(exprName: exprName, cond: cond);
+  }
 
   @override
   Iterable<Component> build() => [];
@@ -269,13 +302,12 @@ class BClass extends DomComponent {
 /// Creates a dynamic HTML tag using Blogger template helper syntax.
 class BTag extends DomComponent {
   final String? name; //either nae or expr:name is required
-  final Map<String, String>? attributesz;
   final String? cond;
 
-  BTag({this.name, this.attributesz, this.cond, super.children})
+  BTag({this.name, Map<String, String>? attributes, this.cond, super.children})
     : super(
         'b:tag',
-        attributes: {'name': ?name, ...?attributesz, 'cond': ?cond},
+        attributes: {'name': ?name, ...?attributes, 'cond': ?cond},
       );
 }
 
@@ -451,7 +483,24 @@ class BParam extends DomComponent {
   final String? exprValue;
 
   BParam({this.value, this.exprValue})
-    : super('b:param', attributes: {'value': ?value, 'expr:value': ?exprValue});
+    : assert(
+        value != null || exprValue != null,
+        'BParam requires either value or exprValue to be provided.',
+      ),
+      super(
+        'b:param',
+        attributes: {
+          if (exprValue != null)
+            'expr:value': exprValue
+          else if (value != null && value.isNotEmpty)
+            'value': value,
+        },
+      );
+
+  /// Convenience constructor for dynamic parameter expressions (e.g., expr:value="...")
+  factory BParam.expr(String exprValue) {
+    return BParam(exprValue: exprValue);
+  }
 
   @override
   Iterable<Component> build() => [];

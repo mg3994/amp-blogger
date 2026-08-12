@@ -11,4 +11,4 @@ body#layout .headP{width:50%}
 
 ''';
 
-final styleCSS = BSkin(variables: skinVariable, children: [RawText(css)]);
+final styleCSS = BSkin(css, variables: skinVariable);

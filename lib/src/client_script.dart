@@ -2,21 +2,71 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'core.dart';
 
-/// Loads a Dart script from disk and compiles it to JavaScript at render time.
-///
-/// The script source is expected to be a valid Dart file and will be compiled
-/// using the Dart SDK before rendering.
+/// Loads a Dart script from disk and compiles it to JavaScript at render time,
+/// or renders a raw inline JavaScript block with customizable attributes.
 class BClientScript extends Component {
-  final String scriptPath;
+  final String? scriptPath;
+  final String? inlineCode;
   final bool? contentInCDATA;
+  final Map<String, String>? attributes;
 
-  const BClientScript(this.scriptPath, {this.contentInCDATA});
+  const BClientScript(
+    String this.scriptPath, {
+    this.contentInCDATA,
+    this.attributes,
+  }) : inlineCode = null;
+
+  const BClientScript.inline(
+    String this.inlineCode, {
+    this.contentInCDATA,
+    this.attributes,
+  }) : scriptPath = null;
 
   @override
   Iterable<Component> build() {
-    // This will be handled during the rendering process or by a pre-processor.
-    // For simplicity, we can make it a DomComponent that we populate later.
-    return [_CompiledScript(scriptPath, contentInCDATA: contentInCDATA)];
+    if (inlineCode != null) {
+      return [
+        _InlineScript(
+          inlineCode!,
+          contentInCDATA: contentInCDATA,
+          attributes: attributes,
+        ),
+      ];
+    }
+    return [
+      _CompiledScript(
+        scriptPath!,
+        contentInCDATA: contentInCDATA,
+        attributes: attributes,
+      ),
+    ];
+  }
+}
+
+/// Internal helper that renders an inline JavaScript code block.
+class _InlineScript extends DomComponent {
+  final String code;
+  final bool? contentInCDATA;
+
+  _InlineScript(
+    this.code, {
+    this.contentInCDATA = true,
+    Map<String, String>? attributes,
+  }) : super(
+         'script',
+         attributes: {
+           'type': 'text/javascript',
+           ...?attributes,
+         },
+       );
+
+  @override
+  Iterable<Component> build() {
+    return [
+      if (contentInCDATA == true) RawText('//<![CDATA[\n'),
+      Text(code, escape: !contentInCDATA!),
+      if (contentInCDATA == true) RawText('\n//]]>'),
+    ];
   }
 }
 
@@ -25,17 +75,25 @@ class _CompiledScript extends DomComponent {
   final String scriptPath;
   final bool? contentInCDATA;
 
-  const _CompiledScript(this.scriptPath, {this.contentInCDATA})
-    : super('script', attributes: const {'type': 'text/javascript'});
+  _CompiledScript(
+    this.scriptPath, {
+    this.contentInCDATA = true,
+    Map<String, String>? attributes,
+  }) : super(
+         'script',
+         attributes: {
+           'type': 'text/javascript',
+           ...?attributes,
+         },
+       );
 
   @override
   Iterable<Component> build() {
     var jsContent = _compileDartToJs(scriptPath);
     return [
-      if (contentInCDATA == true)
-        RawText('//<![CDATA[\n$jsContent\n//]]>')
-      else
-        Text(jsContent),
+      if (contentInCDATA == true) RawText('//<![CDATA[\n'),
+      Text(jsContent, escape: !contentInCDATA!),
+      if (contentInCDATA == true) RawText('\n//]]>'),
     ];
   }
 
