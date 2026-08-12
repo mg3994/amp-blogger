@@ -21,7 +21,9 @@ class BloggerTheme extends Component {
   @override
   Iterable<Component> build() {
     assert(
-      children == null || !children!.any((c) => c is Head || c is Body),
+      children == null ||
+          children!.isEmpty ||
+          (children!.first is! Head && children!.first is! Body),
       'BloggerTheme children should not contain Head or Body elements. Use the `head` and `body` parameters instead.',
     );
     final filteredChildren =
