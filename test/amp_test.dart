@@ -283,13 +283,14 @@ void main() {
   }
   print('✓ Affiliate and observer components (Skimlinks, Smartlinks, OrientationObserver) rendering passed');
 
-  // Test 20: BClientScript inline factory constructor
+  // Test 20: BClientScript inline factory constructor and customizable attributes
   final inlineScript = const BClientScript.inline(
     'console.log("Inline JS!");',
     contentInCDATA: true,
+    attributes: {'id': 'custom-script-id', 'class': 'script-cls'},
   ).render();
 
-  if (!inlineScript.contains('<script type="text/javascript">//<![CDATA[\nconsole.log("Inline JS!");\n//]]></script>')) {
+  if (!inlineScript.contains('<script type="text/javascript" id="custom-script-id" class="script-cls">//<![CDATA[\nconsole.log("Inline JS!");\n//]]></script>')) {
     print('Failed Test 20: $inlineScript');
     throw Exception('BClientScript.inline rendering mismatch');
   }
