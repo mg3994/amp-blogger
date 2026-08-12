@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 /// A node in the Blogger theme component tree.
 ///
 /// All renderable objects in this package implement [Component].
@@ -15,6 +17,15 @@ class Text extends Component {
 
   @override
   Iterable<Component> build() => [];
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is Text && other.value == value && other.escape == escape;
+  }
+
+  @override
+  int get hashCode => value.hashCode ^ escape.hashCode;
 }
 
 /// A raw text node that disables XML escaping.
@@ -32,6 +43,24 @@ class DomComponent extends Component {
 
   @override
   Iterable<Component> build() => children ?? [];
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final mapEquals = const MapEquality().equals;
+    final iterableEquals = const IterableEquality().equals;
+
+    return other is DomComponent &&
+        other.tag == tag &&
+        mapEquals(other.attributes, attributes) &&
+        iterableEquals(other.children, children);
+  }
+
+  @override
+  int get hashCode =>
+      tag.hashCode ^
+      const MapEquality().hash(attributes) ^
+      const IterableEquality().hash(children);
 }
 
 /// A wrapper for grouping components without introducing a DOM tag.
@@ -42,6 +71,16 @@ class Fragment extends Component {
 
   @override
   Iterable<Component> build() => children;
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is Fragment &&
+        const IterableEquality().equals(other.children, children);
+  }
+
+  @override
+  int get hashCode => const IterableEquality().hash(children);
 }
 
 /// Escapes XML reserved characters, filters XML 1.0 restricted control characters (C0 and C1),
@@ -147,4 +186,9 @@ extension CustomDomComponentExtension on String {
   DomComponent tag({Map<String, String>? attributes, Iterable<Component>? children}) {
     return DomComponent(this, attributes: attributes, children: children);
   }
+}
+
+extension IterableComponentExtension on Iterable<Component> {
+  /// Wraps a list of components in a Fragment.
+  Fragment get fragment => Fragment(children: this);
 }

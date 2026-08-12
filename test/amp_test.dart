@@ -233,6 +233,26 @@ void main() {
   }
   print('✓ Modern Social Embed components (TikTok, Reddit) rendering passed');
 
+  // Test 19: Component value equality & Iterable.fragment extension
+  final textA = Text('Hello', escape: true);
+  final textB = Text('Hello', escape: true);
+  if (textA != textB || textA.hashCode != textB.hashCode) {
+    throw Exception('Text component value equality mismatch');
+  }
+
+  final compA = DomComponent('div', attributes: {'class': 'card'}, children: [textA]);
+  final compB = DomComponent('div', attributes: {'class': 'card'}, children: [textB]);
+  if (compA != compB || compA.hashCode != compB.hashCode) {
+    throw Exception('DomComponent value equality mismatch');
+  }
+
+  final list = [compA, compB];
+  final fragment = list.fragment;
+  if (fragment.children != list) {
+    throw Exception('IterableComponentExtension.fragment conversion mismatch');
+  }
+  print('✓ Component value equality & Iterable.fragment extension passed');
+
   // Test 18: VK and Google Read Aloud embed components
   final additionalSocialEmbeds = AmpHtml(children: [
     AmpVk(embedId: 'vk-id'),

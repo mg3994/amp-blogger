@@ -31,5 +31,6 @@ environment:
 dependencies:
   path:
   web:
+  collection: ^1.18.0
 dev_dependencies:
   lints:
