@@ -11,16 +11,24 @@ class BClientScript extends Component {
   final Map<String, String>? attributes;
 
   const BClientScript(
-    String this.scriptPath, {
-    this.contentInCDATA,
+    this.scriptPath, {
+    this.contentInCDATA = true,
     this.attributes,
-  }) : inlineCode = null;
+  })  : inlineCode = null,
+        assert(
+          scriptPath != null,
+          'BClientScript requires either scriptPath or inlineCode to be provided.',
+        );
 
   const BClientScript.inline(
-    String this.inlineCode, {
-    this.contentInCDATA,
+    this.inlineCode, {
+    this.contentInCDATA = true,
     this.attributes,
-  }) : scriptPath = null;
+  })  : scriptPath = null,
+        assert(
+          inlineCode != null,
+          'BClientScript requires either scriptPath or inlineCode to be provided.',
+        );
 
   @override
   Iterable<Component> build() {
